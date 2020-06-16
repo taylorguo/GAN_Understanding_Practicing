@@ -20,6 +20,8 @@ real_image_input = tf.placeholder(tf.float32, shape=[None, 28, 28, 1])
 # A boolean to indicate BN if training or inference
 is_training = tf.placeholder(tf.bool)
 
+model_dir = "Model"
+
 # No this function below tensorflow-1.12
 def leakyrelu(x, alpha=0.2):
     return 0.5 * (1 + alpha) * x + 0.5 * (1 - alpha) * abs(x)
@@ -105,7 +107,7 @@ def train():
 
     ## 5. ## 开始训练
     saver = tf.train.Saver()
-    model_name = "Model/dcgan.ckpt"
+    model_name = model_dir + "/dcgan.ckpt"
     sess = tf.Session()
     sess.run(init)
     # Training
@@ -128,5 +130,23 @@ def train():
             print("Step %d: Generator Loss: %f, Discriminator Loss: %f" % (i, generator_learning, discriminator_learning))
             saver.save(sess, model_name)
 
+def predict():
+
+    meta_file = "/dcgan.ckpt.meta"
+    saver = tf.train.import_meta_graph(model_dir + meta_file)
+    graph = tf.get_default_graph()
+    tensor_name_list = [tensor.name for tensor in graph.as_graph_def().node]
+    for i in tensor_name_list:
+        print(i)
+
+    # n = 6
+    # canvas = np.empty((28 * n, 28 * n))
+
+    # for i in range(n):
+    #     z = np.random.uniform(-1., 1., size=[n, noise_dim])
+
+    #     g = 
+
 if __name__ == '__main__':
-    train()
+    # train()
+    predict()
