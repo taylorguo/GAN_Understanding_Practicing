@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 
 from tensorflow.examples.tutorials.mnist import input_data
-mnist = input_data.read_data_sets("./data/", one_hot=True)
+mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
 # training parameters
 num_steps = 10000
@@ -70,7 +70,11 @@ def discriminator(x, reuse=False):
         return x
 
 def train():
+    # 构建生成器
     gen_sample = generator(noise_input)
-
-    disc_real = discriminator(real_image_input)
-    disc_fake = discriminator(gen_sample, reuse=True)
+    # 构建判别器: 1. 对真实图片判别;  2. 对生成图片判别
+    discriminator_real = discriminator(real_image_input)
+    discriminator_fake = discriminator(gen_sample, reuse=True)
+    # 真实图像: 标签1; 生成图像: 标签0
+    discriminator_loss_real = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(logits = discriminator_real, labels = tf.ones([batch_size], dtype=tf.int32)))
+    discriminator_loss_fake = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(logits = discriminator_fake, labels = tf.zeros([batch_size], dtype=tf.int32)))
