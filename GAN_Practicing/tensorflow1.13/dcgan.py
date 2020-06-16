@@ -20,6 +20,7 @@ real_image_input = tf.placeholder(tf.float32, shape=[None, 28, 28, 1])
 # A boolean to indicate BN if training or inference
 is_training = tf.placeholder(tf.bool)
 
+# No this function below tensorflow-1.12
 def leakyrelu(x, alpha=0.2):
     return 0.5 * (1 + alpha) * x + 0.5 * (1 - alpha) * abs(x)
 
@@ -70,6 +71,8 @@ def discriminator(x, reuse=False):
         return x
 
 def train():
+
+    ## 1. ## 构建生成器和判别器损失函数
     # 构建生成器
     gen_sample = generator(noise_input)
     # 构建判别器: 1. 对真实图片判别;  2. 对生成图片判别
@@ -78,3 +81,52 @@ def train():
     # 真实图像: 标签1; 生成图像: 标签0
     discriminator_loss_real = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(logits = discriminator_real, labels = tf.ones([batch_size], dtype=tf.int32)))
     discriminator_loss_fake = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(logits = discriminator_fake, labels = tf.zeros([batch_size], dtype=tf.int32)))
+    # 判别器总损失函数
+    discriminator_loss = discriminator_loss_real + discriminator_loss_fake
+    # 生成器损失函数: 生成器生成的图像, 希望这个图像尽可能地与真实图像一致, 也就是判别器认为生成器生成图像为1时, 任务成功, 所以标签为1 
+    generator_loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(logits = discriminator_fake, labels = tf.ones([batch_size], dtype = tf.int32)))
+    ## 2. ## 创建优化器
+    optimizer_generator = tf.train.AdamOptimizer(learning_rate= lr_generator, beta1=0.5, beta2= 0.999)
+    optimizer_discriminator = tf.train.AdamOptimizer(learning_rate= lr_discriminator, beta1= 0.5, beta2=0.999)
+    ## 3. ## 构建训练变量和训练操作
+    # 获取所有变量用于优化器更新
+    generator_var = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, scope="Generator")
+    discriminator_var = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, scope="Discriminator")
+    # BN operation in training
+    # BN中的每个batch的均值和方差并不是训练得到的,而是直接计算后更新的; 放在collection — tf.GraphKeys.UPDATE_OPS中, 每轮迭代前需要插入该操作
+    generator_update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS, scope="Generator")
+    with tf.control_dependencies(generator_update_ops):
+        train_generator = optimizer_generator.minimize(generator_loss, var_list=generator_var)
+    discriminator_update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS, scope="Discriminator")
+    with tf.control_dependencies(discriminator_update_ops):
+        train_discriminator = optimizer_discriminator.minimize(discriminator_loss, var_list=discriminator_var)
+    ## 4. ## 初始化全局变量
+    init = tf.global_variables_initializer()
+
+    ## 5. ## 开始训练
+    saver = tf.train.Saver()
+    model_name = "Model/dcgan.ckpt"
+    sess = tf.Session()
+    sess.run(init)
+    # Training
+    for i in range(1, num_steps + 1):
+        # 准备输入数据, 不需要标签
+        batch_x, _ = mnist.train.next_batch(batch_size)
+        batch_x = np.reshape(batch_x, newshape=[-1, 28, 28, 1])
+        # Rescale to [-1, 1] for input of discriminator
+        batch_x = batch_x * 2. - 1.
+
+        # Discriminator Training
+        z = np.random.uniform(-1., 1., size=[batch_size, noise_dim])
+        _, discriminator_learning = sess.run([train_discriminator, discriminator_loss], feed_dict={real_image_input: batch_x, noise_input:z, is_training:True})
+
+        # Generator Training
+        z = np.random.uniform(-1., 1., size=[batch_size, noise_dim])
+        _, generator_learning = sess.run([train_generator, generator_loss], feed_dict={noise_input: z, is_training:True})
+
+        if i % 500 == 0 or i == 1:
+            print("Step %d: Generator Loss: %f, Discriminator Loss: %f" % (i, generator_learning, discriminator_learning))
+            saver.save(sess, model_name)
+
+if __name__ == '__main__':
+    train()
