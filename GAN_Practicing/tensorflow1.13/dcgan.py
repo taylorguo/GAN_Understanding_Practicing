@@ -136,8 +136,16 @@ def predict():
     saver = tf.train.import_meta_graph(model_dir + meta_file)
     graph = tf.get_default_graph()
     tensor_name_list = [tensor.name for tensor in graph.as_graph_def().node]
-    for i in tensor_name_list:
-        print(i)
+    # for i in tensor_name_list:
+    #     print(i)
+
+    # x = graph.get_tensor_by_name()
+    # y = graph.get_tensor_by_name()
+
+
+    with tf.Session() as sess:
+        saver.restore(sess, tf.train.latest_checkpoint(model_dir))
+        print(" *** Model Loaded! ***")
 
     # n = 6
     # canvas = np.empty((28 * n, 28 * n))
