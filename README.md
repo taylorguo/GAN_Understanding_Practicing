@@ -14,7 +14,13 @@
 - [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
 
 
+********
 
+## Dataset
+
+- [Kaggle - CelebA: 200k images with 40 binary attribute](https://www.kaggle.com/jessicali9530/celeba-dataset/data#)
+
+********
 
 ## Reference
 
