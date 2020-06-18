@@ -15,7 +15,7 @@ image_dim = 784
 noise_dim = 100
 
 # build network
-noise_input = tf.placeholder(tf.float32, shape=[None, noise_dim])
+noise_input = tf.placeholder(tf.float32, shape=[None, noise_dim], name="noise_input")
 real_image_input = tf.placeholder(tf.float32, shape=[None, 28, 28, 1])
 # A boolean to indicate BN if training or inference
 is_training = tf.placeholder(tf.bool)
@@ -139,21 +139,23 @@ def predict():
     # for i in tensor_name_list:
     #     print(i)
 
-    # x = graph.get_tensor_by_name()
-    # y = graph.get_tensor_by_name()
+    x = graph.get_tensor_by_name("Placeholder:0")
+    y = graph.get_tensor_by_name()
 
 
     with tf.Session() as sess:
         saver.restore(sess, tf.train.latest_checkpoint(model_dir))
         print(" *** Model Loaded! ***")
 
-    # n = 6
-    # canvas = np.empty((28 * n, 28 * n))
+        gen_sample = generator(noise_input)
 
-    # for i in range(n):
-    #     z = np.random.uniform(-1., 1., size=[n, noise_dim])
+        n = 6
+        canvas = np.empty((28 * n, 28 * n))
 
-    #     g = 
+        for i in range(n):
+            z = np.random.uniform(-1., 1., size=[n, noise_dim])
+
+            g = sess.run(gen_sample, feed_dict={})
 
 if __name__ == '__main__':
     # train()
