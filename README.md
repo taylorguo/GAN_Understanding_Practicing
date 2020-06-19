@@ -11,7 +11,7 @@
   > ![CGAN loss](README/images/dcgan.png) 
 
 #### Implementation 
-- ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
+<!-- - ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb) -->
 
 - <img src="./README/images/pytorch.png" height="15">
 
@@ -21,13 +21,38 @@
 
 - <img src="./README/images/tf2.png" height="15">   [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
 
+
+********
+
+**WGAN**
+
+
+#### Implementation 
+
+- <img src="./README/images/pytorch.png" height="15">
+
+- <img src="./README/images/keras.png" height="15">
+
+- <img src="./README/images/tf1.png" height="15">
+
+- <img src="./README/images/tf2.png" height="15">   
+
+
+
 ********
 
 **InfoGAN**
 
 
+#### Implementation 
 
+- <img src="./README/images/pytorch.png" height="15">
 
+- <img src="./README/images/keras.png" height="15">
+
+- <img src="./README/images/tf1.png" height="15">
+
+- <img src="./README/images/tf2.png" height="15">   
 
 ********
 
