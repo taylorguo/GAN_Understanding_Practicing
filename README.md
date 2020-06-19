@@ -11,8 +11,15 @@
   > ![CGAN loss](README/images/dcgan.png) 
 
 #### Implementation 
-- ![tf1](README/images/tf1.png)[DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
+- ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
 
+- <img src="./images/pytorch.png" height="20">
+
+- <img src="./images/keras.png" height="20">
+
+- <img src="./images/tf2.png" height="20">
+
+- <img src="./images/tf2.png" height="20">
 
 ********
 
