@@ -10,7 +10,7 @@ class Generator:
     
     def __call__(self, z):
         with tf.variable_scope(self.name) as scope:
-            x = tf.layers.dense(z, self.size * self.size * self.channel_list[0], activation=tf.nn.relu())
+            x = tf.layers.dense(z, self.size * self.size * self.channel_list[0], activation=tf.nn.relu)
 
 
 class DCGAN():
