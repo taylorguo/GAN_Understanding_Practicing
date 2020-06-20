@@ -2,7 +2,7 @@
 
 ## GAN Practice
 
-:lemon:  **DCGAN** :date:  - 2015
+:lemon:  **DCGAN**   :date:   2015
 
 #### Loss Function 
 
@@ -36,7 +36,7 @@
 
 ********
 
-:lemon:  **ConditionalGAN** :date:   - 2014
+:lemon:  **ConditionalGAN**   :date:    2014
 
 #### Network 
 
@@ -55,7 +55,7 @@
 ********
 
 
-**WGAN**
+:lemon:  **WassersteinGAN**   :date:    2017
 
 
 #### Implementation 
@@ -72,7 +72,7 @@
 
 ********
 
-**InfoGAN**
+:lemon:  **InfoGAN**   :date:    2016
 
 
 #### Implementation 
