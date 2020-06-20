@@ -7,10 +7,11 @@
 #### Loss Function 
 
 - 【Binary_Cross_Entropy Loss】    
-  > ![Binary CrossEntropy loss](README/images/binary_crossentropy.png) 
+  > ![Binary CrossEntropy loss](<img src="README/images/binary_crossentropy.png", height="20">)
     
 - 【Loss Function】    
-  > ![CGAN loss](README/images/dcgan.png) 
+  <!-- > ![CGAN loss](README/images/dcgan.png)  -->
+  > ![CGAN loss](<img src="README/images/dcgan.png", height="20">) 
 
 
 #### Network 
