@@ -4,11 +4,18 @@
 
 **DCGAN**
 
+#### Loss Function 
+
 - 【Binary_Cross_Entropy Loss】    
   > ![Binary CrossEntropy loss](README/images/binary_crossentropy.png) 
     
 - 【Loss Function】    
   > ![CGAN loss](README/images/dcgan.png) 
+
+
+#### Network 
+
+
 
 #### Implementation 
 <!-- - ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb) -->
@@ -19,13 +26,19 @@
 
 - <img src="./README/images/tf1.png" height="15">
 
-- <img src="./README/images/tf2.png" height="15">   [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
+- <img src="./README/images/tf2.png" height="15">   
+
+
+#### Reference 
+
+- [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
 
 
 ********
 
-**ConditionalGAN**2014
+**ConditionalGAN** - 2014
 
+#### Network 
 
 #### Implementation 
 
