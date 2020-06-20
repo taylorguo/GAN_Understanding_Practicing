@@ -2,7 +2,7 @@
 
 ## GAN Practice
 
-**DCGAN**
+:watermelon: **DCGAN**
 
 #### Loss Function 
 
