@@ -57,13 +57,9 @@
 
 - <img src="./README/images/tf2.png" height="15">   
 
-
-
 ********
 
-
 :lemon:  **WassersteinGAN**   :date:    2017
-
 
 #### Implementation 
 
@@ -74,14 +70,11 @@
 - <img src="./README/images/tf1.png" height="15">
 
 - <img src="./README/images/tf2.png" height="15">   
-
-
 
 ********
 
 :lemon:  **InfoGAN**   :date:    2016
 
-
 #### Implementation 
 
 - <img src="./README/images/pytorch.png" height="15">
@@ -93,7 +86,6 @@
 - <img src="./README/images/tf2.png" height="15">   
 
 ********
-
 
 ## Dataset
 
