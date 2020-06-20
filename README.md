@@ -2,7 +2,7 @@
 
 ## GAN Practice
 
-:lemon: **DCGAN**
+:lemon:  **DCGAN** :date:  - 2015
 
 #### Loss Function 
 
@@ -36,7 +36,7 @@
 
 ********
 
-**ConditionalGAN** - 2014
+:lemon:  **ConditionalGAN** :date:   - 2014
 
 #### Network 
 
