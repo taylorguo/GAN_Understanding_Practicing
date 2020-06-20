@@ -2,6 +2,8 @@
 
 ## GAN Practice
 
+:shipit: :sparkles: :+1: :clap:
+
 ********
 
 :lemon:  **DCGAN**   :date:   2015
