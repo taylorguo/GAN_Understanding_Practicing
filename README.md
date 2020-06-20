@@ -2,6 +2,8 @@
 
 ## GAN Practice
 
+********
+
 :lemon:  **DCGAN**   :date:   2015
 
 #### Loss Function 
