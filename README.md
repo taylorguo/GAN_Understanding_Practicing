@@ -2,7 +2,7 @@
 
 ## [GAN Understand](./GAN_Understanding/README.md)
 
-### GAN Principle 
+********
 
 ## GAN Practice
 
