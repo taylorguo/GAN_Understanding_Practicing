@@ -15,7 +15,7 @@
       Typically, we have summary statistics (mean & covariance matrix) of one of these distributions, 
       while the 2nd distribution is given by a GAN.
 
-      <img src="../README/images/fid_formula.png" height="15">  
+   <img src="../README/images/fid_formula.png" height="15">  
 
 
 - [1982 - The Fréchet Distance between Multivariate Normal Distributions](https://core.ac.uk/download/pdf/82269844.pdf)
