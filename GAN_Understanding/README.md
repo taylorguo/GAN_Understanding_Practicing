@@ -41,25 +41,23 @@
 
       计算均值的时候是否包含零填充, PyTorch默认 count_include_pad=True, 这里计算FID要设置为False
 
-            """
-            Build pretrained Inception model for FID computation
-            The Inception model for FID computation uses a different set of weights
-            and has a slightly different structure than torchvision's Inception.
-            This method first constructs torchvision's Inception and then patches the
-            necessary parts that are different in the FID Inception model.
-            """
-            inception = _inception_v3(num_classes=1008,
-                                          aux_logits=False,
-                                          pretrained=False)
-            inception.Mixed_5b = FIDInceptionA(192, pool_features=32)
-            inception.Mixed_5c = FIDInceptionA(256, pool_features=64)
-            inception.Mixed_5d = FIDInceptionA(288, pool_features=64)
-            inception.Mixed_6b = FIDInceptionC(768, channels_7x7=128)
-            inception.Mixed_6c = FIDInceptionC(768, channels_7x7=160)
-            inception.Mixed_6d = FIDInceptionC(768, channels_7x7=160)
-            inception.Mixed_6e = FIDInceptionC(768, channels_7x7=192)
-            inception.Mixed_7b = FIDInceptionE_1(1280)
-            inception.Mixed_7c = FIDInceptionE_2(2048)
+      """
+      Build pretrained Inception model for FID computation
+      The Inception model for FID computation uses a different set of weights
+      and has a slightly different structure than torchvision's Inception.
+      This method first constructs torchvision's Inception and then patches the
+      necessary parts that are different in the FID Inception model.
+      """
+      inception = _inception_v3(num_classes=1008, aux_logits=False, pretrained=False)
+      inception.Mixed_5b = FIDInceptionA(192, pool_features=32)
+      inception.Mixed_5c = FIDInceptionA(256, pool_features=64)
+      inception.Mixed_5d = FIDInceptionA(288, pool_features=64)
+      inception.Mixed_6b = FIDInceptionC(768, channels_7x7=128)
+      inception.Mixed_6c = FIDInceptionC(768, channels_7x7=160)
+      inception.Mixed_6d = FIDInceptionC(768, channels_7x7=160)
+      inception.Mixed_6e = FIDInceptionC(768, channels_7x7=192)
+      inception.Mixed_7b = FIDInceptionE_1(1280)
+      inception.Mixed_7c = FIDInceptionE_2(2048)
 
 - <img src="../README/images/keras.png" height="15">
 
