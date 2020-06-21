@@ -1,5 +1,9 @@
 # GAN_Understanding_Practicing
 
+## [GAN Understand](./GAN_Understanding/README.md)
+
+### GAN Principle 
+
 ## GAN Practice
 
 :shipit: :sparkles: :+1: :clap:
