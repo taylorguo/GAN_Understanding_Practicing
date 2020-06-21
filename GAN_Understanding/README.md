@@ -33,7 +33,7 @@
 
 #### Network 
 
-   <img src="../README/images/fidcalc.png" height="15"> 
+   <img src="../README/images/fidcalc.png"> 
 
 #### Implementation 
 
