@@ -87,6 +87,11 @@
 
 ********
 
+:lemon:  **Self-Attention GAN**   :date:    2016
+
+
+
+
 ## Dataset
 
 - [Kaggle - CelebA: 200k images with 40 binary attribute](https://www.kaggle.com/jessicali9530/celeba-dataset/data#)
