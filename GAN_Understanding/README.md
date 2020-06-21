@@ -15,20 +15,21 @@
       Typically, we have summary statistics (mean & covariance matrix) of one of these distributions, 
       while the 2nd distribution is given by a GAN.
 
-      ```
       FID between two multivariate Gaussians:
       X_1 ~ N(m, C) 
       X_2 ~ N(mw, Cw)
-      ```
 
    <img src="../README/images/fid.png">  
 
+      FID computing, propagate images through the pretrained Inception-v3 model, using the last pooling layers to calculate the mean mw and the covariance matrix Cw.
 
 - [1982 - The Fréchet Distance between Multivariate Normal Distributions](https://core.ac.uk/download/pdf/82269844.pdf)
 
    Proof FID calculate Distributions
     
    <img src="../README/images/fid_formula.png" height="15"> 
+
+- [2017-(J)- Learning from uncertain curves: The 2-Wasserstein metric for Gaussian processes](https://papers.nips.cc/paper/7149-learning-from-uncertain-curves-the-2-wasserstein-metric-for-gaussian-processes.pdf)
 
 #### Network 
 
@@ -50,6 +51,11 @@
 
 - [FID TensorFlow 1.x Official](https://github.com/bioinf-jku/TTUR)
 - [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
+
+      计算均值的时候是否包含零填充, PyTorch默认 count_include_pad=True, 这里计算FID要设置为False
+
+
+
 
 ********
 
