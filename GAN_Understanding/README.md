@@ -10,7 +10,6 @@
 
 - [2017 - GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium](https://arxiv.org/pdf/1706.08500)
 
-
       The FID metric calculates the distance between two distributions of images.
       Typically, we have summary statistics (mean & covariance matrix) of one of these distributions, 
       while the 2nd distribution is given by a GAN.
@@ -21,7 +20,8 @@
 
    <img src="../README/images/fid.png">  
 
-      FID computing, propagate images through the pretrained Inception-v3 model, using the last pooling layers to calculate the mean mw and the covariance matrix Cw.
+      FID computing, propagate images through the pretrained Inception-v3 model, 
+      using the last pooling layers to calculate the mean mw and the covariance matrix Cw.
 
 - [1982 - The Fréchet Distance between Multivariate Normal Distributions](https://core.ac.uk/download/pdf/82269844.pdf)
 
