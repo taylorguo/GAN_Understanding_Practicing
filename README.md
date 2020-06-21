@@ -26,7 +26,7 @@
 
 #### Network 
 
-
+   <img src="./README/images/dcganfull.png">
 
 #### Implementation 
 <!-- - ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb) -->
