@@ -12,7 +12,7 @@
 
 - 【Binary_Cross_Entropy Loss】    
   
-   <img src="./README/images/binary_crossentropy.png" height="50">
+   <img src="../README/images/binary_crossentropy.png" height="50">
     
 - 【Loss Function】    
   <!-- > ![CGAN loss](README/images/dcgan.png)  -->
