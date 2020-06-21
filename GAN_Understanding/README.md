@@ -1,23 +1,24 @@
 # GAN_Understand
 
-## GAN Practice
-
 :shipit: :sparkles: :+1: :clap:
 
 ********
 
-:lemon:  **DCGAN**   :date:   2015
+:watermelon:  **Fréchet Inception Distance (FID score)**   :date:   2017
 
-#### Loss Function 
+#### Paper
 
-- 【Binary_Cross_Entropy Loss】    
-  
-   <img src="../README/images/binary_crossentropy.png" height="50">
-    
-- 【Loss Function】    
-  <!-- > ![CGAN loss](README/images/dcgan.png)  -->
+- [2017 - GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium](https://arxiv.org/pdf/1706.08500)
 
-   <img src="./README/images/dcgan.png" height="25">
+The FID metric calculates the distance between two distributions of images.
+Typically, we have summary statistics (mean & covariance matrix) of one
+of these distributions, while the 2nd distribution is given by a GAN.
+
+
+
+- [1982 - The Fréchet Distance between Multivariate Normal Distributions](https://core.ac.uk/download/pdf/82269844.pdf)
+
+
 
 
 #### Network 
@@ -27,19 +28,19 @@
 #### Implementation 
 <!-- - ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb) -->
 
-- <img src="./README/images/pytorch.png" height="15">
+- <img src="../README/images/pytorch.png" height="15">  
 
-- <img src="./README/images/keras.png" height="15">
+- <img src="../README/images/keras.png" height="15">
 
-- <img src="./README/images/tf1.png" height="15">
+- <img src="../README/images/tf1.png" height="15">
 
-- <img src="./README/images/tf2.png" height="15">   
+- <img src="../README/images/tf2.png" height="15">   
 
 
 #### Reference 
 
-- [DCGAN TensorFlow2.x Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
-- [DCGAN PyTorch](https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN)
+- [FID TensorFlow 1.x Official](https://github.com/bioinf-jku/TTUR)
+- [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
 
 ********
 
