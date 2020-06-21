@@ -119,7 +119,7 @@
 
 ********
 
-:lemon:  **Progressive Growing GAN**   :date:    2018
+:lemon:  **Progressive Growing GAN**   :date:    2017
 
 
 
