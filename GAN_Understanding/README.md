@@ -1,0 +1,104 @@
+# GAN_Understand
+
+## GAN Practice
+
+:shipit: :sparkles: :+1: :clap:
+
+********
+
+:lemon:  **DCGAN**   :date:   2015
+
+#### Loss Function 
+
+- 【Binary_Cross_Entropy Loss】    
+  
+   <img src="./README/images/binary_crossentropy.png" height="50">
+    
+- 【Loss Function】    
+  <!-- > ![CGAN loss](README/images/dcgan.png)  -->
+
+   <img src="./README/images/dcgan.png" height="25">
+
+
+#### Network 
+
+
+
+#### Implementation 
+<!-- - ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb) -->
+
+- <img src="./README/images/pytorch.png" height="15">
+
+- <img src="./README/images/keras.png" height="15">
+
+- <img src="./README/images/tf1.png" height="15">
+
+- <img src="./README/images/tf2.png" height="15">   
+
+
+#### Reference 
+
+- [DCGAN TensorFlow2.x Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
+- [DCGAN PyTorch](https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN)
+
+********
+
+:lemon:  **ConditionalGAN**   :date:    2014
+
+#### Network 
+
+#### Implementation 
+
+- <img src="./README/images/pytorch.png" height="15">
+
+- <img src="./README/images/keras.png" height="15">
+
+- <img src="./README/images/tf1.png" height="15">
+
+- <img src="./README/images/tf2.png" height="15">   
+
+********
+
+:lemon:  **WassersteinGAN**   :date:    2017
+
+#### Implementation 
+
+- <img src="./README/images/pytorch.png" height="15">
+
+- <img src="./README/images/keras.png" height="15">
+
+- <img src="./README/images/tf1.png" height="15">
+
+- <img src="./README/images/tf2.png" height="15">   
+
+********
+
+:lemon:  **InfoGAN**   :date:    2016
+
+#### Implementation 
+
+- <img src="./README/images/pytorch.png" height="15">
+
+- <img src="./README/images/keras.png" height="15">
+
+- <img src="./README/images/tf1.png" height="15">
+
+- <img src="./README/images/tf2.png" height="15">   
+
+********
+
+## Dataset
+
+- [Kaggle - CelebA: 200k images with 40 binary attribute](https://www.kaggle.com/jessicali9530/celeba-dataset/data#)
+
+********
+
+## Reference
+
+- [2019 - Generative Adversarial Networks in Computer Vision: A Survey and Taxonomy](https://arxiv.org/pdf/1906.01529.pdf)
+
+- [Generative model](https://en.wikipedia.org/wiki/Generative_model)
+
+- [Lecture 13: Generative Models](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)
+
+- [Ian Goodfellow GANs PPT @ NIPS 2016](http://www.iangoodfellow.com/slides/2016-12-04-NIPS.pdf)
