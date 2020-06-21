@@ -31,13 +31,13 @@
 #### Implementation 
 <!-- - ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb) -->
 
-- <img src="./README/images/pytorch.png" height="15">
+- <img src="./README/images/pytorch.png" height="13">
 
-- <img src="./README/images/keras.png" height="15">
+- <img src="./README/images/keras.png" height="13">
 
-- <img src="./README/images/tf1.png" height="15">
+- <img src="./README/images/tf1.png" height="13">
 
-- <img src="./README/images/tf2.png" height="15">   
+- <img src="./README/images/tf2.png" height="13">   
 
 
 #### Reference 
@@ -47,19 +47,33 @@
 
 ********
 
-:lemon:  **ConditionalGAN**   :date:    2014
+:lemon:  [**ConditionalGAN**](https://arxiv.org/pdf/1411.1784.pdf)   :date:    2014
+
+- Log-Likelihood Estimates 对数最大似然估计
+- Conditioning the model to direct the data generation process possibly 模型增加条件控制控制数据生成过程; conditioning based on class labels 条件控制是数据类别标签
+- Probabilistic one-to-many mapping is instantiated as a conditional predictive distribution, the input is taken to be conditioning variable 输入条件变量可以实现一对多的条件生成分布,从而生成样本
+
+#### Loss Function
+- 【Loss Function】    
+  
+   <img src="./README/images/cganloss.png" height="13">
 
 #### Network 
 
 #### Implementation 
 
-- <img src="./README/images/pytorch.png" height="15">
+- <img src="./README/images/pytorch.png" height="13">
 
-- <img src="./README/images/keras.png" height="15">
+- <img src="./README/images/keras.png" height="13">
 
-- <img src="./README/images/tf1.png" height="15">
+- <img src="./README/images/tf1.png" height="13">
 
-- <img src="./README/images/tf2.png" height="15">   
+- <img src="./README/images/tf2.png" height="13">   
+
+#### Reference 
+
+- [cGAN Keras: How to Develop a Conditional GAN (cGAN) From Scratch](https://machinelearningmastery.com/how-to-develop-a-conditional-generative-adversarial-network-from-scratch/)
+- [cDCGAN Keras](https://github.com/gaborvecsei/CDCGAN-Keras)
 
 ********
 
