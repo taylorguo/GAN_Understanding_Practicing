@@ -10,7 +10,7 @@
 
 ********
 
-:lemon:  **DCGAN**   :date:   2015
+:lemon:  [**DCGAN**](https://arxiv.org/pdf/1511.06434.pdf)   :date:   2015
 
 #### Loss Function 
 
