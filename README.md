@@ -56,7 +56,7 @@
 #### Loss Function
 - 【Loss Function】    
   
-   <img src="./README/images/cganloss.png" height="15">
+   <img src="./README/images/cganloss.png" height="16">
 
 #### Network 
 
