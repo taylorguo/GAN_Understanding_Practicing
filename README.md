@@ -176,14 +176,25 @@ _________________________________________________________________
 
 - <img src="./README/images/tf2.png" height="15">   
 
+
+
 ********
 
-:lemon:  **Self-Attention GAN**   :date:    2016
+:lemon:  [**Image Transformer**](https://arxiv.org/pdf/1802.05751v3.pdf)   :date:    2018
+
+
+
+********
+
+:lemon:  [**Self-Attention GAN**](https://arxiv.org/pdf/1805.08318.pdf)   :date:    2018
 
 
 
 #### Network 
 
+- Self-Attention Module: modeling long-range dependencies
+- Spectral Normalization in Generator: stabilize GAN training
+- TTUR: Speed-up training of regularized discriminator
 
 
 #### Implementation 
