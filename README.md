@@ -8,6 +8,9 @@
 
 :shipit: :sparkles: :+1: :clap:
 
+********
+
+:lemon:  [**GAN**](https://arxiv.org/pdf/1406.2661.pdf)   :date:   2015
 
 #### Network
 
