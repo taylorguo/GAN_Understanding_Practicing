@@ -223,9 +223,9 @@ _________________________________________________________________
    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
    - Initialize  <img src="https://latex.codecogs.com/gif.latex?\tilde{u}_{l}\in&space;R^{d_{l}}" title="\tilde{u}_{l}\in R^{d_{l}}">  for l = 1, ..., L with a random vector (sampled from isotropic distribution).
    - For each update & each layer l: 
-      1. Apply power iteration method to a unnormalized weight <img src="https://www.codecogs.com/eqnedit.php?latex=W^{l}">:
+      1. Apply power iteration method to a unnormalized weight <img src="https://latex.codecogs.com/gif.latex?W^{l}">:
 
-         <img src="https://www.codecogs.com/eqnedit.php?latex=\tilde{\upsilon}&space;_{l}&space;\leftarrow&space;(W^{l})^{T}&space;\tilde{u}_{l}&space;/&space;\parallel&space;(W^{l})^{T}&space;\tilde{u}_{l}&space;\parallel&space;_{2}">
+         <img src="https://latex.codecogs.com/gif.latex?\tilde{\upsilon}&space;_{l}&space;\leftarrow&space;(W^{l})^{T}&space;\tilde{u}_{l}&space;/&space;\parallel&space;(W^{l})^{T}&space;\tilde{u}_{l}&space;\parallel&space;_{2}">
 
          <img src="https://latex.codecogs.com/gif.latex?\tilde{u}&space;_{l}&space;\leftarrow&space;W^{l}&space;\tilde{\upsilon}_{l}&space;/&space;\parallel&space;W^{l}&space;\tilde{\upsilon}_{l}&space;\parallel&space;_{2}">
 
