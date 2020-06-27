@@ -218,6 +218,19 @@ _________________________________________________________________
 :lemon:  [**SN-GAN**](https://arxiv.org/pdf/1802.05751v3.pdf)   :date:    2018
 
 
+   _________________________________________________________________
+   Algorithm: SGD with Spectral Normalization
+   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   - Initialize <img src="https://latex.codecogs.com/gif.latex?\tilde{u}_{l}\in&space;R^{d_{l}}" title="\tilde{u}_{l}\in R^{d_{l}}">
+   - For each update & each layer l: 
+   
+
+
+#### Reference 
+
+- [2017 - Spectral Norm Regularization for Improving the Generalizability of Deep Learning](https://arxiv.org/pdf/1705.10941.pdf)
+
+- [2018 - 【Blog】 - Spectral Normalization Explained](https://christiancosgrove.com/blog/2018/01/04/spectral-normalization-explained.html)
 
 ********
 

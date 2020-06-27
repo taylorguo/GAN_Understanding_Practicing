@@ -94,6 +94,13 @@
 
 - [2017 - Improved Training of Wasserstein GANs](https://arxiv.org/pdf/1704.00028.pdf)
 
+
+- [2017 - 【Blog】 - Wasserstein GAN and the Kantorovich-Rubinstein Duality](https://vincentherrmann.github.io/blog/wasserstein/) 
+
+      
+
+- [2019 - 【Blog】 - 从Wasserstein距离、对偶理论到WGAN](https://spaces.ac.cn/archives/6280)
+
 #### Network 
 
    <img src="../README/images/fidcalc.png"> 
