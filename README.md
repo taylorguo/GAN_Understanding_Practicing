@@ -217,8 +217,8 @@ _________________________________________________________________
 ********
 :lemon:  [**SN-GAN**](https://arxiv.org/pdf/1802.05751v3.pdf)   :date:    2018
 
-**Algorithm: SGD with Spectral Normalization**
-   <img src="./README/images/sn_algorithm.png">
+   **Algorithm: SGD with Spectral Normalization**
+      <img src="./README/images/sn_algorithm.png">
          
 
 
