@@ -217,27 +217,12 @@ _________________________________________________________________
 ********
 :lemon:  [**SN-GAN**](https://arxiv.org/pdf/1802.05751v3.pdf)   :date:    2018
 
-
+```
    _________________________________________________________________
    Algorithm: SGD with Spectral Normalization
    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-   - Initialize  <img src="https://latex.codecogs.com/gif.latex?\tilde{u}_{l}\in&space;R^{d_{l}}" title="\tilde{u}_{l}\in R^{d_{l}}">,   for l = 1, ..., L with a random vector (sampled from isotropic distribution).
-   - For each update & each layer l: 
-      
-      ❶ Apply power iteration method to a unnormalized weight <img src="https://latex.codecogs.com/gif.latex?W^{l}">:
-
-         <img src="https://latex.codecogs.com/gif.latex?\tilde{\upsilon}&space;_{l}&space;\leftarrow&space;(W^{l})^{T}&space;\tilde{u}_{l}&space;/&space;\parallel&space;(W^{l})^{T}&space;\tilde{u}_{l}&space;\parallel&space;_{2}">
-
-         <img src="https://latex.codecogs.com/gif.latex?\tilde{u}&space;_{l}&space;\leftarrow&space;W^{l}&space;\tilde{\upsilon}_{l}&space;/&space;\parallel&space;W^{l}&space;\tilde{\upsilon}_{l}&space;\parallel&space;_{2}">
-
-      ❷ Calculate <img src="https://latex.codecogs.com/gif.latex?\bar{W}_{SN}(W^{l})" title="\bar{W}_{SN}(W^{l})"> with the spectral normalization:
-
-         <img src="https://latex.codecogs.com/gif.latex?\bar{W}_{SN}(W^{l})&space;=&space;W^{l}&space;/&space;\sigma&space;(W^{l});&space;where,&space;\sigma&space;(W^{l})&space;=&space;{\tilde{u}_{l}}^{T}W^{l}\tilde{\upsilon&space;}_{l}" title="\bar{W}_{SN}(W^{l})"> 
-
-      ❸ Update <img src="https://latex.codecogs.com/gif.latex?W^{l}"> with SGD on mini-batch dataset <img src="https://latex.codecogs.com/gif.latex?D_{M}"> with a learning rate α:
-
-         <img src="https://latex.codecogs.com/gif.latex?W^{l}&space;\leftarrow&space;W^{l}&space;-&space;\alpha&space;{\bigtriangledown}_{W^{l}}&space;l&space;(\bar{W}_{SN}^{l}(W^{l}),D_{M})" title="W^{l} \leftarrow W^{l} - \alpha {\bigtriangledown}_{W^{l}} l (\bar{W}_{SN}^{l}(W^{l}),D_{M})">
-      
+```
+   <img src="./README/images/sn_algorithm.png">
          
 
 
