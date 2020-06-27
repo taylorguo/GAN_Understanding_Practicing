@@ -187,7 +187,7 @@ _________________________________________________________________
 
 ********
 
-:lemon:  **WassersteinGAN**   :date:    2017
+:lemon:  [**WassersteinGAN**](https://arxiv.org/pdf/1701.07875.pdf)   :date:    2017
 
 #### Implementation 
 
@@ -201,7 +201,7 @@ _________________________________________________________________
 
 ********
 
-:lemon:  **InfoGAN**   :date:    2016
+:lemon:  [**InfoGAN**](https://arxiv.org/pdf/1606.03657.pdf)   :date:    2016
 
 #### Implementation 
 
@@ -214,8 +214,13 @@ _________________________________________________________________
 - <img src="./README/images/tf2.png" height="15">   
 
 
+********
+:lemon:  [**SN-GAN**](https://arxiv.org/pdf/1802.05751v3.pdf)   :date:    2018
+
+
 
 ********
+
 
 :lemon:  [**Image Transformer**](https://arxiv.org/pdf/1802.05751v3.pdf)   :date:    2018
 
@@ -254,7 +259,7 @@ _________________________________________________________________
 
 ********
 
-:lemon:  **Progressive Growing GAN**   :date:    2017
+:lemon:  [**Progressive Growing GAN**](https://arxiv.org/pdf/1710.10196.pdf)   :date:    2017
 
 
 
@@ -278,6 +283,36 @@ _________________________________________________________________
 
 - [DCGAN TensorFlow2.x Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
 - [DCGAN PyTorch](https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN)
+
+
+********
+
+:lemon:  [**BigGAN**](https://arxiv.org/pdf/1809.11096.pdf)   :date:    2018
+
+
+
+#### Network 
+
+
+
+#### Implementation 
+<!-- - ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb) -->
+
+- <img src="./README/images/pytorch.png" height="15">
+
+- <img src="./README/images/keras.png" height="15">
+
+- <img src="./README/images/tf1.png" height="15">
+
+- <img src="./README/images/tf2.png" height="15">   
+
+
+#### Reference 
+
+- [DCGAN TensorFlow2.x Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
+- [DCGAN PyTorch](https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN)
+
+********
 
 ## Dataset
 
