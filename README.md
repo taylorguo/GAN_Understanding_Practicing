@@ -226,17 +226,17 @@ _________________________________________________________________
       
       ❶ Apply power iteration method to a unnormalized weight <img src="https://latex.codecogs.com/gif.latex?W^{l}">:
 
-      <img src="https://latex.codecogs.com/gif.latex?\tilde{\upsilon}&space;_{l}&space;\leftarrow&space;(W^{l})^{T}&space;\tilde{u}_{l}&space;/&space;\parallel&space;(W^{l})^{T}&space;\tilde{u}_{l}&space;\parallel&space;_{2}">
+         <img src="https://latex.codecogs.com/gif.latex?\tilde{\upsilon}&space;_{l}&space;\leftarrow&space;(W^{l})^{T}&space;\tilde{u}_{l}&space;/&space;\parallel&space;(W^{l})^{T}&space;\tilde{u}_{l}&space;\parallel&space;_{2}">
 
-      <img src="https://latex.codecogs.com/gif.latex?\tilde{u}&space;_{l}&space;\leftarrow&space;W^{l}&space;\tilde{\upsilon}_{l}&space;/&space;\parallel&space;W^{l}&space;\tilde{\upsilon}_{l}&space;\parallel&space;_{2}">
+         <img src="https://latex.codecogs.com/gif.latex?\tilde{u}&space;_{l}&space;\leftarrow&space;W^{l}&space;\tilde{\upsilon}_{l}&space;/&space;\parallel&space;W^{l}&space;\tilde{\upsilon}_{l}&space;\parallel&space;_{2}">
 
       ❷ Calculate <img src="https://latex.codecogs.com/gif.latex?\bar{W}_{SN}(W^{l})" title="\bar{W}_{SN}(W^{l})"> with the spectral normalization:
 
-      <img src="https://latex.codecogs.com/gif.latex?\bar{W}_{SN}(W^{l})&space;=&space;W^{l}&space;/&space;\sigma&space;(W^{l});&space;where,&space;\sigma&space;(W^{l})&space;=&space;{\tilde{u}_{l}}^{T}W^{l}\tilde{\upsilon&space;}_{l}" title="\bar{W}_{SN}(W^{l})"> 
+         <img src="https://latex.codecogs.com/gif.latex?\bar{W}_{SN}(W^{l})&space;=&space;W^{l}&space;/&space;\sigma&space;(W^{l});&space;where,&space;\sigma&space;(W^{l})&space;=&space;{\tilde{u}_{l}}^{T}W^{l}\tilde{\upsilon&space;}_{l}" title="\bar{W}_{SN}(W^{l})"> 
 
       ❸ Update <img src="https://latex.codecogs.com/gif.latex?W^{l}"> with SGD on mini-batch dataset <img src="https://latex.codecogs.com/gif.latex?D_{M}"> with a learning rate α:
 
-      <img src="https://latex.codecogs.com/gif.latex?W^{l}&space;\leftarrow&space;W^{l}&space;-&space;\alpha&space;{\bigtriangledown}_{W^{l}}&space;l&space;(\bar{W}_{SN}^{l}(W^{l}),D_{M})" title="W^{l} \leftarrow W^{l} - \alpha {\bigtriangledown}_{W^{l}} l (\bar{W}_{SN}^{l}(W^{l}),D_{M})">
+         <img src="https://latex.codecogs.com/gif.latex?W^{l}&space;\leftarrow&space;W^{l}&space;-&space;\alpha&space;{\bigtriangledown}_{W^{l}}&space;l&space;(\bar{W}_{SN}^{l}(W^{l}),D_{M})" title="W^{l} \leftarrow W^{l} - \alpha {\bigtriangledown}_{W^{l}} l (\bar{W}_{SN}^{l}(W^{l}),D_{M})">
       
          
 
