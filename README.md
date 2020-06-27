@@ -221,8 +221,9 @@ _________________________________________________________________
    _________________________________________________________________
    Algorithm: SGD with Spectral Normalization
    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-   - Initialize  <img src="https://latex.codecogs.com/gif.latex?\tilde{u}_{l}\in&space;R^{d_{l}}" title="\tilde{u}_{l}\in R^{d_{l}}">  for l = 1, ..., L with a random vector (sampled from isotropic distribution).
+   - Initialize  <img src="https://latex.codecogs.com/gif.latex?\tilde{u}_{l}\in&space;R^{d_{l}}" title="\tilde{u}_{l}\in R^{d_{l}}">,   for l = 1, ..., L with a random vector (sampled from isotropic distribution).
    - For each update & each layer l: 
+      ```
       1. Apply power iteration method to a unnormalized weight <img src="https://latex.codecogs.com/gif.latex?W^{l}">:
 
          <img src="https://latex.codecogs.com/gif.latex?\tilde{\upsilon}&space;_{l}&space;\leftarrow&space;(W^{l})^{T}&space;\tilde{u}_{l}&space;/&space;\parallel&space;(W^{l})^{T}&space;\tilde{u}_{l}&space;\parallel&space;_{2}">
@@ -236,7 +237,7 @@ _________________________________________________________________
       3. Update <img src="https://latex.codecogs.com/gif.latex?W^{l}"> with SGD on mini-batch dataset <img src="https://latex.codecogs.com/gif.latex?D_{M}"> with a learning rate α:
 
          <img src="https://latex.codecogs.com/gif.latex?W^{l}&space;\leftarrow&space;W^{l}&space;-&space;\alpha&space;{\bigtriangledown}_{W^{l}}&space;l&space;(\bar{W}_{SN}^{l}(W^{l}),D_{M})" title="W^{l} \leftarrow W^{l} - \alpha {\bigtriangledown}_{W^{l}} l (\bar{W}_{SN}^{l}(W^{l}),D_{M})">
-
+      ```
          
 
 
