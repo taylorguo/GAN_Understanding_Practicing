@@ -120,6 +120,43 @@ _________________________________________________________________
 
 ********
 
+:lemon:  [**LAPGAN**](https://arxiv.org/pdf/1506.05751.pdf)   :date:   2015
+
+#### Loss Function 
+
+- 【Binary_Cross_Entropy Loss】    
+  
+   <img src="./README/images/binary_crossentropy.png" height="50">
+    
+- 【Loss Function】    
+  <!-- > ![CGAN loss](README/images/dcgan.png)  -->
+
+   <img src="./README/images/dcgan.png" height="25">
+
+
+#### Network 
+
+   <img src="./README/images/dcganfull.png">
+
+#### Implementation 
+<!-- - ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb) -->
+
+- <img src="./README/images/pytorch.png" height="13">
+
+- <img src="./README/images/keras.png" height="13">
+
+- <img src="./README/images/tf1.png" height="13">
+
+- <img src="./README/images/tf2.png" height="13">   
+
+
+#### Reference 
+
+- [LAPGAN TensorFlow](https://github.com/jimfleming/LAPGAN)
+- [LAPGAN PyTorch](https://github.com/AaronYALai/Generative_Adversarial_Networks_PyTorch/tree/master/LAPGAN)
+
+********
+
 :lemon:  [**ConditionalGAN**](https://arxiv.org/pdf/1411.1784.pdf)   :date:    2014
 
 - Log-Likelihood Estimates 对数最大似然估计
