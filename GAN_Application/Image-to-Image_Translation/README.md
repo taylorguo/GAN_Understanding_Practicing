@@ -15,12 +15,8 @@
 
       Combine the advantages of AdaIN and LN by selectively keeping or changing the content information
 
-      
+      <img src="../../README/images/adalin_formulation.png" height="60">  
 
-   <img src="../../README/images/adalin_formulation.png" height="60">  
-
-      FID computing, propagate images through the pretrained Inception-v3 model, 
-      using the last pooling layers to calculate the mean mw and the covariance matrix Cw.
 
 - [1982 - The Fréchet Distance between Multivariate Normal Distributions](https://core.ac.uk/download/pdf/82269844.pdf)
 
