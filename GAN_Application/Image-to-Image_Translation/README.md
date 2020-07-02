@@ -14,6 +14,7 @@
    - Adaptive Layer-Instance Normalization (AdaLIN)
 
       Combine the advantages of AdaIN and LN by selectively keeping or changing the content information
+      选择或改变特定内容信息,融合了AdaIN和LN的优势
 
       <img src="../../README/images/adalin_formulation.png" height="60">  
 
@@ -62,7 +63,7 @@
 
 ********
 
-:watermelon:  **Wasserstein GAN (FID score)**   :date:   2017
+:strawberry:  **Wasserstein GAN (FID score)**   :date:   2016
 
 #### Paper
 
