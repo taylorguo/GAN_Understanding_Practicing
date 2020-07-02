@@ -21,7 +21,7 @@
       X_1 ~ N(m, C) 
       X_2 ~ N(mw, Cw)
 
-   <img src="../../README/images/adalin_formulation.png">  
+   <img src="../../README/images/adalin_formulation.png" height="30">  
 
       FID computing, propagate images through the pretrained Inception-v3 model, 
       using the last pooling layers to calculate the mean mw and the covariance matrix Cw.
