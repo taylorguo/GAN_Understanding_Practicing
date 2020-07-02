@@ -9,15 +9,13 @@
 
 :strawberry:  [**U-GAN-IT**](https://arxiv.org/pdf/1907.10830.pdf)   :date:   2019.07v1
 
-#### Paper
+#### Loss Function 
 
-      Adaptive Layer-Instance Normalization (AdaLIN)
+   - Adaptive Layer-Instance Normalization (AdaLIN)
 
       Combine the advantages of AdaIN and LN by selectively keeping or changing the content information
 
-      FID between two multivariate Gaussians:
-      X_1 ~ N(m, C) 
-      X_2 ~ N(mw, Cw)
+      
 
    <img src="../../README/images/adalin_formulation.png" height="60">  
 
