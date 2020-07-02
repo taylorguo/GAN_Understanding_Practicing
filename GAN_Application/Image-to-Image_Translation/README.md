@@ -7,11 +7,9 @@
 
 ********
 
-:strawberry:  [**U-GAN-IT**]   :date:   2019.07v1
+:strawberry:  [**U-GAN-IT**](https://arxiv.org/pdf/1907.10830.pdf)   :date:   2019.07v1
 
 #### Paper
-
-- [2019 - U-GAT-IT: Unsupervised Generative Attentional Networks with Adaptive Layer-Instance Normalization for Image-to-Image Translation](https://arxiv.org/pdf/1907.10830.pdf)
 
       Adaptive Layer-Instance Normalization (AdaLIN)
 
@@ -21,7 +19,7 @@
       X_1 ~ N(m, C) 
       X_2 ~ N(mw, Cw)
 
-   <img src="../../README/images/adalin_formulation.png" height="30">  
+   <img src="../../README/images/adalin_formulation.png" height="60">  
 
       FID computing, propagate images through the pretrained Inception-v3 model, 
       using the last pooling layers to calculate the mean mw and the covariance matrix Cw.
