@@ -4,7 +4,7 @@
 
 ********
 
-:watermelon:  **Fréchet Inception Distance (FID score)**   :date:   2017
+:watermelon:  **Fréchet Inception Distance (FID score)**   :date:   2017.06
 
 #### Paper
 

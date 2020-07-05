@@ -10,7 +10,7 @@
 
 ********
 
-:lemon:  [**GAN**](https://arxiv.org/pdf/1406.2661.pdf)   :date:   2015
+:lemon:  [**GAN**](https://arxiv.org/pdf/1406.2661.pdf)   :date:   2014.06
 
 #### Network
 
@@ -83,7 +83,7 @@ _________________________________________________________________
 
 ********
 
-:lemon:  [**DCGAN**](https://arxiv.org/pdf/1511.06434.pdf)   :date:   2015
+:lemon:  [**DCGAN**](https://arxiv.org/pdf/1511.06434.pdf)   :date:   2015.11
 
 #### Loss Function 
 
@@ -120,7 +120,7 @@ _________________________________________________________________
 
 ********
 
-:lemon:  [**LAPGAN**](https://arxiv.org/pdf/1506.05751.pdf)   :date:   2015
+:lemon:  [**LAPGAN**](https://arxiv.org/pdf/1506.05751.pdf)   :date:   2015.06
 
 #### Loss Function 
 
@@ -157,7 +157,7 @@ _________________________________________________________________
 
 ********
 
-:lemon:  [**ConditionalGAN**](https://arxiv.org/pdf/1411.1784.pdf)   :date:    2014
+:lemon:  [**ConditionalGAN**](https://arxiv.org/pdf/1411.1784.pdf)   :date:    2014.11
 
 - Log-Likelihood Estimates 对数最大似然估计
 - Conditioning the model to direct the data generation process possibly 模型增加条件控制控制数据生成过程; conditioning based on class labels 条件控制是数据类别标签
@@ -187,7 +187,7 @@ _________________________________________________________________
 
 ********
 
-:lemon:  [**WassersteinGAN**](https://arxiv.org/pdf/1701.07875.pdf)   :date:    2017
+:lemon:  [**WassersteinGAN**](https://arxiv.org/pdf/1701.07875.pdf)   :date:    2017.01
 
 #### Implementation 
 
@@ -201,7 +201,7 @@ _________________________________________________________________
 
 ********
 
-:lemon:  [**WGAN-GP**](https://arxiv.org/pdf/1704.00028.pdf)   :date:    2017
+:lemon:  [**WGAN-GP**](https://arxiv.org/pdf/1704.00028.pdf)   :date:    2017.03
 
 #### Implementation 
 
@@ -215,7 +215,7 @@ _________________________________________________________________
 
 ********
 
-:lemon:  [**InfoGAN**](https://arxiv.org/pdf/1606.03657.pdf)   :date:    2016
+:lemon:  [**InfoGAN**](https://arxiv.org/pdf/1606.03657.pdf)   :date:    2016.06
 
 #### Implementation 
 
@@ -229,7 +229,44 @@ _________________________________________________________________
 
 
 ********
-:lemon:  [**SN-GAN**](https://arxiv.org/pdf/1802.05751v3.pdf)   :date:    2018
+
+:lemon:  [**ACGAN**](https://arxiv.org/pdf/1610.09585.pdf)   :date:   2016.10
+
+#### Loss Function 
+
+- 【Binary_Cross_Entropy Loss】    
+  
+   <img src="./README/images/binary_crossentropy.png" height="50">
+    
+- 【Loss Function】    
+  <!-- > ![CGAN loss](README/images/dcgan.png)  -->
+
+   <img src="./README/images/dcgan.png" height="25">
+
+
+#### Network 
+
+   <img src="./README/images/dcganfull.png">
+
+#### Implementation 
+<!-- - ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb) -->
+
+- <img src="./README/images/pytorch.png" height="13">
+
+- <img src="./README/images/keras.png" height="13">
+
+- <img src="./README/images/tf1.png" height="13">
+
+- <img src="./README/images/tf2.png" height="13">   
+
+
+#### Reference 
+
+- [DCGAN TensorFlow2.x Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
+- [DCGAN PyTorch](https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN)
+
+********
+:lemon:  [**SN-GAN**](https://arxiv.org/pdf/1802.05751v3.pdf)   :date:    2018.02
 
    **Algorithm: SGD with Spectral Normalization**
       <img src="./README/images/sn_algorithm.png">
@@ -248,13 +285,13 @@ _________________________________________________________________
 ********
 
 
-:lemon:  [**Image Transformer**](https://arxiv.org/pdf/1802.05751v3.pdf)   :date:    2018
+:lemon:  [**Image Transformer**](https://arxiv.org/pdf/1802.05751v3.pdf)   :date:    2018.02
 
 
 
 ********
 
-:lemon:  [**Self-Attention GAN**](https://arxiv.org/pdf/1805.08318.pdf)   :date:    2018
+:lemon:  [**Self-Attention GAN**](https://arxiv.org/pdf/1805.08318.pdf)   :date:    2018.05
 
 
 
@@ -285,7 +322,7 @@ _________________________________________________________________
 
 ********
 
-:lemon:  [**Progressive Growing GAN**](https://arxiv.org/pdf/1710.10196.pdf)   :date:    2017
+:lemon:  [**Progressive Growing GAN**](https://arxiv.org/pdf/1710.10196.pdf)   :date:    2017.10
 
 
 
@@ -313,7 +350,7 @@ _________________________________________________________________
 
 ********
 
-:lemon:  [**BigGAN**](https://arxiv.org/pdf/1809.11096.pdf)   :date:    2018
+:lemon:  [**BigGAN**](https://arxiv.org/pdf/1809.11096.pdf)   :date:    2018.09
 
 
 
