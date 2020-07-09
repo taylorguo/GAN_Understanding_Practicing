@@ -15,6 +15,10 @@
 
 :lemon:  [**GAN**](https://arxiv.org/pdf/1406.2661.pdf)   :date:   2014.06
 
+#### GAN Principle
+
+   <img src="./README/images/gan_principle.png" height="200">
+
 #### Network
 
 Discriminator
