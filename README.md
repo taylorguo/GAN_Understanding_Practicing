@@ -8,6 +8,9 @@
 
 :shipit: :sparkles: :+1: :clap:
 
+
+### GAN Network Structure
+
 ********
 
 :lemon:  [**GAN**](https://arxiv.org/pdf/1406.2661.pdf)   :date:   2014.06
@@ -239,7 +242,6 @@ _________________________________________________________________
    <img src="./README/images/binary_crossentropy.png" height="50">
     
 - 【Loss Function】    
-  <!-- > ![CGAN loss](README/images/dcgan.png)  -->
 
    <img src="./README/images/dcgan.png" height="25">
 
@@ -249,7 +251,6 @@ _________________________________________________________________
    <img src="./README/images/dcganfull.png">
 
 #### Implementation 
-<!-- - ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb) -->
 
 - <img src="./README/images/pytorch.png" height="13">
 
@@ -331,7 +332,6 @@ _________________________________________________________________
 
 
 #### Implementation 
-<!-- - ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb) -->
 
 - <img src="./README/images/pytorch.png" height="15">
 
@@ -359,7 +359,6 @@ _________________________________________________________________
 
 
 #### Implementation 
-<!-- - ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb) -->
 
 - <img src="./README/images/pytorch.png" height="15">
 
@@ -376,6 +375,18 @@ _________________________________________________________________
 - [DCGAN PyTorch](https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN)
 
 ********
+
+
+### Normalization
+
+
+:lemon:  [**Spatially-Adaptive Normalization**](https://arxiv.org/pdf/1903.07291.pdf)   :date:    2019.03
+
+
+
+
+********
+
 
 ## Dataset
 
