@@ -237,6 +237,22 @@ _________________________________________________________________
 
 ********
 
+:lemon:  [**SGAN**](https://arxiv.org/pdf/1606.01583.pdf)   :date:    2016.06
+
+Semi-Supervised Learning with Generative Adversarial Networks
+
+#### Implementation 
+
+- <img src="./README/images/pytorch.png" height="15">
+
+- <img src="./README/images/keras.png" height="15">
+
+- <img src="./README/images/tf1.png" height="15">
+
+- <img src="./README/images/tf2.png" height="15">   
+
+
+********
 :lemon:  [**ACGAN**](https://arxiv.org/pdf/1610.09585.pdf)   :date:   2016.10
 
 #### Loss Function 
@@ -269,6 +285,40 @@ _________________________________________________________________
 
 - [DCGAN TensorFlow2.x Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
 - [DCGAN PyTorch](https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN)
+
+********
+
+:lemon:  [**LSGAN**](https://arxiv.org/pdf/1611.04076.pdf)   :date:   2016.11
+
+#### Loss Function 
+
+- 【Binary_Cross_Entropy Loss】    
+  
+   <img src="./README/images/binary_crossentropy.png" height="50">
+    
+- 【Loss Function】    
+
+   <img src="./README/images/dcgan.png" height="25">
+
+
+#### Network 
+
+   <img src="./README/images/dcganfull.png">
+
+#### Implementation 
+
+- <img src="./README/images/pytorch.png" height="13">
+
+- <img src="./README/images/keras.png" height="13">
+
+- <img src="./README/images/tf1.png" height="13">
+
+- <img src="./README/images/tf2.png" height="13">   
+
+
+
+
+
 
 ********
 :lemon:  [**SN-GAN**](https://arxiv.org/pdf/1802.05751v3.pdf)   :date:    2018.02

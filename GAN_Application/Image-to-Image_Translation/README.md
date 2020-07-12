@@ -1,9 +1,13 @@
-# GAN_Application
+# GAN Applications
 
 :shipit: :sparkles: :+1: :clap:
 ********
 
 ## Image-to-Image Translation
+
+********
+:strawberry:  [**Pix2Pix**](https://arxiv.org/pdf/1611.07004.pdf)   :date:   2016.11v1
+
 
 ********
 
