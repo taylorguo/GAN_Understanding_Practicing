@@ -10,6 +10,9 @@
 
 
 ********
+:strawberry:  [**Pix2PixHD](https://arxiv.org/pdf/1711.11585.pdf)   :date:   2017.11v1
+
+********
 
 :strawberry:  [**U-GAN-IT**](https://arxiv.org/pdf/1907.10830.pdf)   :date:   2019.07v1
 
@@ -67,7 +70,7 @@
 
 ********
 
-:strawberry:  **Wasserstein GAN (FID score)**   :date:   2016
+:strawberry:  [**UNIT (Unsupervised Image-to-Image Translation Networks)**](https://arxiv.org/pdf/1703.00848.pdf)   :date:   2017.03v1
 
 #### Paper
 
