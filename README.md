@@ -21,7 +21,7 @@
 
 #### Network
 
-<img src="./README/images/gan_block.png" height="350">
+<img src="./README/images/gan_block.png" height="550">
 
 Discriminator
 ```
