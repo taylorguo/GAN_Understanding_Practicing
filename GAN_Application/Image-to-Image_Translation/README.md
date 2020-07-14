@@ -12,10 +12,27 @@
 ********
 :strawberry:  [**Pix2PixHD**](https://arxiv.org/pdf/1711.11585.pdf)   :date:   2017.11v1
 
+High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs
 
 #### Reference 
 
 -  <img src="../../README/images/pytorch.png" height="15">  [Pix2PixHD - NVidia Official PyTorch](https://github.com/NVIDIA/pix2pixHD)
+
+
+********
+:strawberry:  [**MUNIT**](https://arxiv.org/pdf/1804.04732.pdf)   :date:   2018.04v1
+
+MUNIT: Multimodal UNsupervised Image-to-image Translation
+
+#### Reference 
+
+-  <img src="../../README/images/pytorch.png" height="13">  [MUNIT - NVidia Official PyTorch](https://github.com/NVlabs/MUNIT)
+
+- <img src="./README/images/keras.png" height="12"> [MUNIT - Keras](https://github.com/shaoanlu/MUNIT-keras)
+
+- <img src="./README/images/tf1.png" height="13"> [MUNIT - tensorflow1.4](https://github.com/taki0112/MUNIT-Tensorflow)
+
+- <img src="./README/images/tf2.png" height="13"> 
 
 ********
 
