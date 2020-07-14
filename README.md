@@ -17,9 +17,11 @@
 
 #### GAN Principle
 
-   <img src="./README/images/gan_principle.png" height="200">
+   <img src="./README/images/gan_principle.png" height="250">
 
 #### Network
+
+<img src="./README/images/gan_block.png" height="350">
 
 Discriminator
 ```
@@ -87,6 +89,14 @@ Trainable params: 1,164,289
 Non-trainable params: 155,137
 _________________________________________________________________
 ```
+
+#### Implementation 
+
+- <img src="./README/images/keras.png" height="12"> [GAN](https://github.com/taylorguo/GAN_Understanding_Practicing/blob/master/GAN_Practicing/Keras/gan_keras.py)
+
+#### Reference 
+
+- [GAN by Ian J. Goodfellow](https://github.com/goodfeli/adversarial)
 
 ********
 
