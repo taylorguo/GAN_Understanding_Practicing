@@ -106,12 +106,12 @@ _________________________________________________________________
 
 - 【Binary_Cross_Entropy Loss】    
   
-   <img src="./README/images/binary_crossentropy.png" height="50">
+   <img src="./README/images/binary_crossentropy.png" height="80">
     
 - 【Loss Function】    
   <!-- > ![CGAN loss](README/images/dcgan.png)  -->
 
-   <img src="./README/images/dcgan.png" height="25">
+   <img src="./README/images/dcgan.png" height="55">
 
 
 #### Network 
