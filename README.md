@@ -316,7 +316,36 @@ Semi-Supervised Learning with Generative Adversarial Networks
 - <img src="./README/images/tf2.png" height="13">   
 
 
+********
 
+:lemon:  [**EBGAN**: Energy-based GAN](https://arxiv.org/pdf/1609.03126.pdf)   :date:   2016.11
+
+
+
+#### Loss Function 
+
+- 【Binary_Cross_Entropy Loss】    
+  
+   <img src="./README/images/binary_crossentropy.png" height="50">
+    
+- 【Loss Function】    
+
+   <img src="./README/images/dcgan.png" height="25">
+
+
+#### Network 
+
+   <img src="./README/images/dcganfull.png">
+
+#### Implementation 
+
+- <img src="./README/images/pytorch.png" height="13">
+
+- <img src="./README/images/keras.png" height="13">
+
+- <img src="./README/images/tf1.png" height="13">
+
+- <img src="./README/images/tf2.png" height="13">   
 
 
 
