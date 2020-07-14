@@ -10,7 +10,12 @@
 
 
 ********
-:strawberry:  [**Pix2PixHD](https://arxiv.org/pdf/1711.11585.pdf)   :date:   2017.11v1
+:strawberry:  [**Pix2PixHD**](https://arxiv.org/pdf/1711.11585.pdf)   :date:   2017.11v1
+
+
+#### Reference 
+
+-  <img src="../../README/images/pytorch.png" height="15">  [Pix2PixHD - NVidia Official PyTorch](https://github.com/NVIDIA/pix2pixHD)
 
 ********
 
