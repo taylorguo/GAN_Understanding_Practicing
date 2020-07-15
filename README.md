@@ -7,13 +7,14 @@
 ## GAN Practice
 
 :shipit: :sparkles: :+1: :clap:
-
+[**GAN Evoluation**](https://arxiv.org/pdf/1910.13076.pdf)
+   <img src="./README/images/gan_evolution.png" height="450">
 
 ### GAN Network Structure
 
 ********
 
-:lemon:  [**GAN**](https://arxiv.org/pdf/1406.2661.pdf)   :date:   2014.06
+:lemon:  [**GAN**](https://arxiv.org/pdf/1406.2661.pdf)   :date:   2014.06    :blush:  Université de Montréal
 
 #### GAN Principle
 
@@ -100,7 +101,7 @@ _________________________________________________________________
 
 ********
 
-:lemon:  [**DCGAN**](https://arxiv.org/pdf/1511.06434.pdf)   :date:   2015.11
+:lemon:  [**DCGAN**](https://arxiv.org/pdf/1511.06434.pdf)   :date:   2015.11    :blush:  indico Research/Facebook
 
 #### Loss Function 
 
@@ -145,18 +146,13 @@ Integrate conditional GAN model into Laplacian Pyramid Framework
 
 -  将cGAN集成到 Laplacian Pyramid Framework, generator和discriminator都是卷积网络
 -  cGAN conditional 是类别信息, 类别的先验分布; 这里的conditional是另一个图像, 从cGAN模型生成的图像
--  Lapacian Pyramid 拉普拉斯高斯金字塔的每一层
+-  Lapacian Pyramid 拉普拉斯高斯金字塔的每一层嵌入cGAN
 
 #### Loss Function 
-
-- 【Binary_Cross_Entropy Loss】    
   
-   <img src="./README/images/binary_crossentropy.png" height="50">
-    
 - 【Loss Function】    
-  <!-- > ![CGAN loss](README/images/dcgan.png)  -->
 
-   <img src="./README/images/dcgan.png" height="25">
+   <img src="./README/images/lapgan_loss.png" height="25">
 
 
 #### Network 
@@ -178,11 +174,16 @@ Integrate conditional GAN model into Laplacian Pyramid Framework
 
 - [LAPGAN TensorFlow](https://github.com/jimfleming/LAPGAN)
 - [LAPGAN PyTorch](https://github.com/AaronYALai/Generative_Adversarial_Networks_PyTorch/tree/master/LAPGAN)
+- [LAPGAN Network Architecture - Offical](https://gist.github.com/soumith/e3f722173ea16c1ea0d9)
 - [图像与滤波](http://www.ruanyifeng.com/blog/2017/12/image-and-wave-filters.html)
 
 ********
 
-:lemon:  [**ConditionalGAN**](https://arxiv.org/pdf/1411.1784.pdf)   :date:    2014.11
+<img src="./README/images/Summary-of-the-Differences-Between-the-Conditional-GAN-Semi-Supervised-GAN-InfoGAN-and-AC-GAN.png">
+
+********
+
+:lemon:  [**ConditionalGAN**](https://arxiv.org/pdf/1411.1784.pdf)   :date:    2014.11    :blush:    Université de Montréal/Flickr(Yahoo)
 
 - Log-Likelihood Estimates 对数最大似然估计
 - Conditioning the model to direct the data generation process possibly 模型增加条件控制控制数据生成过程; conditioning based on class labels 条件控制是数据类别标签
@@ -209,34 +210,6 @@ Integrate conditional GAN model into Laplacian Pyramid Framework
 
 - [cGAN Keras: How to Develop a Conditional GAN (cGAN) From Scratch](https://machinelearningmastery.com/how-to-develop-a-conditional-generative-adversarial-network-from-scratch/)
 - [cDCGAN Keras](https://github.com/gaborvecsei/CDCGAN-Keras)
-
-********
-
-:lemon:  [**WassersteinGAN**](https://arxiv.org/pdf/1701.07875.pdf)   :date:    2017.01
-
-#### Implementation 
-
-- <img src="./README/images/pytorch.png" height="15">
-
-- <img src="./README/images/keras.png" height="15">
-
-- <img src="./README/images/tf1.png" height="15">
-
-- <img src="./README/images/tf2.png" height="15">   
-
-********
-
-:lemon:  [**WGAN-GP**](https://arxiv.org/pdf/1704.00028.pdf)   :date:    2017.03
-
-#### Implementation 
-
-- <img src="./README/images/pytorch.png" height="15">
-
-- <img src="./README/images/keras.png" height="15">
-
-- <img src="./README/images/tf1.png" height="15">
-
-- <img src="./README/images/tf2.png" height="15">   
 
 ********
 
@@ -286,7 +259,7 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 #### Network 
 
-   <img src="./README/images/dcganfull.png">
+   <img src="./README/images/AC-GAN-Generator-and-Discriminator-Model-Configuration.png">
 
 #### Implementation 
 
@@ -303,6 +276,7 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 - [DCGAN TensorFlow2.x Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
 - [DCGAN PyTorch](https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN)
+
 
 ********
 
@@ -366,6 +340,33 @@ Semi-Supervised Learning with Generative Adversarial Networks
 - <img src="./README/images/tf2.png" height="13">   
 
 
+********
+
+:lemon:  [**WassersteinGAN**](https://arxiv.org/pdf/1701.07875.pdf)   :date:    2017.01
+
+#### Implementation 
+
+- <img src="./README/images/pytorch.png" height="15">
+
+- <img src="./README/images/keras.png" height="15">
+
+- <img src="./README/images/tf1.png" height="15">
+
+- <img src="./README/images/tf2.png" height="15">   
+
+********
+
+:lemon:  [**WGAN-GP**](https://arxiv.org/pdf/1704.00028.pdf)   :date:    2017.03
+
+#### Implementation 
+
+- <img src="./README/images/pytorch.png" height="15">
+
+- <img src="./README/images/keras.png" height="15">
+
+- <img src="./README/images/tf1.png" height="15">
+
+- <img src="./README/images/tf2.png" height="15"> 
 
 ********
 :lemon:  [**SN-GAN**](https://arxiv.org/pdf/1802.05751v3.pdf)   :date:    2018.02
