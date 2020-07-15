@@ -161,10 +161,9 @@ Integrate conditional GAN model into Laplacian Pyramid Framework
 
 #### Network 
 
-   <img src="./README/images/dcganfull.png">
+   <img src="./README/images/lapgan_network_training.png" height="500">
 
 #### Implementation 
-<!-- - ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb) -->
 
 - <img src="./README/images/pytorch.png" height="13">
 
