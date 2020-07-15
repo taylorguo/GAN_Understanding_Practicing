@@ -137,15 +137,15 @@ _________________________________________________________________
 
 ********
 
-:lemon:  [**LAPGAN**](https://arxiv.org/pdf/1506.05751.pdf)   :date:   2015.06    :man scientist:  NYU, Facebook
+:lemon:  [**LAPGAN**](https://arxiv.org/pdf/1506.05751.pdf)   :date:   2015.06    :blush:  NYU, Facebook
 
 Deep Generative Image Models using a Laplacian Pyramid of Adversarial Networks
 
 Integrate conditional GAN model into Laplacian Pyramid Framework 
 
-- 1. 将cGAN集成到 Laplacian Pyramid Framework, generator和discriminator都是卷积网络
-- 2. cGAN conditional 是类别信息, 类别的先验分布; 这里的conditional是另一个图像, 从cGAN模型生成的图像
-- 3. Lapacian Pyramid 拉普拉斯高斯金字塔的每一层
+-  将cGAN集成到 Laplacian Pyramid Framework, generator和discriminator都是卷积网络
+-  cGAN conditional 是类别信息, 类别的先验分布; 这里的conditional是另一个图像, 从cGAN模型生成的图像
+-  Lapacian Pyramid 拉普拉斯高斯金字塔的每一层
 
 #### Loss Function 
 
@@ -191,7 +191,7 @@ Integrate conditional GAN model into Laplacian Pyramid Framework
 #### Loss Function
 - 【Loss Function】    
   
-   <img src="./README/images/cganloss.png" height="16">
+   <img src="./README/images/cganloss.png" height="26">
 
 #### Network 
 
