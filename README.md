@@ -122,11 +122,10 @@ _________________________________________________________________
    <img src="./README/images/dcganfull.png">
 
 #### Implementation 
-<!-- - ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb) -->
 
 - <img src="./README/images/pytorch.png" height="13">
 
-- <img src="./README/images/keras.png" height="13">
+- <img src="./README/images/keras.png" height="13"> [DCGAN Keras](https://github.com/taylorguo/GAN_Understanding_Practicing/blob/master/GAN_Practicing/Keras/dcgan_keras.py)
 
 - <img src="./README/images/tf1.png" height="13">
 
@@ -161,7 +160,7 @@ Integrate conditional GAN model into Laplacian Pyramid Framework
 
    <img src="./README/images/lapgan_network_training.png" height="500">
 
-   <img src="./README/images/lapgan_gd.png" height="500">
+   <img src="./README/images/lapgan_gd.png">
 
 #### Implementation 
 
@@ -204,7 +203,7 @@ Integrate conditional GAN model into Laplacian Pyramid Framework
 
 - <img src="./README/images/pytorch.png" height="13">
 
-- <img src="./README/images/keras.png" height="13">
+- <img src="./README/images/keras.png" height="13"> [cGAN Keras](https://github.com/taylorguo/GAN_Understanding_Practicing/blob/master/GAN_Practicing/Keras/cgan_keras.py)
 
 - <img src="./README/images/tf1.png" height="13">
 
