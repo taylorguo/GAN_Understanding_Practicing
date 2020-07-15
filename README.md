@@ -7,9 +7,11 @@
 ## GAN Practice
 
 :shipit: :sparkles: :+1: :clap:
+
 [**GAN Evoluation**](https://arxiv.org/pdf/1910.13076.pdf)
    <img src="./README/images/gan_evolution.png" height="450">
 
+********
 ### GAN Network Structure
 
 ********
@@ -158,6 +160,8 @@ Integrate conditional GAN model into Laplacian Pyramid Framework
 #### Network 
 
    <img src="./README/images/lapgan_network_training.png" height="500">
+
+   <img src="./README/images/lapgan_gd.png" height="500">
 
 #### Implementation 
 
