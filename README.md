@@ -256,7 +256,7 @@ Semi-Supervised Learning with Generative Adversarial Networks
     
 - 【Loss Function】    
 
-   <img src="./README/images/acgan_loss.png">
+   <img src="./README/images/acgan_loss.png" height="70">
 
 
 #### Network 
