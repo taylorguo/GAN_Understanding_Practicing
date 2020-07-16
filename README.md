@@ -288,12 +288,11 @@ Semi-Supervised Learning with Generative Adversarial Networks
     
 - 【Loss Function】    
 
-   <img src="./README/images/dcgan.png" height="25">
-
+   <img src="./README/images/lsgan_loss.png">
 
 #### Network 
 
-   <img src="./README/images/dcganfull.png">
+   <img src="./README/images/lsgan_model.png">
 
 #### Implementation 
 
@@ -313,10 +312,6 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 
 #### Loss Function 
-
-- 【Binary_Cross_Entropy Loss】    
-  
-   <img src="./README/images/binary_crossentropy.png" height="50">
     
 - 【Loss Function】    
 
