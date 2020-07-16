@@ -407,9 +407,9 @@ Semi-Supervised Learning with Generative Adversarial Networks
 - Spectral Normalization in Generator: stabilize GAN training
 - TTUR: Speed-up training of regularized discriminator
 
+<img src="./README/images/sagan_attention.png">
 
 #### Implementation 
-<!-- - ![tf1](README/images/tf1.png)  [DCGAN tensorflow Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb) -->
 
 - <img src="./README/images/pytorch.png" height="15">
 
@@ -422,8 +422,8 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 #### Reference 
 
-- [DCGAN TensorFlow2.x Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
-- [DCGAN PyTorch](https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN)
+- [SAGAN TensorFlow1.8](https://github.com/taki0112/Self-Attention-GAN-Tensorflow)
+- [SAGAN PyTorch](https://github.com/heykeetae/Self-Attention-GAN)
 
 
 ********
@@ -449,8 +449,8 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 #### Reference 
 
-- [DCGAN TensorFlow2.x Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
-- [DCGAN PyTorch](https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN)
+- [PGGAN TensorFlow1.x Official](https://github.com/tkarras/progressive_growing_of_gans/tree/master)
+- [PGGAN PyTorch](https://github.com/github-pengge/PyTorch-progressive_growing_of_gans)
 
 
 ********
@@ -497,6 +497,8 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 - [Kaggle - CelebA: 200k images with 40 binary attribute](https://www.kaggle.com/jessicali9530/celeba-dataset/data#)
 - [CelebA in Google Drive](https://drive.google.com/drive/folders/0B7EVK8r0v71pWEZsZE9oNnFzTm8)
+
+- [UTKFace - Large Scale Face Dataset: landmarks (68 points), labelled by age, gender, and ethnicity](https://susanqq.github.io/UTKFace/)
 
 ********
 
