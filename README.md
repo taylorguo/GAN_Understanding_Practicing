@@ -253,14 +253,10 @@ Semi-Supervised Learning with Generative Adversarial Networks
 :lemon:  [**ACGAN**](https://arxiv.org/pdf/1610.09585.pdf)   :date:   2016.10
 
 #### Loss Function 
-
-- 【Binary_Cross_Entropy Loss】    
-  
-   <img src="./README/images/binary_crossentropy.png" height="50">
     
 - 【Loss Function】    
 
-   <img src="./README/images/dcgan.png" height="25">
+   <img src="./README/images/acgan_loss.png">
 
 
 #### Network 
@@ -280,8 +276,8 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 #### Reference 
 
-- [DCGAN TensorFlow2.x Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
-- [DCGAN PyTorch](https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN)
+- [ACGAN Keras](https://github.com/lukedeo/keras-acgan)
+- [ACGAN PyTorch](https://github.com/clvrai/ACGAN-PyTorch)
 
 
 ********
@@ -289,10 +285,6 @@ Semi-Supervised Learning with Generative Adversarial Networks
 :lemon:  [**LSGAN**](https://arxiv.org/pdf/1611.04076.pdf)   :date:   2016.11
 
 #### Loss Function 
-
-- 【Binary_Cross_Entropy Loss】    
-  
-   <img src="./README/images/binary_crossentropy.png" height="50">
     
 - 【Loss Function】    
 
