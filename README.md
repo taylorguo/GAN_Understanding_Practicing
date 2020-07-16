@@ -476,8 +476,8 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 #### Reference 
 
-- [DCGAN TensorFlow2.x Official](https://github.com/tensorflow/docs-l10n/blob/master/site/zh-cn/tutorials/generative/dcgan.ipynb)
-- [DCGAN PyTorch](https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN)
+- [BigGAN TensorFlow](https://github.com/taki0112/BigGAN-Tensorflow)
+- [BigGAN PyTorch](https://github.com/ajbrock/BigGAN-PyTorch)
 
 ********
 
