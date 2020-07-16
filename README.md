@@ -277,6 +277,7 @@ Semi-Supervised Learning with Generative Adversarial Networks
 #### Reference 
 
 - [ACGAN Keras](https://github.com/lukedeo/keras-acgan)
+- [ACGAN Keras Notebook](https://github.com/lukedeo/keras-acgan/blob/master/acgan-analysis.ipynb)
 - [ACGAN PyTorch](https://github.com/clvrai/ACGAN-PyTorch)
 
 
