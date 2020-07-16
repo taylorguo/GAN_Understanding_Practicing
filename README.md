@@ -93,6 +93,10 @@ Non-trainable params: 155,137
 _________________________________________________________________
 ```
 
+#### GAN Loss
+
+<img src="./README/images/gan_loss_original.png">
+
 #### Implementation 
 
 - <img src="./README/images/keras.png" height="12"> [GAN](https://github.com/taylorguo/GAN_Understanding_Practicing/blob/master/GAN_Practicing/Keras/gan_keras.py)
@@ -107,12 +111,11 @@ _________________________________________________________________
 
 #### Loss Function 
 
-- 【Binary_Cross_Entropy Loss】    
+- 【Binary_Cross_Entropy】    
   
    <img src="./README/images/binary_crossentropy.png" height="80">
     
 - 【Loss Function】    
-  <!-- > ![CGAN loss](README/images/dcgan.png)  -->
 
    <img src="./README/images/dcgan.png" height="55">
 
