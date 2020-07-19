@@ -308,7 +308,7 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 ********
 
-:lemon:  [**EBGAN**: Energy-based GAN](https://arxiv.org/pdf/1609.03126.pdf)   :date:   2016.11
+:lemon:  [**EBGAN**: Energy-based GAN](https://arxiv.org/pdf/1609.03126.pdf)   :date:   2016.09    :blush:  NYU  
 
 
 
