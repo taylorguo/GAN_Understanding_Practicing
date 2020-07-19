@@ -30,11 +30,11 @@
 
 样本空间(sample space): 所有可能的结果构成的集合
 
-概率P(E)是发生频率的极限:  <img src="./images/probability_frequency_limit.png">
+概率P(E)是发生频率的极限:  <img src="./images/probability_frequency_limit.png" height="50">
 
 离散概率空间
 
-<img src="./images/probability_principle.png">
+<img src="./images/probability_principle.png" height="200">
 
 随机变量: 从样本空间到实数的函数
 
@@ -71,6 +71,7 @@
 信息熵:
 
     这个信息量, 香农定义为"信息熵"Entropy, 用符号H表示, 单位是比特; 
+
     这和热力学的熵有很大相似性, 是系统无序的度量, 换一个角度也是一种不确定性的度量.
 
 #### Reference 
