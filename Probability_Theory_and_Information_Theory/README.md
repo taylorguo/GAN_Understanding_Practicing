@@ -13,7 +13,7 @@
 
 #### Reference 
 
--  <img src="../../../README/images/pytorch.png" height="13">  [MUNIT - NVidia Official PyTorch](https://github.com/NVlabs/MUNIT)
+-  <img src="../README/images/pytorch.png" height="13">  [MUNIT - NVidia Official PyTorch](https://github.com/NVlabs/MUNIT)
 
 
 ********
@@ -30,7 +30,7 @@
 
 样本空间(sample space): 所有可能的结果构成的集合
 
-概率P(E)是发生频率的极限:  <img src="./images/probability_frequency_limit.png" height="15">
+概率P(E)是发生频率的极限:  <img src="./images/probability_frequency_limit.png">
 
 离散概率空间
 
@@ -41,17 +41,38 @@
 
 #### Reference 
 
--  <img src="../../../README/images/pytorch.png" height="15">  [Pix2PixHD - NVidia Official PyTorch](https://github.com/NVIDIA/pix2pixHD)
+-  <img src="../README/images/pytorch.png" height="15">  [Pix2PixHD - NVidia Official PyTorch](https://github.com/NVIDIA/pix2pixHD)
 
 
 ********
 :peach:  [**Information Theory  信息论**](https://arxiv.org/pdf/1711.11585.pdf) 
 
+信息熵: 
 
+一条信息的信息量与其不确定性有直接的关系.
+
+我们要搞清楚一件非常不确定的事情, 或一无所知的事情, 就需要了解大量信息。
+
+信息量就等于不确定性的多少。
+
+
+量化信息的度量:
+
+32支球队, 冠军是谁? 需要五次, 每猜一次一块钱, 猜对就需要猜五次, 信息量就值五块钱.
+
+香农用"比特"Bit来度量信息量。 一个比特即是一位二进制, 一个字节8比特. 32只球队猜冠军,信息是5比特; 64只球队, 信息是6比特.
+
+信息量的比特数和所有可能情况的对数log有关: log32=5; log64=6.
+
+但当事件发生的概率不等时, 比如求"冠军"的信息量比5比特少.
+
+因此, 准确信息量应该是: <img src="./images/information.png">
+
+这个信息量, 香农定义为"信息熵"Entropy, 用符号H表示, 单位是比特; 这和热力学的熵有很大相似性, 是系统无序的度量, 换一个角度也是一种不确定性的度量.
 
 #### Reference 
 
--  <img src="../../README/images/pytorch.png" height="13">  [MUNIT - NVidia Official PyTorch](https://github.com/NVlabs/MUNIT)
+-  <img src="../README/images/pytorch.png" height="13">  [MUNIT - NVidia Official PyTorch](https://github.com/NVlabs/MUNIT)
 
 
 ********
