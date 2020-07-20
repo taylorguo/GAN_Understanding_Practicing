@@ -107,7 +107,7 @@
 
    条件熵H（Y|X）表示在已知随机变量X的条件下随机变量Y的不确定性。
    随机变量X给定的条件下随机变量Y的条件熵H(Y|X):
-
+   <img src="./images/conditional_entropy_formula.png" height="70%">
    条件熵: 知道X后Y还剩多少信息量（H(Y|X)）。或者知道Y后，X还剩多少信息量（H(X|Y)）。
    <img src="./images/conditional_entropy.jpeg" height="70%">
 
