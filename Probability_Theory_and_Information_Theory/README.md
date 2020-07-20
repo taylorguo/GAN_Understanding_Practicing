@@ -98,7 +98,7 @@
 
     熵在信息论中代表随机变量不确定度的度量。
     一个离散型随机变量X的熵 H(X) 定义为:
-[信息熵:](https://www.zhihu.com/equation?tex=H%28X%29%3D-%5Csum%5Climits_%7Bx%5Cin%5Cmathcal%7BX%7D%7Dp%28x%29%5Clog+p%28x%29)
+[信息熵:](./images/equation.svg)
 
     变量的不确定性越大,熵就越大,要把它确定, 所需的信息量就越大. 
     比如, 常用汉字约7000字, 假如每个汉字等概率, 那么大约13Bit表示一个汉字。
