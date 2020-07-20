@@ -20,13 +20,19 @@
 
 ## Probability Theory and Information Theory
 
+**提出问题: 为什么?**
 
+   机器学习通常必须处理不确定量，有时也可能需要处理随机 (非确定性的) 量。
+
+   我们的确需要一种用以对不确定性进行表示和推理的方法, 使用概率论来量化不确定性; 事件发生的概率相等/不等
 
 
 ********
-:peach:  [**Probability Theory  概率论**](https://arxiv.org/pdf/1611.07004.pdf)
+:peach:  [**Probability Theory  概率论**](https://github.com/jcnlp/books/blob/master/math/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1(%E6%B5%99%E5%A4%A7%E7%AC%AC%E5%9B%9B%E7%89%88).pdf)
 
-概率论本质上是对随机事件的发生可能性赋以一种合理的度量。将“事件”这个概念抽象化, 引入“集合论”, 把这些事件表示成集合。接着对事件的发生进行度量, 就赋予相应的概率测度。
+概率论本质上是对随机事件的发生可能性赋以一种合理的度量。
+将“事件”这个概念抽象化, 引入“集合论”, 把这些事件表示成集合。
+接着对事件的发生进行度量, 就赋予相应的概率测度。
 
 样本空间(sample space): 所有可能的结果构成的集合
 
@@ -39,10 +45,26 @@
 随机变量: 从样本空间到实数的函数
 
 
+• 频率学派概率 (Frequentist Probability):认为概率和事件发生的频率相关。
+• 贝叶斯学派概率 (Bayesian Probability):认为概率是对某件事发生的确定程度，可以理解成是确信的程度。
+• 随机变量 (Random Variable):一个可能随机取不同值的变量。例如:抛掷一枚硬币，出现正面或者反面的结果。
+
 #### Reference 
 
 -  <img src="../README/images/pytorch.png" height="15">  [Pix2PixHD - NVidia Official PyTorch](https://github.com/NVIDIA/pix2pixHD)
 
+-  [概率论和数理统计公式总结](https://zhuanlan.zhihu.com/p/36584335)
+
+
+########
+:peach: [**Statistical Method 统计方法**](https://en.wikibooks.org/wiki/Statistics/Introduction/What_is_Statistics)
+
+
+
+
+#### Reference 
+
+- [从最大似然估计到交叉熵](https://www.cnblogs.com/LeftNotEasy/p/mle-cross-entropy-and-deep-learning.html)
 
 ********
 :peach:  [**Information Theory  信息论**](https://arxiv.org/pdf/1711.11585.pdf) 
@@ -74,10 +96,18 @@
 
     这和热力学的熵有很大相似性, 是系统无序的度量, 换一个角度也是一种不确定性的度量.
 
+    熵在信息论中代表随机变量不确定度的度量。一个离散型随机变量X的熵 H(X) 定义为:
+
+    [](https://www.zhihu.com/equation?tex=H%28X%29%3D-%5Csum%5Climits_%7Bx%5Cin%5Cmathcal%7BX%7D%7Dp%28x%29%5Clog+p%28x%29)
+
 #### Reference 
 
 <!-- -  <img src="../README/images/pytorch.png" height="13"> -->
 -  [《数学之美》( The beauty of Mathematics)](https://github.com/mantchs/Mathematics)
 
+- [UCB Data8 计算与推断思维 with Python Code](https://data8.apachecn.org/#/)
 
+- [AI学习路线资料汇总](https://www.chainnews.com/articles/964633052193.htm)
+
+- [深度学习_花书中文翻译与代码_Python_Numpy](https://github.com/MingchaoZhu/DeepLearning)
 ********
