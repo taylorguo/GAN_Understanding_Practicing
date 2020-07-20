@@ -46,7 +46,9 @@
 
 
 • 频率学派概率 (Frequentist Probability):认为概率和事件发生的频率相关。
+
 • 贝叶斯学派概率 (Bayesian Probability):认为概率是对某件事发生的确定程度，可以理解成是确信的程度。
+
 • 随机变量 (Random Variable):一个可能随机取不同值的变量。例如:抛掷一枚硬币，出现正面或者反面的结果。
 
 #### Reference 
@@ -56,7 +58,7 @@
 -  [概率论和数理统计公式总结](https://zhuanlan.zhihu.com/p/36584335)
 
 
-########
+********
 :peach: [**Statistical Method 统计方法**](https://en.wikibooks.org/wiki/Statistics/Introduction/What_is_Statistics)
 
 
@@ -65,6 +67,8 @@
 #### Reference 
 
 - [从最大似然估计到交叉熵](https://www.cnblogs.com/LeftNotEasy/p/mle-cross-entropy-and-deep-learning.html)
+
+
 
 ********
 :peach:  [**Information Theory  信息论**](https://arxiv.org/pdf/1711.11585.pdf) 
