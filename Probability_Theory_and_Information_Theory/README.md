@@ -84,7 +84,7 @@
     信息量的比特数和所有可能情况的对数log有关: log32=5; log64=6.
     但当事件发生的概率不等时, 比如求"冠军"的信息量比5比特少.
     因此, 准确信息量应该是: 
-   <img src="./images/information.png" height="50%">
+   <img src="./images/information.png" height="40%">
 
 **信息熵:**
 
@@ -103,6 +103,9 @@
 
    条件熵H（Y|X）表示在已知随机变量X的条件下随机变量Y的不确定性。
    随机变量X给定的条件下随机变量Y的条件熵H(Y|X):
+
+   条件熵: 知道X后Y还剩多少信息量（H(Y|X)）。或者知道Y后，X还剩多少信息量（H(X|Y)）。
+   <img src="./images/conditional_entropy.jpeg" height="70%">
 
 
 
