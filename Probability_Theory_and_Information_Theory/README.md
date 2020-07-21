@@ -42,7 +42,7 @@
 
     离散概率空间
 
-    <img src="./images/probability_principle.png" height="200">
+<img src="./images/probability_principle.png" height="200">
 
     随机变量: 从样本空间到实数的函数
 
@@ -94,7 +94,7 @@
         但当事件发生的概率不等时, 比如求"冠军"的信息量比5比特少.
 
         因此, 准确信息量应该是: 
-    <img src="./images/information.png" height="40%">
+<img src="./images/information.png" height="40%">
 
 **信息熵:**
 
@@ -106,7 +106,7 @@
 
         一个离散型随机变量X的熵 H(X) 定义为:
 
-    ![](./images/equation.svg)
+![](./images/equation.svg)
 
         变量的不确定性越大,熵就越大,要把它确定, 所需的信息量就越大. 
 
@@ -122,11 +122,11 @@
 
         随机变量X给定的条件下随机变量Y的条件熵H(Y|X):
 
-        <img src="./images/conditional_entropy_formula.png" height="50%">
+<img src="./images/conditional_entropy_formula.png" height="50%" style="margin-left:45px">
 
         条件熵: 知道X后Y还剩多少信息量（H(Y|X)）。或者知道Y后，X还剩多少信息量（H(X|Y)）。
 
-        <img src="./images/conditional_entropy.jpeg" height="50%">
+<img src="./images/conditional_entropy.jpeg" height="50%" style="margin-left:45px">
 
         信息的作用是用来消除不确定性.
 
