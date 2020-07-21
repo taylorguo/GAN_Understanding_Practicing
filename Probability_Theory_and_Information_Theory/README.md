@@ -93,8 +93,9 @@
 
         但当事件发生的概率不等时, 比如求"冠军"的信息量比5比特少.
 
-        因此, 准确信息量应该是: 
-<div style="margin-left:245px"><img src="./images/information.png" height=18></div>
+        因此, 准确信息量应该是:  
+<img src="./images/information.png" height=18>
+
 
 **信息熵:**
 
@@ -147,7 +148,13 @@
 
         相对熵衡量两个信息的相似程度,信息越相似相对熵就越小. 
         
-        KL散度（Kullback–Leibler divergence）, 用于衡量两个概率分布之间的差异。
+        也用来衡量相关性, 但与变量的互信息不同, 衡量正函数的相似性.
+        
+        以提出者的名字命名, 也叫 KL散度（Kullback–Leibler divergence）, 用于衡量两个概率分布之间的差异。
+
+        定义为:
+
+![](images/mutual_entropy_probability.svg)
 
 
 #### Reference 
