@@ -94,7 +94,7 @@
         但当事件发生的概率不等时, 比如求"冠军"的信息量比5比特少.
 
         因此, 准确信息量应该是: 
-<img src="./images/information.png" height=18 style="margin-left:245px">
+<div style="margin-left:245px"><img src="./images/information.png" height=18></div>
 
 **信息熵:**
 
