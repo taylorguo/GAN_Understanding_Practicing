@@ -140,7 +140,7 @@
 
         条件熵之间的差异.
 
-        <!-- ![](./images/mutual_entropy.svg) -->
+<!-- ![](./images/mutual_entropy.svg) -->
 <img src="./images/mutual_entropy.svg">
 
 
