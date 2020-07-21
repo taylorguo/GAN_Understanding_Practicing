@@ -94,7 +94,7 @@
         但当事件发生的概率不等时, 比如求"冠军"的信息量比5比特少.
 
         因此, 准确信息量应该是: 
-<img src="./images/information.png" height="40%">
+<img src="./images/information.png" height=100 style="margin-left:245px">
 
 **信息熵:**
 
@@ -122,11 +122,11 @@
 
         随机变量X给定的条件下随机变量Y的条件熵H(Y|X):
 
-<img src="./images/conditional_entropy_formula.png" height="50%" style="margin-left:45px">
+<img src="./images/conditional_entropy_formula.png" height="50%" style="margin-left:145px">
 
         条件熵: 知道X后Y还剩多少信息量（H(Y|X)）。或者知道Y后，X还剩多少信息量（H(X|Y)）。
 
-<img src="./images/conditional_entropy.jpeg" height="50%" style="margin-left:45px">
+<img src="./images/conditional_entropy.jpeg" height="50%" style="margin-left:145px">
 
         信息的作用是用来消除不确定性.
 
@@ -139,7 +139,8 @@
 
         条件熵之间的差异.
 
-        ![](./images/mutual_entropy.svg)
+        <!-- ![](./images/mutual_entropy.svg) -->
+<img src="./images/mutual_entropy.svg">
 
 
 **相对熵 Relative Entropy:**
