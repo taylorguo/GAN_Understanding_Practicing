@@ -148,7 +148,8 @@
 
 <!-- ![](./images/mutual_entropy.svg) -->
 <img src="./images/mutual_entropy.svg">
-![](images/mutual_entropy_probability.svg)
+
+![](./images/mutual_entropy_probability.svg)
 
 **相对熵 Relative Entropy:**
 
