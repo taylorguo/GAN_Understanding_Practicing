@@ -40,11 +40,13 @@
 
     概率P(E)是发生频率的极限:  <img src="./images/probability_frequency_limit.png" height="50">
 
+    随机变量: 从样本空间到实数的函数
+
     离散概率空间
 
-<img src="./images/probability_principle.png" height="200">
+    连续概率空间
 
-    随机变量: 从样本空间到实数的函数
+<img src="./images/probability_principle.png" height="200">
 
 
     • 频率学派概率 (Frequentist Probability):认为概率和事件发生的频率相关。
@@ -53,13 +55,17 @@
 
     • 随机变量 (Random Variable):一个可能随机取不同值的变量。例如:抛掷一枚硬币，出现正面或者反面的结果。
 
+    贝叶斯公式：
+
+<img src="image/bayes_theorem.svg">
+
 #### Reference 
 
 -  <img src="../README/images/pytorch.png" height="15">  [Pix2PixHD - NVidia Official PyTorch](https://github.com/NVIDIA/pix2pixHD)
 
 -  [概率论和数理统计公式总结](https://zhuanlan.zhihu.com/p/36584335)
 
-
+-  [DL_code: distribution-is-all-you-need](https://github.com/graykode/distribution-is-all-you-need)
 ********
 :peach: [**Statistical Method 统计方法**](https://en.wikibooks.org/wiki/Statistics/Introduction/What_is_Statistics)
 
@@ -142,7 +148,7 @@
 
 <!-- ![](./images/mutual_entropy.svg) -->
 <img src="./images/mutual_entropy.svg">
-
+![](images/mutual_entropy_probability.svg)
 
 **相对熵 Relative Entropy:**
 
@@ -154,7 +160,9 @@
 
         定义为:
 
-![](images/mutual_entropy_probability.svg)
+
+
+
 
 
 #### Reference 
