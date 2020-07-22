@@ -234,7 +234,7 @@
 
         定义为:
 
-
+<img src="./images/kl_divergence.svg">
 
 
 
@@ -253,6 +253,8 @@
 - [信息熵是什么？](https://www.zhihu.com/question/22178202)
 
 - [什么是「互信息」？](https://www.zhihu.com/question/304499706/answer/544609335)
+  
+- [为什么交叉熵（cross-entropy）可以用于计算代价？](https://www.zhihu.com/question/65288314/answer/244557337)
 
 - [Book: Information Theory, Inference, and Learning Algorithms _ English](http://www.inference.org.uk/itprnn/book.pdf)
 
