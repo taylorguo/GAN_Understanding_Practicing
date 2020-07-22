@@ -2,6 +2,12 @@
 
 ********
 
+<a href=”#概率论的作用与定义”>概率论
+
+
+
+********
+
 :peach:  [**Kullback-Leibler Divergence**](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence) 
 
 
@@ -9,11 +15,6 @@
 
 
 :peach:  [**Wasserstein Distance**](https://en.wikipedia.org/wiki/Wasserstein_metric) 
-
-
-#### Reference 
-
--  <img src="../README/images/pytorch.png" height="13">  [MUNIT - NVidia Official PyTorch](https://github.com/NVlabs/MUNIT)
 
 
 ********
@@ -277,5 +278,7 @@
 - [为什么交叉熵（cross-entropy）可以用于计算代价？](https://www.zhihu.com/question/65288314/answer/244557337)
 
 - [Book: Information Theory, Inference, and Learning Algorithms _ English](http://www.inference.org.uk/itprnn/book.pdf)
+  
+- [David MacKay Homepage](http://www.inference.org.uk/mackay/itila/)
 
 ********
