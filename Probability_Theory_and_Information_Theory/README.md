@@ -2,11 +2,11 @@
 
 ********
 
-[概率论](#probability-theory-and-information-theory)
+[概率论](#probability-theory-概率论)
 
-[统计方法](#)
+[统计方法](#statistical-method-统计方法)
 
-
+[信息论](#information-theory-信息论)
 
 ********
 
@@ -32,6 +32,8 @@
 
 ********
 :peach:  [**Probability Theory  概率论**](https://github.com/jcnlp/books/blob/master/math/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1(%E6%B5%99%E5%A4%A7%E7%AC%AC%E5%9B%9B%E7%89%88).pdf)
+
+#### Probability Theory  概率论
 
 **概率论的作用与定义:**
 
@@ -143,10 +145,12 @@
 -  [联合概率、边缘概率、条件概率之间的关系&贝叶斯公式](https://blog.csdn.net/tick_tock97/article/details/79885868)
 
 ********
-:peach: #### [Statistical Method 统计方法](https://en.wikibooks.org/wiki/Statistics/Introduction/What_is_Statistics)
+:peach: [**Statistical Method 统计方法**](https://en.wikibooks.org/wiki/Statistics/Introduction/What_is_Statistics)
+#### Statistical Method 统计方法
 
+        函数估计的所有模型都是基于最大似然估计:
 
-
+        p(x, a)是密度函数的集合, p(x, a0)属于这个函数集合中的一个. 用独立同分布数据x1, ...xn, 来估计密度函数.
 
 #### Reference 
 
@@ -156,6 +160,8 @@
 
 ********
 :peach:  [**Information Theory  信息论**](https://arxiv.org/pdf/1711.11585.pdf) 
+
+#### Information Theory  信息论
 
 **信息量:** 
 
@@ -252,7 +258,7 @@
 
         将KL Divergence不等式两边取平均, 基于KL散度的变体，解决了KL散度非对称的问题。
 
-<img src="./images/js_divergence.svg">
+<img src="./images/js_divergence.png">
 
         一般地，JS散度是对称的，其取值是0到1之间。
 
