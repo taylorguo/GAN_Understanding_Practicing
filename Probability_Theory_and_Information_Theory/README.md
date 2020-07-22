@@ -2,7 +2,9 @@
 
 ********
 
-<a href=”#Probability Theory  概率论”>概率论
+[概率论](#probability-theory-and-information-theory)
+
+[统计方法](#)
 
 
 
@@ -141,7 +143,7 @@
 -  [联合概率、边缘概率、条件概率之间的关系&贝叶斯公式](https://blog.csdn.net/tick_tock97/article/details/79885868)
 
 ********
-:peach: [**Statistical Method 统计方法**](https://en.wikibooks.org/wiki/Statistics/Introduction/What_is_Statistics)
+:peach: #### [Statistical Method 统计方法](https://en.wikibooks.org/wiki/Statistics/Introduction/What_is_Statistics)
 
 
 
