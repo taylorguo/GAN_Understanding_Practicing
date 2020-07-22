@@ -122,7 +122,7 @@
 
         贝叶斯公式：
 
-<img src="image/bayes_theorem.svg">
+<img src="./image/bayes_theorem.svg">
 
 
 <img src="./images/one_dim.png" height=600>
