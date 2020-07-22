@@ -22,42 +22,112 @@
 
 **提出问题: 为什么?**
 
-    机器学习通常必须处理不确定量，有时也可能需要处理随机 (非确定性的) 量。
+        机器学习通常必须处理不确定量，有时也可能需要处理随机 (非确定性的) 量。
 
-    我们的确需要一种用以对不确定性进行表示和推理的方法, 使用概率论来量化不确定性; 事件发生的概率相等/不等
+        我们的确需要一种用以对不确定性进行表示和推理的方法, 使用概率论来量化不确定性; 事件发生的概率相等/不等
 
 
 ********
 :peach:  [**Probability Theory  概率论**](https://github.com/jcnlp/books/blob/master/math/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1(%E6%B5%99%E5%A4%A7%E7%AC%AC%E5%9B%9B%E7%89%88).pdf)
 
-    概率论本质上是对随机事件的发生可能性赋以一种合理的度量。
+**概率论的作用与定义:**
 
-    将“事件”这个概念抽象化, 引入“集合论”, 把这些事件表示成集合。
+        概率论本质上是对随机事件的发生可能性赋以一种合理的度量。
 
-    接着对事件的发生进行度量, 就赋予相应的概率测度。
+        将“事件”这个概念抽象化, 引入“集合论”, 把这些事件表示成集合。
 
-    样本空间(sample space): 所有可能的结果构成的集合
+        接着对事件的发生进行度量, 就赋予相应的概率测度。
 
-    概率P(E)是发生频率的极限:  <img src="./images/probability_frequency_limit.png" height="50">
+        样本空间(sample space): 所有可能的结果构成的集合
 
-    随机变量: 从样本空间到实数的函数
+        概率P(E)是发生频率的极限:  
 
-    离散概率空间
+<img src="./images/probability_frequency_limit.png" height="50">
 
-    连续概率空间
+
+        随机变量(Random Variable): 从样本空间到实数的函数; 
+        
+        一个可能随机取不同值的变量。例如:抛掷一枚硬币，出现正面或者反面的结果;
+        
+        对可能状态的描述, 伴随概率分布来指定每个状态的可能性; 可以是离散的或连续的.
+
+        离散随机变量/概率空间: 随机变量即在一定区间内变量取值为有限个或可数个;
+        
+        离散型随机变量通常依据概率质量函数分类，主要分为：伯努利随机变量、二项随机变量、几何随机变量和泊松随机变量。
+
+        连续随机变量/概率空间: 随机变量即在一定区间内变量取值有无限个，或数值无法一一列举出来。
+
+        几个重要的连续随机变量常常出现在概率论中，如：均匀随机变量、指数随机变量、伽马随机变量和正态随机变量。
 
 <img src="./images/probability_principle.png" height="200">
 
 
-    • 频率学派概率 (Frequentist Probability):认为概率和事件发生的频率相关。
+**概率空间上的基本运算:**
 
-    • 贝叶斯学派概率 (Bayesian Probability):认为概率是对某件事发生的确定程度，可以理解成是确信的程度。
+        离散变量概率分布用概率质量函数(Probability Mass Funcation: PMF)表示:
 
-    • 随机变量 (Random Variable):一个可能随机取不同值的变量。例如:抛掷一枚硬币，出现正面或者反面的结果。
+        概率质量函数将随机变量的每个取值映射到取到该值/状态的概率, 记为: x~P(x), 概率为1表示确定发生;为0表示不可能发生.
 
-    贝叶斯公式：
+        多个变量的概率分布为: 联合概率分布(Joint Probability Distribution), 记为: P(x,y) 或 P(x=x, y=y)
+
+        PMF的性质:
+
+        1. 定义域是所有可能状态的集合
+        2. 概率取值的值域是[0, 1]
+        3. 归一化(Normalized): 概率取值的和为1
+
+        x有k个状态的 均匀分布: P(x=xi) = 1/k (i取k); 和 = 1
+
+
+        ********
+
+        连续变量概率分布用概率密度函数(Probability Density Function: PDF)表示:
+
+        PDF的性质:
+
+        1. 定义域是所有可能状态的集合
+        2. 概率取值>=0; 并不要求p(x)<=1
+        3. 归一化(Normalized): 概率积分取值为1, 对概率密度函数在较小的区间上求积分来获得概率质量
+    
+        均匀分布: u(x:a,b) = 1 / (b-a), 表示x取值范围为[a,b],积分为1; 该范围外的取值为0, 记为x~U(a,b)
+
+
+        ********
+
+
+        联合概率指的是包含多个条件且所有条件同时成立的概率，记作P(X=a,Y=b)或P(a,b)
+
+        边缘概率分布(Marginal Probability Distribution): 边缘概率是与联合概率对应，P(X=a)或P(Y=b)，仅与单个随机变量有关的概率称为边缘概率
+
+
+
+        条件概率: 某事件在其他事件发生情况下出现的概率
+
+
+        条件概率的链式法则:
+
+
+        ********
+
+        平均度, 偏离度, 相关性
+
+        期望 Expectation: 加权求和; 概率积分
+
+        方差 Variance: x相对期望/均值的偏离程度,分布情况; 标准差 Standard Deviation 是方差的平方根
+
+
+        • 频率学派概率 (Frequentist Probability):认为概率和事件发生的频率相关。
+
+        • 贝叶斯学派概率 (Bayesian Probability):认为概率是对某件事发生的确定程度，可以理解成是确信的程度。
+
+        贝叶斯公式：
 
 <img src="image/bayes_theorem.svg">
+
+
+<img src="./images/one_dim.png" height=600>
+<img src="./images/one_dim_char.png" height=600>
+
 
 #### Reference 
 
@@ -66,6 +136,9 @@
 -  [概率论和数理统计公式总结](https://zhuanlan.zhihu.com/p/36584335)
 
 -  [DL_code: distribution-is-all-you-need](https://github.com/graykode/distribution-is-all-you-need)
+
+-  [联合概率、边缘概率、条件概率之间的关系&贝叶斯公式](https://blog.csdn.net/tick_tock97/article/details/79885868)
+
 ********
 :peach: [**Statistical Method 统计方法**](https://en.wikibooks.org/wiki/Statistics/Introduction/What_is_Statistics)
 
