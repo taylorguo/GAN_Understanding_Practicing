@@ -127,10 +127,10 @@
 
         贝叶斯公式：
 
-<img src="./image/bayes_theorem.svg">
+<!-- <img src="./image/bayes_theorem.svg"> -->
+![](./images/bayes_theorem.svg)
 
-
-<img src="./images/one_dim.png" height=600>
+<img src="./images/one_dim.png" height=400>
 <img src="./images/one_dim_char.png" height=600>
 
 
@@ -144,6 +144,11 @@
 
 -  [联合概率、边缘概率、条件概率之间的关系&贝叶斯公式](https://blog.csdn.net/tick_tock97/article/details/79885868)
 
+
+
+
+
+
 ********
 :peach: [**Statistical Method 统计方法**](https://en.wikibooks.org/wiki/Statistics/Introduction/What_is_Statistics)
 #### Statistical Method 统计方法
@@ -155,6 +160,10 @@
 #### Reference 
 
 - [从最大似然估计到交叉熵](https://www.cnblogs.com/LeftNotEasy/p/mle-cross-entropy-and-deep-learning.html)
+
+
+
+
 
 
 
