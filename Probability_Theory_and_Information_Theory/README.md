@@ -136,8 +136,6 @@
 
 #### Reference 
 
--  <img src="../README/images/pytorch.png" height="15">  [Pix2PixHD - NVidia Official PyTorch](https://github.com/NVIDIA/pix2pixHD)
-
 -  [概率论和数理统计公式总结](https://zhuanlan.zhihu.com/p/36584335)
 
 -  [DL_code: distribution-is-all-you-need](https://github.com/graykode/distribution-is-all-you-need)
@@ -256,7 +254,8 @@
 
         1. 即两个事件分布完全相同，那么KL散度等于0。
         2. 减号左边的就是事件A的熵
-        3. KL散度来计算两个分布A与B的时候是不是对称的，有“坐标系”的问题; 换句话说，KL散度由A自己的熵与B在A上的期望共同决定。当使用KL散度来衡量两个事件(连续或离散)，上面的公式意义就是求 A与B之间的对数差 在 A上的期望值。 
+        3. KL散度来计算两个分布A与B的时候是不是对称的，有“坐标系”的问题; 换句话说，KL散度由A自己的熵与B在A上的期望共同决定。
+            当使用KL散度来衡量两个事件(连续或离散)，上面的公式意义就是求 A与B之间的对数差 在 A上的期望值。 
 
 <img src="./images/kl_divergence.svg">
 
