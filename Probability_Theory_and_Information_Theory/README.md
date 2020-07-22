@@ -233,8 +233,28 @@
         以提出者的名字命名, 也叫 KL散度（Kullback–Leibler divergence）, 用于衡量两个概率分布之间的差异。
 
         定义为:
+<img src="./images/kl_formulate_discrete.svg">
+<img src="./images/kl_formulate.svg">
+
+        1. 即两个事件分布完全相同，那么KL散度等于0。
+        2. 减号左边的就是事件A的熵
+        3. KL散度来计算两个分布A与B的时候是不是对称的，有“坐标系”的问题; 换句话说，KL散度由A自己的熵与B在A上的期望共同决定。当使用KL散度来衡量两个事件(连续或离散)，上面的公式意义就是求 A与B之间的对数差 在 A上的期望值。 
 
 <img src="./images/kl_divergence.svg">
+
+
+        ********
+
+**JS Divergence:**
+
+        将KL Divergence不等式两边取平均, 基于KL散度的变体，解决了KL散度非对称的问题。
+
+<img src="./images/js_divergence.svg">
+
+        一般地，JS散度是对称的，其取值是0到1之间。
+
+
+
 
 
 
