@@ -8,11 +8,15 @@
 ********
 :strawberry:  [**Pix2Pix**](https://arxiv.org/pdf/1611.07004.pdf)   :date:   2016.11v1
 
+Image-to-Image Translation with Conditional Adversarial Networks
+
+
 
 ********
 :strawberry:  [**Pix2PixHD**](https://arxiv.org/pdf/1711.11585.pdf)   :date:   2017.11v1
 
 High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs
+
 
 #### Reference 
 
@@ -38,6 +42,8 @@ Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks
 
 Unsupervised Image-to-Image Translation Networks
 
+
+
 #### Paper
 
 - [2017 - Towards Principled Methods for Training Generative Adversarial Networks](https://arxiv.org/pdf/1701.04862.pdf)
@@ -48,13 +54,13 @@ Unsupervised Image-to-Image Translation Networks
 
 #### Implementation 
 
-- <img src="../README/images/pytorch.png" height="15">  [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
+- <img src="../../README/images/pytorch.png" height="15">  [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
 
-- <img src="../README/images/keras.png" height="15">
+- <img src="../../README/images/keras.png" height="15">
 
-- <img src="../README/images/tf1.png" height="15">
+- <img src="../../README/images/tf1.png" height="15">
 
-- <img src="../README/images/tf2.png" height="15">   
+- <img src="../../README/images/tf2.png" height="15">   
 
 
 #### Reference 
@@ -90,18 +96,24 @@ MUNIT: Multimodal UNsupervised Image-to-image Translation
 
 #### Network 
 
-   <img src="../README/images/fidcalc.png"> 
+   <img src="../../README/images/fidcalc.png"> 
 
 #### Implementation 
 
-- <img src="../README/images/pytorch.png" height="15">  [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
+- <img src="../../README/images/pytorch.png" height="15">  [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
 
-- <img src="../README/images/keras.png" height="15">
+- <img src="../../README/images/keras.png" height="15">
 
-- <img src="../README/images/tf1.png" height="15">
+- <img src="../../README/images/tf1.png" height="15">
 
-- <img src="../README/images/tf2.png" height="15">   
+- <img src="../../README/images/tf2.png" height="15">   
 
+
+********
+
+:strawberry:  [**FUNIT**](https://arxiv.org/pdf/1905.01723.pdf)   :date:   2019.05v1
+
+Few-Shot Unsupervised Image-to-Image Translation
 
 
 ********
