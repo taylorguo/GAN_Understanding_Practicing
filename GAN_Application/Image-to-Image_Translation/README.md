@@ -116,4 +116,8 @@ MUNIT: Multimodal UNsupervised Image-to-image Translation
 Few-Shot Unsupervised Image-to-Image Translation
 
 
+#### Network 
+
+   <img src="../../README/images/funit_block.jpg" height=550> 
+
 ********
