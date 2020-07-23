@@ -293,6 +293,8 @@
   
 - [为什么交叉熵（cross-entropy）可以用于计算代价？](https://www.zhihu.com/question/65288314/answer/244557337)
 
+- [如何通俗的解释交叉熵与相对熵？](https://www.zhihu.com/question/41252833)
+
 - [Book: Information Theory, Inference, and Learning Algorithms _ English](http://www.inference.org.uk/itprnn/book.pdf)
   
 - [David MacKay Homepage](http://www.inference.org.uk/mackay/itila/)
