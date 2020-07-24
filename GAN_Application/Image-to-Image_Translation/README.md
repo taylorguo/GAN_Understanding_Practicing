@@ -44,9 +44,6 @@ Unsupervised Image-to-Image Translation Networks
 
 
 
-#### Paper
-
-- [2017 - Towards Principled Methods for Training Generative Adversarial Networks](https://arxiv.org/pdf/1701.04862.pdf)
 
 #### Network 
 
@@ -118,6 +115,39 @@ Few-Shot Unsupervised Image-to-Image Translation
 
 #### Network 
 
-   <img src="../../README/images/funit_block.jpg" height=550> 
+   <img src="../../README/images/funit_block.jpg" height=450> 
+
+********
+
+:strawberry:  [**StarGAN v1**](https://arxiv.org/pdf/1711.09020.pdf)   :date:   2017.11v1
+
+StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation
+
+
+
+#### Network 
+
+   <img src="../../README/images/funit_block.jpg" height=450> 
+
+
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13">  [StarGAN v1 PyTorch Official](https://github.com/yunjey/stargan)
+
+********
+
+:strawberry:  [**StarGAN v2**](https://arxiv.org/pdf/1912.01865.pdf)   :date:   2019.12v1
+
+StarGAN v2: Diverse Image Synthesis for Multiple Domains
+
+
+#### Network 
+
+   <img src="../../README/images/funit_block.jpg" height=450> 
+
+
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13">  [StarGAN v2 PyTorch Official](https://github.com/clovaai/stargan-v2)
 
 ********
