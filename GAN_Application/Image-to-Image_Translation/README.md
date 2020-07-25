@@ -43,7 +43,7 @@ Image-to-Image Translation with Conditional Adversarial Networks
       生成器和判别器都是用convolution-BatchNorm-ReLu
 
       ------
-      [It's beneficial to mix the GAN objective with a more traditional loss, such as L2 distance](https://arxiv.org/pdf/1604.07379.pdf)
+   [It's beneficial to mix the GAN objective with a more traditional loss, such as L2 distance](https://arxiv.org/pdf/1604.07379.pdf)
 
       discriminator’s job remains unchanged, 
 
