@@ -44,9 +44,6 @@ Unsupervised Image-to-Image Translation Networks
 
 
 
-#### Paper
-
-- [2017 - Towards Principled Methods for Training Generative Adversarial Networks](https://arxiv.org/pdf/1701.04862.pdf)
 
 #### Network 
 
@@ -118,10 +115,11 @@ Few-Shot Unsupervised Image-to-Image Translation
 
 #### Network 
 
-   <img src="../../README/images/funit_block.jpg" height=550> 
+   <img src="../../README/images/funit_block.jpg" height=450> 
 
 ********
 
+<<<<<<< HEAD
 
 
 ## Face Synthesis
@@ -140,9 +138,42 @@ Few-Shot Unsupervised Image-to-Image Translation
 #### Network
 
 
+=======
+:strawberry:  [**StarGAN v1**](https://arxiv.org/pdf/1711.09020.pdf)   :date:   2017.11v1
+
+StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation
+
+
+
+#### Network 
+
+   <img src="../../README/images/funit_block.jpg" height=450> 
 
 
 #### Implementation 
 
+- <img src="../../README/images/pytorch.png" height="13">  [StarGAN v1 PyTorch Official](https://github.com/yunjey/stargan)
+
+********
+
+:strawberry:  [**StarGAN v2**](https://arxiv.org/pdf/1912.01865.pdf)   :date:   2019.12v1
+
+StarGAN v2: Diverse Image Synthesis for Multiple Domains
+
+
+#### Network 
+
+   <img src="../../README/images/funit_block.jpg" height=450> 
+>>>>>>> 869fc2e8056bdbeb981c5ac5b52abd0452e9e779
+
+
+#### Implementation 
+
+<<<<<<< HEAD
 - <img src="../../README/images/pytorch.png" height="13">  [Few-Shot-Vid2Vid Pytorch](https://github.com/NVlabs/few-shot-vid2vid)
 
+=======
+- <img src="../../README/images/pytorch.png" height="13">  [StarGAN v2 PyTorch Official](https://github.com/clovaai/stargan-v2)
+
+********
+>>>>>>> 869fc2e8056bdbeb981c5ac5b52abd0452e9e779
