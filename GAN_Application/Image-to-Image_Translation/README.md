@@ -112,7 +112,7 @@ Unsupervised Image-to-Image Translation Networks
 
 #### Network 
 
-   <img src="../README/images/fidcalc.png"> 
+   <img src="../../README/images/fidcalc.png"> 
 
 #### Implementation 
 
@@ -120,9 +120,9 @@ Unsupervised Image-to-Image Translation Networks
 
 - <img src="../../README/images/keras.png" height="13">
 
-- <img src="../../README/images/tf1.png" height="15">
+- <img src="../../README/images/tf1.png" height="13">
 
-- <img src="../../README/images/tf2.png" height="15">   
+- <img src="../../README/images/tf2.png" height="13">   
 
 
 #### Reference 
@@ -139,11 +139,11 @@ MUNIT: Multimodal UNsupervised Image-to-image Translation
 
 -  <img src="../../README/images/pytorch.png" height="13">  [MUNIT - NVidia Official PyTorch](https://github.com/NVlabs/MUNIT)
 
-- <img src="./README/images/keras.png" height="12"> [MUNIT - Keras](https://github.com/shaoanlu/MUNIT-keras)
+- <img src="../../README/images/keras.png" height="12"> [MUNIT - Keras](https://github.com/shaoanlu/MUNIT-keras)
 
-- <img src="./README/images/tf1.png" height="13"> [MUNIT - tensorflow1.4](https://github.com/taki0112/MUNIT-Tensorflow)
+- <img src="../../README/images/tf1.png" height="13"> [MUNIT - tensorflow1.4](https://github.com/taki0112/MUNIT-Tensorflow)
 
-- <img src="./README/images/tf2.png" height="13"> 
+- <img src="../../README/images/tf2.png" height="13"> 
 
 ********
 
@@ -162,13 +162,13 @@ MUNIT: Multimodal UNsupervised Image-to-image Translation
 
 #### Implementation 
 
-- <img src="../../README/images/pytorch.png" height="15">  [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
+- <img src="../../README/images/pytorch.png" height="13">  [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
 
-- <img src="../../README/images/keras.png" height="15">
+- <img src="../../README/images/keras.png" height="13">
 
-- <img src="../../README/images/tf1.png" height="15">
+- <img src="../../README/images/tf1.png" height="13">
 
-- <img src="../../README/images/tf2.png" height="15">   
+- <img src="../../README/images/tf2.png" height="13">   
 
 
 ********
@@ -194,7 +194,7 @@ Few-Shot Unsupervised Image-to-Image Translation
 
 ## Video Synthesis
 
-:tomato: [**Few-shot Video-to-Video Synthesis**](https://arxiv.org/pdf/1910.12713.pdf)
+:tomato: [**Few-shot Video-to-Video Synthesis**](https://arxiv.org/pdf/1910.12713.pdf)   :date:   2016.11v1    :blush:  NVidia
 
 
 
