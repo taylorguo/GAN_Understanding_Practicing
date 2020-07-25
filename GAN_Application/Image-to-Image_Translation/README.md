@@ -14,14 +14,14 @@ Image-to-Image Translation with Conditional Adversarial Networks
 
 思路：cGAN + L1 Loss, U-Net;  PatchGAN Discriminator on NxN image patch
 
-      ------
+   ------
       Conditional GANs suitable for image-to-image translation tasks, 
 
       condition on an input image and generate a corresponding output image
 
       cGAN比较适合图像到图像的风格转移: 给输入图像施加条件, 生成对应的输出图像
 
-      ------
+   ------
       Generator: use a “U-Net”-based architecture; add skip connections
 
       For image translation, there is a great deal of low-level information shared between the input and output
@@ -42,7 +42,7 @@ Image-to-Image Translation with Conditional Adversarial Networks
 
       生成器和判别器都是用convolution-BatchNorm-ReLu
 
-      ------
+   ------
    [It's beneficial to mix the GAN objective with a more traditional loss, such as L2 distance](https://arxiv.org/pdf/1604.07379.pdf)
 
       discriminator’s job remains unchanged, 
