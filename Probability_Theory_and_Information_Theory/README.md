@@ -160,7 +160,7 @@
 - [从最大似然估计到交叉熵](https://www.cnblogs.com/LeftNotEasy/p/mle-cross-entropy-and-deep-learning.html)
 
 
-
+- [概率论中「矩」（moment）的实际含义是什么，高阶矩表示数据的哪些状态？](https://www.zhihu.com/question/23236070?sort=created)
 
 
 
