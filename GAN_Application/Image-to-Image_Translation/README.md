@@ -6,10 +6,52 @@
 ## Image-to-Image Translation
 
 ********
-:strawberry:  [**Pix2Pix**](https://arxiv.org/pdf/1611.07004.pdf)   :date:   2016.11v1
+:strawberry:  [**Pix2Pix**](https://arxiv.org/pdf/1611.07004.pdf)   :date:   2016.11v1    :blush:  UC Berkeley
 
 Image-to-Image Translation with Conditional Adversarial Networks
 
+改进：图像到图像的风格转移： 无需手工处理映射函数，损失函数
+思路：cGAN + L1 Loss, U-Net;  PatchGAN Discriminator on NxN image patch
+
+   Conditional GANs suitable for image-to-image translation tasks, 
+   condition on an input image and generate a corresponding output image
+   cGAN比较适合图像到图像的风格转移: 给输入图像施加条件, 生成对应的输出图像
+
+   Generator: use a “U-Net”-based architecture; add skip connections
+   For image translation, there is a great deal of low-level information shared between the input and output
+   and it would be desirable to shuttle this information directly across the net
+   Discriminator: use a convolutional “PatchGAN” classifier, which only penalizes structure at the scale of image patches
+   Both generator and discriminator use modules of the form convolution-BatchNorm-ReLu
+   生成器使用 类U-Net 架构; 添加跳层连接, 而不仅仅是使用自动编解码器
+   图像转移, 希望输入和输出共享低阶信息, 直接把这些信息透传到网络中, 例如边缘信息
+   判别器使用 Markovian discriminator 马尔科夫判别器/PatchGAN分类器, 只约束图像 NxN区块结构
+   N远小于图像尺寸时, 生成的图像质量较高
+   生成器和判别器都是用convolution-BatchNorm-ReLu
+
+   [It's beneficial to mix the GAN objective with a more traditional loss, such as L2 distance](https://arxiv.org/pdf/1604.07379.pdf)
+   discriminator’s job remains unchanged, 
+   generator is tasked to not only fool the discriminator but also to be near the ground truth output in an L2 sense
+   Using L1 distance rather than L2 as L1 encourages less blurring
+   生成器不仅仅是要与判别器博弈, 还需要更可能地接近 训练样本;
+   相比L2, 使用L1距离可以使图片更清晰
+
+#### Loss Function
+
+   <img src="../../README/images/pix2pix_loss.png" height=140>
+
+   λ = 0  , only cGAN gives much sharper results but introduces visual artifacts
+   λ = 100, both terms together reduces these artifacts
+
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13">  [Pix2Pix + BEGAN PyTorch](https://github.com/taey16/pix2pixBEGAN.pytorch)
+
+- <img src="../../README/images/keras.png" height="13"> [Pix2Pix Keras](https://github.com/tdeboissiere/DeepLearningImplementations/tree/master/pix2pix)
+
+
+#### Reference
+
+- [How to Develop a Pix2Pix GAN for Image-to-Image Translation](https://machinelearningmastery.com/how-to-develop-a-pix2pix-gan-for-image-to-image-translation/)
 
 
 ********
@@ -20,7 +62,7 @@ High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs
 
 #### Reference 
 
--  <img src="../../README/images/pytorch.png" height="15">  [Pix2PixHD - NVidia Official PyTorch](https://github.com/NVIDIA/pix2pixHD)
+-  <img src="../../README/images/pytorch.png" height="13">  [Pix2PixHD - NVidia Official PyTorch](https://github.com/NVIDIA/pix2pixHD)
 
 
 
@@ -51,9 +93,9 @@ Unsupervised Image-to-Image Translation Networks
 
 #### Implementation 
 
-- <img src="../../README/images/pytorch.png" height="15">  [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
+- <img src="../../README/images/pytorch.png" height="13">  [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
 
-- <img src="../../README/images/keras.png" height="15">
+- <img src="../../README/images/keras.png" height="13">
 
 - <img src="../../README/images/tf1.png" height="15">
 
