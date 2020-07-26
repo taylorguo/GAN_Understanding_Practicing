@@ -78,7 +78,7 @@ Image-to-Image Translation with Conditional Adversarial Networks
 
 
 ********
-:strawberry:  [**Pix2PixHD**](https://arxiv.org/pdf/1711.11585.pdf)   :date:   2017.11v1
+:strawberry:  [**Pix2PixHD**](https://arxiv.org/pdf/1711.11585.pdf)   :date:   2017.11v1    :blush:  NVidia / UC Berkeley 
 
 High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs
 
@@ -90,7 +90,7 @@ High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs
 
 
 ********
-:strawberry:  [**CycleGAN**](https://arxiv.org/pdf/1703.10593.pdf)   :date:   2017.03v1
+:strawberry:  [**CycleGAN**](https://arxiv.org/pdf/1703.10593.pdf)   :date:   2017.03v1    :blush:  UC Berkeley 
 
 Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks
 
@@ -100,10 +100,11 @@ Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks
 
 - [CycleGAN Offical](https://github.com/junyanz/CycleGAN)
 
+- [How to Develop a CycleGAN for Image-to-Image Translation with Keras](https://machinelearningmastery.com/cyclegan-tutorial-with-keras/)
 
 ********
 
-:strawberry:  [**UNIT**](https://arxiv.org/pdf/1703.00848.pdf)   :date:   2017.03v1
+:strawberry:  [**UNIT**](https://arxiv.org/pdf/1703.00848.pdf)   :date:   2017.03v1    :blush:  Cornell University / NVidia
 
 Unsupervised Image-to-Image Translation Networks
 
@@ -112,11 +113,11 @@ Unsupervised Image-to-Image Translation Networks
 
 #### Network 
 
-   <img src="../../README/images/fidcalc.png"> 
+   <img src="../../README/images/unit_net.png"> 
 
 #### Implementation 
 
-- <img src="../../README/images/pytorch.png" height="13">  [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
+- <img src="../../README/images/pytorch.png" height="13"> 
 
 - <img src="../../README/images/keras.png" height="13">
 
@@ -127,19 +128,48 @@ Unsupervised Image-to-Image Translation Networks
 
 #### Reference 
 
-- [FID TensorFlow 1.x Official](https://github.com/bioinf-jku/TTUR)
+********
+
+:strawberry:  [**BicycleGAN**](https://arxiv.org/pdf/1711.11586.pdf)   :date:   2017.11v1    :blush:  UC Berkeley / Adobe Research
+
+Toward Multimodal Image-to-Image Translation
+
+
+#### Network 
+
+   <img src="../../README/images/bicyclegan_net.png"> 
+
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13">  [BicycleGAN Official PyTorch](https://github.com/junyanz/BicycleGAN)
+
+- <img src="../../README/images/keras.png" height="13">
+
+- <img src="../../README/images/tf1.png" height="13">
+
+- <img src="../../README/images/tf2.png" height="13">   
+
+
+#### Reference 
+
+
 
 
 ********
-:strawberry:  [**MUNIT**](https://arxiv.org/pdf/1804.04732.pdf)   :date:   2018.04v1
+:strawberry:  [**MUNIT**](https://arxiv.org/pdf/1804.04732.pdf)   :date:   2018.04v1    :blush:  Cornell University / NVidia
 
 MUNIT: Multimodal UNsupervised Image-to-image Translation
+
+
+#### Network 
+
+   <img src="../../README/images/munit_net.png"> 
 
 #### Reference 
 
 -  <img src="../../README/images/pytorch.png" height="13">  [MUNIT - NVidia Official PyTorch](https://github.com/NVlabs/MUNIT)
 
-- <img src="../../README/images/keras.png" height="12"> [MUNIT - Keras](https://github.com/shaoanlu/MUNIT-keras)
+- <img src="../../README/images/keras.png" height="13"> [MUNIT - Keras](https://github.com/shaoanlu/MUNIT-keras)
 
 - <img src="../../README/images/tf1.png" height="13"> [MUNIT - tensorflow1.4](https://github.com/taki0112/MUNIT-Tensorflow)
 
