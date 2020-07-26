@@ -1,6 +1,5 @@
 # GAN Applications
 
-:shipit: :sparkles: :+1: :clap:
 ********
 
 ## Image-to-Image Translation
