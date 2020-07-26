@@ -188,7 +188,7 @@ MUNIT: Multimodal UNsupervised Image-to-image Translation
 
 #### Network 
 
-   <img src="../../README/images/fidcalc.png"> 
+   <img src="../../README/images/u-gan-it_net.png"> 
 
 #### Implementation 
 
