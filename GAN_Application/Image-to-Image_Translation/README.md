@@ -77,7 +77,9 @@ Image-to-Image Translation with Conditional Adversarial Networks
 
 - [New York Google Map dataset for Experiment](http://efrosgans.eecs.berkeley.edu/pix2pix/datasets/maps.tar.gz)
 
+
 ********
+
 :strawberry:  [**Pix2PixHD**](https://arxiv.org/pdf/1711.11585.pdf)   :date:   2017.11v1    :blush:  NVidia / UC Berkeley 
 
 High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs

@@ -376,13 +376,13 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 #### Implementation 
 
-- <img src="./README/images/pytorch.png" height="15">
+- <img src="./README/images/pytorch.png" height="13">
 
-- <img src="./README/images/keras.png" height="15">
+- <img src="./README/images/keras.png" height="13">
 
-- <img src="./README/images/tf1.png" height="15">
+- <img src="./README/images/tf1.png" height="13">
 
-- <img src="./README/images/tf2.png" height="15">   
+- <img src="./README/images/tf2.png" height="13">   
 
 ********
 
@@ -390,13 +390,13 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 #### Implementation 
 
-- <img src="./README/images/pytorch.png" height="15">
+- <img src="./README/images/pytorch.png" height="13">
 
-- <img src="./README/images/keras.png" height="15">
+- <img src="./README/images/keras.png" height="13">
 
-- <img src="./README/images/tf1.png" height="15">
+- <img src="./README/images/tf1.png" height="13">
 
-- <img src="./README/images/tf2.png" height="15"> 
+- <img src="./README/images/tf2.png" height="13"> 
 
 ********
 :lemon:  [**SN-GAN**](https://arxiv.org/pdf/1802.05751v3.pdf)   :date:    2018.02
@@ -438,13 +438,13 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 #### Implementation 
 
-- <img src="./README/images/pytorch.png" height="15">
+- <img src="./README/images/pytorch.png" height="13">
 
-- <img src="./README/images/keras.png" height="15">
+- <img src="./README/images/keras.png" height="13">
 
-- <img src="./README/images/tf1.png" height="15">
+- <img src="./README/images/tf1.png" height="13">
 
-- <img src="./README/images/tf2.png" height="15">   
+- <img src="./README/images/tf2.png" height="13">   
 
 
 #### Reference 
@@ -492,13 +492,13 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 #### Implementation 
 
-- <img src="./README/images/pytorch.png" height="15">
+- <img src="./README/images/pytorch.png" height="13">
 
-- <img src="./README/images/keras.png" height="15">
+- <img src="./README/images/keras.png" height="13">
 
-- <img src="./README/images/tf1.png" height="15">
+- <img src="./README/images/tf1.png" height="13">
 
-- <img src="./README/images/tf2.png" height="15">   
+- <img src="./README/images/tf2.png" height="13">   
 
 
 #### Reference 

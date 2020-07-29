@@ -107,7 +107,7 @@
 
 #### Implementation 
 
-- <img src="../README/images/pytorch.png" height="15">  [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
+- <img src="../README/images/pytorch.png" height="13">  [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
 
       计算均值的时候是否包含零填充, PyTorch默认 count_include_pad=True, 这里计算FID要设置为False
 
@@ -129,11 +129,11 @@
       inception.Mixed_7b = FIDInceptionE_1(1280)
       inception.Mixed_7c = FIDInceptionE_2(2048)
 
-- <img src="../README/images/keras.png" height="15">
+- <img src="../README/images/keras.png" height="13">
 
-- <img src="../README/images/tf1.png" height="15">
+- <img src="../README/images/tf1.png" height="13">
 
-- <img src="../README/images/tf2.png" height="15">   
+- <img src="../README/images/tf2.png" height="13">   
 
 ********
 
