@@ -221,6 +221,32 @@ Integrate conditional GAN model into Laplacian Pyramid Framework
 
 :lemon:  [**InfoGAN**](https://arxiv.org/pdf/1606.03657.pdf)   :date:    2016.06    :blush:    OpenAI
 
+InfoGAN: Interpretable Representation Learning by
+Information Maximizing Generative Adversarial Nets
+
+#### Key insights
+
+   A new term encourages high mutual information between generated samples and a small subset of latent variables c. 
+
+   many domains naturally decompose into a set of semantically meaningful factors of variation
+   decompose the input noise vector into two parts: 
+   (i) z, which is treated as source of incompressible noise; 
+   (ii) c, which we will call the latent code and will target the salient structured semantic features of the data distribution.
+   将输入噪声分为两部分: z噪声; c 隐代码控制数据分布的显著结构性语义特征
+
+   InfoGAN approaches this problem is by splitting the Generator input into two parts: 
+   the traditional noise vector and a new “latent code” vector. 
+   The codes are then made meaningful by maximizing the Mutual Information between the code and the Generator output.
+   最大化c隐代码和生成器的输出
+
+   defining an auxiliary distribution Q(c|x) to approximate P(c|x)
+
+
+
+#### Network
+
+- <img src="./README/images/infogan-architecture.png">
+
 #### Implementation 
 
 - <img src="./README/images/pytorch.png" height="13">
@@ -231,6 +257,14 @@ Integrate conditional GAN model into Laplacian Pyramid Framework
 
 - <img src="./README/images/tf2.png" height="13">   
 
+
+#### Reference
+
+- [Correcting a proof in the InfoGAN paper](http://aoliver.org/assets/correct-proof-of-infogan-lemma.pdf)
+
+- [Overview of GANs - Part III : InfoGAN](https://blog.zakjost.com/post/gans_overview_3/)
+
+- [InfoGAN: using the variational bound on mutual information (twice)](https://www.inference.vc/infogan-variational-bound-on-mutual-information-twice/)
 
 ********
 

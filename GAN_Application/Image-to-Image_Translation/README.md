@@ -238,3 +238,27 @@ Few-Shot Unsupervised Image-to-Image Translation
 
 - <img src="../../README/images/pytorch.png" height="13">  [Few-Shot-Vid2Vid Pytorch](https://github.com/NVlabs/few-shot-vid2vid)
 
+
+
+********
+
+:tomato: [**MarioNETte**](https://arxiv.org/pdf/1911.08139.pdf)   :date:   2019.11.19v1    :blush:  Hyperconnect Korea
+
+MarioNETte: Few-shot Face Reenactment Preserving Identity of Unseen Targets
+
+
+
+
+********
+:tomato: [**First Order Motion Model for Image Animation**](https://arxiv.org/pdf/2003.00196.pdf)   :date:   2020.02.29v1    :blush:  University of Trento
+
+
+
+#### Network
+
+- <img src="../../README/images/first-order-model_net.png">
+
+
+
+
+
