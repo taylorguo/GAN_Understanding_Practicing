@@ -229,25 +229,33 @@ Information Maximizing Generative Adversarial Nets
    A new term encourages high mutual information between generated samples and a small subset of latent variables c. 
 
    many domains naturally decompose into a set of semantically meaningful factors of variation
+
    decompose the input noise vector into two parts: 
-   (i) z, which is treated as source of incompressible noise; 
+
+   (i) z, which is treated as source of incompressible noise;
+
    (ii) c, which we will call the latent code and will target the salient structured semantic features of the data distribution.
+
    将输入噪声分为两部分: z噪声; c 隐代码控制数据分布的显著结构性语义特征
 
    InfoGAN approaches this problem is by splitting the Generator input into two parts: 
+
    the traditional noise vector and a new “latent code” vector. 
+
    The codes are then made meaningful by maximizing the Mutual Information between the code and the Generator output.
+
    最大化c隐代码和生成器的输出
 
    defining an auxiliary distribution Q(c|x) to approximate P(c|x)
 
    InfoGAN loss function for θ is this:
    
-   
+
 
 #### Network
 
-- <img src="./README/images/infogan-architecture.png">
+   <img src="./README/images/infogan-architecture.png">
+
 
 #### Implementation 
 
