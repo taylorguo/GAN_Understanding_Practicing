@@ -267,7 +267,7 @@ Information Maximizing Generative Adversarial Nets
 
 - <img src="./README/images/keras.png" height="13">
 
-- <img src="./README/images/tf1.png" height="13">
+- <img src="./README/images/tf1.png" height="13"> [InfoGAN Official OpenAI](https://github.com/openai/InfoGAN)
 
 - <img src="./README/images/tf2.png" height="13">   
 
