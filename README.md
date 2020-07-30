@@ -248,7 +248,7 @@ Information Maximizing Generative Adversarial Nets
 
    defining an auxiliary distribution Q(c|x) to approximate P(c|x):
 
-   
+   <img src="./README/images/infogan_loss.png">
 
    InfoGAN loss function for θ is this:
 
@@ -279,6 +279,8 @@ Information Maximizing Generative Adversarial Nets
 - [Overview of GANs - Part III : InfoGAN](https://blog.zakjost.com/post/gans_overview_3/)
 
 - [InfoGAN: using the variational bound on mutual information (twice)](https://www.inference.vc/infogan-variational-bound-on-mutual-information-twice/)
+
+- [深度学习的互信息：无监督提取特征](https://kexue.fm/archives/6024)
 
 ********
 
