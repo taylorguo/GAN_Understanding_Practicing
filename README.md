@@ -246,7 +246,9 @@ Information Maximizing Generative Adversarial Nets
 
    最大化c隐代码和生成器的输出
 
-   defining an auxiliary distribution Q(c|x) to approximate P(c|x)
+   defining an auxiliary distribution Q(c|x) to approximate P(c|x):
+
+   
 
    InfoGAN loss function for θ is this:
 
