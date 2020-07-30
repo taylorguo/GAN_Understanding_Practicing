@@ -242,6 +242,8 @@ Information Maximizing Generative Adversarial Nets
    defining an auxiliary distribution Q(c|x) to approximate P(c|x)
 
    InfoGAN loss function for θ is this:
+
+      ℓinfoGAN(θ) = I[x,y] − λI[xfake,c]
    
    
 
