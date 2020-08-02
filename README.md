@@ -219,7 +219,7 @@ Integrate conditional GAN model into Laplacian Pyramid Framework
 
 ********
 
-:lemon:  [**InfoGAN**](https://arxiv.org/pdf/1606.03657.pdf)   :date:    2016.06    :blush:    OpenAI
+:lemon:  [**InfoGAN**](https://arxiv.org/pdf/1606.03657.pdf)   :date:    2016.06    :blush:  UC Berkeley /  OpenAI
 
 InfoGAN: Interpretable Representation Learning by
 Information Maximizing Generative Adversarial Nets
@@ -281,6 +281,8 @@ Information Maximizing Generative Adversarial Nets
 - [InfoGAN: using the variational bound on mutual information (twice)](https://www.inference.vc/infogan-variational-bound-on-mutual-information-twice/)
 
 - [深度学习的互信息：无监督提取特征](https://kexue.fm/archives/6024)
+  
+- [李宏毅-InfoGAN, VAE-GAN, BiGAN 讲座](https://speech.ee.ntu.edu.tw/~tlkagk/courses_MLDS18.html)
 
 ********
 

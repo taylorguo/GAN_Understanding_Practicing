@@ -241,6 +241,31 @@ Few-Shot Unsupervised Image-to-Image Translation
 - <img src="../../README/images/pytorch.png" height="13">  [Few-Shot-Vid2Vid Pytorch](https://github.com/NVlabs/few-shot-vid2vid)
 
 
+********
+
+:tomato: [**Face2Face**](https://zollhoefer.com/papers/CACM19_F2F/paper.pdf)   :date:   2016.03.23v1    :blush: Max-Planck-Institute for Informatics / TUM
+
+Face2Face: Real-time Face Capture and Reenactment of RGB Videos
+
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13">  
+
+- <img src="../../README/images/keras.png" height="13">
+
+- <img src="../../README/images/tf1.png" height="13"> [face2face-demo](https://github.com/datitran/face2face-demo)
+
+- <img src="../../README/images/tf2.png" height="13">   
+
+********
+
+:tomato: [**Neural Talking Head**](https://arxiv.org/pdf/1905.08233.pdf)   :date:   2019.05.20v1    :blush:  Samsung AI Center, Moscow / Skolkovo Institute of Science and Technology
+
+Few-Shot Adversarial Learning of Realistic Neural Talking Head Models
+
+#### Network
+
+   <img src="../../README/images/neural-head_net.png" height=260>
 
 ********
 
@@ -248,13 +273,15 @@ Few-Shot Unsupervised Image-to-Image Translation
 
 MarioNETte: Few-shot Face Reenactment Preserving Identity of Unseen Targets
 
+#### Network
 
+   <img src="../../README/images/marionette_net.png" height=230>
 
 
 ********
-:tomato: [**First Order Motion Model for Image Animation**](https://arxiv.org/pdf/2003.00196.pdf)   :date:   2020.02.29v1    :blush:  University of Trento
+:tomato: [**First Order Motion Model**](https://arxiv.org/pdf/2003.00196.pdf)   :date:   2020.02.29v1    :blush:  University of Trento
 
-
+First Order Motion Model for Image Animation
 
 #### Network
 
