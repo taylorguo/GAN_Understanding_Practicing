@@ -216,6 +216,19 @@ Few-Shot Unsupervised Image-to-Image Translation
 
 ********
 
+:strawberry:  [**StyleGAN Encoder for Image-to-Image Translation**](https://arxiv.org/pdf/2008.00951.pdf)   :date:   2020.08.03v1  :blush:  Penta-AI / Tel-Aviv University
+
+Encoding in Style: a StyleGAN Encoder for Image-to-Image Translation
+
+
+#### Network 
+
+   <img src="../../README/images/psp_net.png" height=310> 
+
+
+
+
+********
 
 
 ## Face Synthesis
@@ -223,6 +236,7 @@ Few-Shot Unsupervised Image-to-Image Translation
 
 
 
+********
 
 ## Video Synthesis
 
