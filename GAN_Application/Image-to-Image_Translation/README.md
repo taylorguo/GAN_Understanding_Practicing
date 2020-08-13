@@ -240,6 +240,21 @@ Encoding in Style: a StyleGAN Encoder for Image-to-Image Translation
 
 ## Video Synthesis
 
+********
+
+:tomato: [**FlowNet 2.0**](https://arxiv.org/pdf/1612.01925.pdf)   :date:   2016.12.06v1    :blush:  NVidia
+
+FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks
+
+
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13">  [flownet2-pytorch](https://github.com/NVIDIA/flownet2-pytorch)
+
+
+********
+
+
 :tomato: [**Few-shot Video-to-Video Synthesis**](https://arxiv.org/pdf/1910.12713.pdf)   :date:   2016.11v1    :blush:  NVidia
 
 
@@ -271,6 +286,12 @@ Face2Face: Real-time Face Capture and Reenactment of RGB Videos
 
 - <img src="../../README/images/tf2.png" height="13">   
 
+#### Reference
+
+- [Face2Face](http://niessnerlab.org/papers/2016/1facetoface/thies2016face.pdf)
+
+- [Face2Face Supplemental Material](http://niessnerlab.org/papers/2016/1facetoface/thies2016face_supplemental.pdf)
+
 ********
 
 :tomato: [**Neural Talking Head**](https://arxiv.org/pdf/1905.08233.pdf)   :date:   2019.05.20v1    :blush:  Samsung AI Center, Moscow / Skolkovo Institute of Science and Technology
@@ -280,6 +301,11 @@ Few-Shot Adversarial Learning of Realistic Neural Talking Head Models
 #### Network
 
    <img src="../../README/images/neural-head_net.png" height=260>
+
+
+#### Implementation
+
+- <img src="../../README/images/pytorch.png" height="13"> [vincent-thevenin / Neural Talking Head](https://github.com/vincent-thevenin/Realistic-Neural-Talking-Head-Models)
 
 ********
 
