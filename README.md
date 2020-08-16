@@ -524,6 +524,21 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 ********
 
+:lemon:  [**StyleGAN v1**](https://arxiv.org/pdf/1812.04948.pdf)   :date:    2018.12.12v1    :blush:  NVidia
+
+A Style-Based Generator Architecture for Generative Adversarial Networks
+
+
+
+********
+
+:lemon:  [**StyleGAN v2**](https://arxiv.org/pdf/1912.04958.pdf)   :date:    2019.12.03v1    :blush:  NVidia
+
+Analyzing and Improving the Image Quality of StyleGAN
+
+
+
+********
 
 ### Normalization
 
