@@ -179,6 +179,54 @@ MUNIT: Multimodal UNsupervised Image-to-image Translation
 
 ********
 
+:strawberry:  [**StarGAN v1**](https://arxiv.org/pdf/1711.09020.pdf)   :date:   2017.11.24v1    :blush:  Korea University / Clova AI Research
+
+StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation
+
+
+#### Network 
+
+   <img src="../../README/images/starganv1-net.png"> 
+
+   <img src="../../README/images/starganv1-train.png"> 
+
+#### Reference 
+
+-  <img src="../../README/images/pytorch.png" height="13">  [StarGAN v1 Official PyTorch](https://github.com/yunjey/stargan)
+
+- <img src="../../README/images/keras.png" height="13"> [StarGAN v1 - Keras](https://github.com/hoangthang1607/StarGAN-Keras)
+
+- <img src="../../README/images/tf1.png" height="13"> [StarGAN v1 - tensorflow1.8](https://github.com/taki0112/StarGAN-Tensorflow)
+
+- <img src="../../README/images/tf2.png" height="13"> 
+
+
+********
+
+
+:strawberry:  [**StarGAN v2**](https://arxiv.org/pdf/1912.01865.pdf)   :date:   2019.12.04v1    :blush:  Clova AI Research
+
+StarGAN v2: Diverse Image Synthesis for Multiple Domains
+
+
+#### Network 
+
+   <img src="../../README/images/starganv1-net.png"> 
+
+   <img src="../../README/images/starganv1-train.png"> 
+
+#### Reference 
+
+-  <img src="../../README/images/pytorch.png" height="13">  [StarGAN v2 Official PyTorch](https://github.com/clovaai/stargan-v2)
+
+- <img src="../../README/images/keras.png" height="13"> 
+
+- <img src="../../README/images/tf1.png" height="13"> 
+
+- <img src="../../README/images/tf2.png" height="13"> [StarGAN v2 - tensorflow2.1](https://github.com/clovaai/stargan-v2-tensorflow)
+
+********
+
 :strawberry:  [**U-GAN-IT**](https://arxiv.org/pdf/1907.10830.pdf)   :date:   2019.07v1
 
 #### Loss Function 
