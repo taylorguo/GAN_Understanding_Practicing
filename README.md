@@ -286,6 +286,7 @@ Information Maximizing Generative Adversarial Nets
   
 - [李宏毅-InfoGAN, VAE-GAN, BiGAN 讲座](https://speech.ee.ntu.edu.tw/~tlkagk/courses_MLDS18.html)
 
+- [【論文メモ：InfoGAN】](https://www.nogawanogawa.com/entry/infogan)
 ********
 
 :lemon:  [**SGAN**](https://arxiv.org/pdf/1606.01583.pdf)   :date:    2016.06
