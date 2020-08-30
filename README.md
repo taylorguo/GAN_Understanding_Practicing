@@ -274,6 +274,8 @@ Information Maximizing Generative Adversarial Nets
 
 #### Reference
 
+- [2017- Guiding InfoGAN with Semi-Supervision](https://ait.ethz.ch/projects/2017/ss-infogan/spurr2017ecml.pdf)
+
 - [Correcting a proof in the InfoGAN paper](http://aoliver.org/assets/correct-proof-of-infogan-lemma.pdf)
 
 - [Overview of GANs - Part III : InfoGAN](https://blog.zakjost.com/post/gans_overview_3/)
