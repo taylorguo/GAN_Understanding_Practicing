@@ -73,17 +73,23 @@ Image-to-Image Translation with Conditional Adversarial Networks
 
 #### Reference
 
+- [Pix2Pix Project Homepage](https://phillipi.github.io/pix2pix/)
+
 - [A Gentle Introduction to Pix2Pix Generative Adversarial Network](https://machinelearningmastery.com/a-gentle-introduction-to-pix2pix-generative-adversarial-network/)
 
 - [How to Develop a Pix2Pix GAN for Image-to-Image Translation](https://machinelearningmastery.com/how-to-develop-a-pix2pix-gan-for-image-to-image-translation/)
 
 - [New York Google Map dataset for Experiment](http://efrosgans.eecs.berkeley.edu/pix2pix/datasets/maps.tar.gz)
+
+
 ********
+
 
 :strawberry:  [**Pix2PixHD**](https://arxiv.org/pdf/1711.11585.pdf)   :date:   2017.11v1    :blush:  NVidia / UC Berkeley 
 
 High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs
 
+改进: 生成器分解为2个子2网络: 全局生成器 和 局部增强生成器; 判别器由粗到细, 多尺度架构
 
 #### Reference 
 
