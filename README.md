@@ -445,6 +445,7 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 :lemon:  [**Self-Attention GAN**](https://arxiv.org/pdf/1805.08318.pdf)   :date:    2018.05
 
+Self-Attention Generative Adversarial Networks
 
 
 #### Network 
@@ -503,11 +504,22 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 :lemon:  [**BigGAN**](https://arxiv.org/pdf/1809.11096.pdf)   :date:    2018.09
 
+Large Scale GAN Training for High Fidelity Natural Image Synthesis
+
+Hierarchical Latent Spaces 分层潜在空间
+
+Shared Embedding 共享嵌入
+
+Truncation Trick 截断技巧: 对样本多样性和保真度进行精细控制, 设置阈值截断先验分布 z 采样, 超出范围的值重新采样以落入该范围内
+
+Orthogonal Regularization 正交正则化
 
 
 #### Network 
 
+   <img src="./README/images/biggan_net.png">
 
+   <img src="./README/images/biggan_resblock.png">
 
 #### Implementation 
 
@@ -522,8 +534,11 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 #### Reference 
 
+- [BigGAN Tensorflow Anime](https://github.com/ANIME305/Anime-GAN-tensorflow)
 - [BigGAN TensorFlow](https://github.com/taki0112/BigGAN-Tensorflow)
 - [BigGAN PyTorch](https://github.com/ajbrock/BigGAN-PyTorch)
+
+
 
 ********
 
