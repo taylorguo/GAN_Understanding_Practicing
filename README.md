@@ -555,6 +555,19 @@ A Style-Based Generator Architecture for Generative Adversarial Networks
 Analyzing and Improving the Image Quality of StyleGAN
 
 
+********
+
+:lemon:  [**Image2StyleGAN**](https://arxiv.org/pdf/1904.03189v1.pdf)   :date:    2019.09.03v1    :blush:  KAUST
+
+Image2StyleGAN: How to Embed Images Into the StyleGAN Latent Space?
+
+
+********
+
+:lemon:  [**Image2StyleGAN++**](https://arxiv.org/pdf/1911.11544v1.pdf)   :date:    2019.11.26    :blush:  KAUST
+
+Image2StyleGAN++: How to Edit the Embedded Images?
+
 
 ********
 
