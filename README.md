@@ -477,7 +477,7 @@ Self-Attention Generative Adversarial Networks
 
 :lemon:  [**Progressive Growing GAN**](https://arxiv.org/pdf/1710.10196.pdf)   :date:    2017.10
 
-
+Progressive Growing of GANs for Improved Quality, Stability, and Variation
 
 #### Network 
 
@@ -546,6 +546,20 @@ Orthogonal Regularization 正交正则化
 
 A Style-Based Generator Architecture for Generative Adversarial Networks
 
+#### Network 
+
+   <img src="./README/images/stylegan1_net.png">
+
+#### Implementation 
+
+- <img src="./README/images/tf1.png" height="13"> [StyleGAN1 Official]((https://github.com/NVlabs/stylegan))
+
+
+#### Reference 
+
+- [From ProGAN to StyleGAN](https://www.yuthon.com/post/tutorials/from-progan-to-stylegan/)
+- [Style-based GANs – Generating and Tuning Realistic Artificial Faces](https://www.lyrn.ai/2018/12/26/a-style-based-generator-architecture-for-generative-adversarial-networks/)
+- [stylegan_chs](http://www.gwylab.com/pdf/stylegan_chs.pdf)
 
 
 ********
@@ -554,6 +568,11 @@ A Style-Based Generator Architecture for Generative Adversarial Networks
 
 Analyzing and Improving the Image Quality of StyleGAN
 
+
+
+#### Implementation 
+
+- <img src="./README/images/tf1.png" height="13"> [StyleGAN2 Official](https://github.com/NVlabs/stylegan2)
 
 ********
 
