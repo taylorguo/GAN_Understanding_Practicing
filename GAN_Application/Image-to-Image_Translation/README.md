@@ -308,14 +308,34 @@ FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks
 
 ********
 
+:tomato: [**RAFT**](https://arxiv.org/pdf/2003.12039.pdf)   :date:   2020.03.26v1    :blush:  Princeton University
+
+RAFT: Recurrent All-Pairs Field Transforms for Optical Flow
+
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13">  [RAFT-pytorch](https://github.com/princeton-vl/RAFT)
+
+********
+
 
 :tomato: [**Few-shot Video-to-Video Synthesis**](https://arxiv.org/pdf/1910.12713.pdf)   :date:   2016.11v1    :blush:  NVidia
 
+Few-shot Video-to-Video Synthesis
 
+Video-to-video synthesis (vid2vid): converting an input semantic video to an output photorealistic video.
 
+Conditional GAN framework, user input data not sampling from noise distribution
+
+Vid2vid is based on Image-to-image synthesis, and keeps frames temporally consistent as a whole
+
+Adaptive Network: part of weights are dynamically computed based on input data 
 
 #### Network
 
+flow prediction network W : reuse vid2vid
+soft occlusion map prediction network M : reuse vid2vid
+intermediate image synthesis network H : conditional image generator, adopt SPADE generator for semantic image synthesis
 
 
 
