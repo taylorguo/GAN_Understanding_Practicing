@@ -231,6 +231,24 @@ StarGAN v2: Diverse Image Synthesis for Multiple Domains
 
 - <img src="../../README/images/tf2.png" height="13"> [StarGAN v2 - tensorflow2.1](https://github.com/clovaai/stargan-v2-tensorflow)
 
+
+********
+
+
+:strawberry:  [**GauGAN**](https://arxiv.org/pdf/1903.07291.pdf)   :date:   2019.03.18v1    :blush:  NVidia / UC Berkeley 
+
+Semantic Image Synthesis with Spatially-Adaptive Normalization
+
+
+#### Network 
+
+   <img src="../../README/images/gaugan_net.png"> 
+
+
+#### Reference 
+
+-  <img src="../../README/images/pytorch.png" height="13">  [SPADE Official PyTorch](https://github.com/NVlabs/SPADE)
+
 ********
 
 :strawberry:  [**U-GAN-IT**](https://arxiv.org/pdf/1907.10830.pdf)   :date:   2019.07v1
