@@ -334,12 +334,27 @@ RAFT: Recurrent All-Pairs Field Transforms for Optical Flow
 
 - <img src="../../README/images/pytorch.png" height="13">  [RAFT-pytorch](https://github.com/princeton-vl/RAFT)
 
+
+********
+
+:tomato: [**Video-to-Video Synthesis**](https://arxiv.org/pdf/1808.06601.pdf)   :date:   2018.08.20v1    :blush:  NVidia
+
+Video-to-Video Synthesis
+
+
+
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13">  [Vid2Vid Pytorch](https://github.com/NVIDIA/vid2vid)
+
+
+
 ********
 
 
-:tomato: [**Few-shot Video-to-Video Synthesis**](https://arxiv.org/pdf/1910.12713.pdf)   :date:   2016.11v1    :blush:  NVidia
+:tomato: [**Few-shot Video-to-Video Synthesis**](https://arxiv.org/pdf/1910.12713.pdf)   :date:   2019.10.28v1    :blush:  NVidia
 
-Few-shot Video-to-Video Synthesis
+Few-shot Video-to-Video Synthesis: compose a video based on a small number of reference images and a semantic images based on vid2vid
 
 Video-to-video synthesis (vid2vid): converting an input semantic video to an output photorealistic video.
 
