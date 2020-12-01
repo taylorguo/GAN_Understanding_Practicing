@@ -13,7 +13,7 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
 
 [自回归模型(Autoregressive Model)](http://geodesy.blog.sohu.com/273714573.html)是用自身做回归变量的过程，即利用前期若干时刻的随机变量的线性组合来描述以后某时刻随机变量的线性回归模型, 它是时间序列中的一种常见形式.
 
-<img src="../../README/images/autoregressive_model_defination.jpg">
+<img src="../README/images/autoregressive_model_defination.jpg">
 
 思路来源于: [Pixel RNN](https://arxiv.org/abs/1601.06759) & [Exploring the Limits of Language Modeling](https://arxiv.org/abs/1602.02410)
 
