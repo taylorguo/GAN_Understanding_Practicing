@@ -73,17 +73,23 @@ Image-to-Image Translation with Conditional Adversarial Networks
 
 #### Reference
 
+- [Pix2Pix Project Homepage](https://phillipi.github.io/pix2pix/)
+
 - [A Gentle Introduction to Pix2Pix Generative Adversarial Network](https://machinelearningmastery.com/a-gentle-introduction-to-pix2pix-generative-adversarial-network/)
 
 - [How to Develop a Pix2Pix GAN for Image-to-Image Translation](https://machinelearningmastery.com/how-to-develop-a-pix2pix-gan-for-image-to-image-translation/)
 
 - [New York Google Map dataset for Experiment](http://efrosgans.eecs.berkeley.edu/pix2pix/datasets/maps.tar.gz)
+
+
 ********
+
 
 :strawberry:  [**Pix2PixHD**](https://arxiv.org/pdf/1711.11585.pdf)   :date:   2017.11v1    :blush:  NVidia / UC Berkeley 
 
 High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs
 
+改进: 生成器分解为2个子2网络: 全局生成器 和 局部增强生成器; 判别器由粗到细, 多尺度架构
 
 #### Reference 
 
@@ -225,6 +231,24 @@ StarGAN v2: Diverse Image Synthesis for Multiple Domains
 
 - <img src="../../README/images/tf2.png" height="13"> [StarGAN v2 - tensorflow2.1](https://github.com/clovaai/stargan-v2-tensorflow)
 
+
+********
+
+
+:strawberry:  [**GauGAN**](https://arxiv.org/pdf/1903.07291.pdf)   :date:   2019.03.18v1    :blush:  NVidia / UC Berkeley 
+
+Semantic Image Synthesis with Spatially-Adaptive Normalization
+
+
+#### Network 
+
+   <img src="../../README/images/gaugan_net.png"> 
+
+
+#### Reference 
+
+-  <img src="../../README/images/pytorch.png" height="13">  [SPADE Official PyTorch](https://github.com/NVlabs/SPADE)
+
 ********
 
 :strawberry:  [**U-GAN-IT**](https://arxiv.org/pdf/1907.10830.pdf)   :date:   2019.07v1
@@ -302,14 +326,49 @@ FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks
 
 ********
 
+:tomato: [**RAFT**](https://arxiv.org/pdf/2003.12039.pdf)   :date:   2020.03.26v1    :blush:  Princeton University
 
-:tomato: [**Few-shot Video-to-Video Synthesis**](https://arxiv.org/pdf/1910.12713.pdf)   :date:   2016.11v1    :blush:  NVidia
+RAFT: Recurrent All-Pairs Field Transforms for Optical Flow
+
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13">  [RAFT-pytorch](https://github.com/princeton-vl/RAFT)
+
+
+********
+
+:tomato: [**Video-to-Video Synthesis**](https://arxiv.org/pdf/1808.06601.pdf)   :date:   2018.08.20v1    :blush:  NVidia
+
+Video-to-Video Synthesis
 
 
 
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13">  [Vid2Vid Pytorch](https://github.com/NVIDIA/vid2vid)
+
+
+
+********
+
+
+:tomato: [**Few-shot Video-to-Video Synthesis**](https://arxiv.org/pdf/1910.12713.pdf)   :date:   2019.10.28v1    :blush:  NVidia
+
+Few-shot Video-to-Video Synthesis: compose a video based on a small number of reference images and a semantic images based on vid2vid
+
+Video-to-video synthesis (vid2vid): converting an input semantic video to an output photorealistic video.
+
+Conditional GAN framework, user input data not sampling from noise distribution
+
+Vid2vid is based on Image-to-image synthesis, and keeps frames temporally consistent as a whole
+
+Adaptive Network: part of weights are dynamically computed based on input data 
 
 #### Network
 
+flow prediction network W : reuse vid2vid
+soft occlusion map prediction network M : reuse vid2vid
+intermediate image synthesis network H : conditional image generator, adopt SPADE generator for semantic image synthesis
 
 
 
@@ -376,6 +435,38 @@ First Order Motion Model for Image Animation
 - <img src="../../README/images/first-order-model_net.png">
 
 
+********
+:tomato: [**One-Shot Free-View Neural Talking-Head Synthesis**](https://arxiv.org/pdf/2011.15126.pdf)   :date:   2020.11.30v1    :blush:  NVidia
 
+One-Shot Free-View Neural Talking-Head Synthesis for Video Conferencing
 
+单样本多角度人脸视频合成
+
+- <img src="../../README/images/one-shot-vid2vid.png">
+
+- <img src="../../README/images/one-shot-vid2vid-synthesis.png">
+
+项目地址: https://nvlabs.github.io/face-vid2vid/
+
+主流程: 
+
+      1. 源图像特征提取:用3D特征提取网络(3D特征点检测网络)获取源图像的3D特征(20个3D关键点,宽、高和深度; 也用于后续视频合成的头部旋转和平移)和雅可比矩阵(关键点局部仿射变换到合成帧中,主要是表情的几何处理); 然后, 对于驱动视频, 用头部位姿估计网络获取旋转矩阵和平移向量, 还用表情形变估计网络估计3D形变(从中性表情的), 这两个网络都是从源图像提取运动几何信息。将前面关键点提取和这两个网络提取的几何信息结合, 即3D关键点经过旋转、平移、几何形变得到新的3D关键点, 雅可比矩阵经过旋转得到新的雅可比矩阵。
+
+      2. 驱动视频特征提取: 对于驱动视频使用上述方法计算逐帧新的3D关键点和雅可比矩阵。
+
+      3. 视频生成: 图像帧生成器, 输入处理好的特征, 生成新图像帧。输入特征的处理: 先用一阶估计计算20个关键点的光流, 然后用运动场估计网络估计光流掩码, 生成最终的特征用于生成。
+
+主要部分是3D关键点学习与分解(人脸表情的模型, 人头的几何表示; 两者结合生成特定图像的关键点; 再用关键点学习两个图像之间的映射关系; 这些步骤用一组网络实现, 联合训练)。
+
+#### Network
+
+- <img src="../../README/images/one-shot-vid2vid-net.png">
+
+#### Loss Function
+
+一共用了6个网络: 3D特征提取器F, 3D规范化关键点提取器L, 位姿估计H, 表情形变估计网络△, 运动场估计网络M, 生成器G。
+
+6个损失函数: 感知损失Lp, GAN损失LG, 关键点和雅克比等效损失LE(估计的关键点和变换回图像的L1距离), 关键点先验损失LL(平均深度阈值设置), 位姿估计LH(估计的位姿和预训练估计器生成位姿的L1距离), 形变先验损失L△(L1范数):
+
+- <img src="../../README/images/one-shot-vid-loss.png">
 

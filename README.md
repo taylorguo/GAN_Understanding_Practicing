@@ -274,6 +274,8 @@ Information Maximizing Generative Adversarial Nets
 
 #### Reference
 
+- [2017- Guiding InfoGAN with Semi-Supervision](https://ait.ethz.ch/projects/2017/ss-infogan/spurr2017ecml.pdf)
+
 - [Correcting a proof in the InfoGAN paper](http://aoliver.org/assets/correct-proof-of-infogan-lemma.pdf)
 
 - [Overview of GANs - Part III : InfoGAN](https://blog.zakjost.com/post/gans_overview_3/)
@@ -284,6 +286,7 @@ Information Maximizing Generative Adversarial Nets
   
 - [李宏毅-InfoGAN, VAE-GAN, BiGAN 讲座](https://speech.ee.ntu.edu.tw/~tlkagk/courses_MLDS18.html)
 
+- [【論文メモ：InfoGAN】](https://www.nogawanogawa.com/entry/infogan)
 ********
 
 :lemon:  [**SGAN**](https://arxiv.org/pdf/1606.01583.pdf)   :date:    2016.06
@@ -442,6 +445,7 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 :lemon:  [**Self-Attention GAN**](https://arxiv.org/pdf/1805.08318.pdf)   :date:    2018.05
 
+Self-Attention Generative Adversarial Networks
 
 
 #### Network 
@@ -473,7 +477,7 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 :lemon:  [**Progressive Growing GAN**](https://arxiv.org/pdf/1710.10196.pdf)   :date:    2017.10
 
-
+Progressive Growing of GANs for Improved Quality, Stability, and Variation
 
 #### Network 
 
@@ -500,11 +504,22 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 :lemon:  [**BigGAN**](https://arxiv.org/pdf/1809.11096.pdf)   :date:    2018.09
 
+Large Scale GAN Training for High Fidelity Natural Image Synthesis
+
+Hierarchical Latent Spaces 分层潜在空间
+
+Shared Embedding 共享嵌入
+
+Truncation Trick 截断技巧: 对样本多样性和保真度进行精细控制, 设置阈值截断先验分布 z 采样, 超出范围的值重新采样以落入该范围内
+
+Orthogonal Regularization 正交正则化
 
 
 #### Network 
 
+   <img src="./README/images/biggan_net.png">
 
+   <img src="./README/images/biggan_resblock.png">
 
 #### Implementation 
 
@@ -519,8 +534,11 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 #### Reference 
 
+- [BigGAN Tensorflow Anime](https://github.com/ANIME305/Anime-GAN-tensorflow)
 - [BigGAN TensorFlow](https://github.com/taki0112/BigGAN-Tensorflow)
 - [BigGAN PyTorch](https://github.com/ajbrock/BigGAN-PyTorch)
+
+
 
 ********
 
@@ -528,6 +546,20 @@ Semi-Supervised Learning with Generative Adversarial Networks
 
 A Style-Based Generator Architecture for Generative Adversarial Networks
 
+#### Network 
+
+   <img src="./README/images/stylegan1_net.png">
+
+#### Implementation 
+
+- <img src="./README/images/tf1.png" height="13"> [StyleGAN1 Official]((https://github.com/NVlabs/stylegan))
+
+
+#### Reference 
+
+- [From ProGAN to StyleGAN](https://www.yuthon.com/post/tutorials/from-progan-to-stylegan/)
+- [Style-based GANs – Generating and Tuning Realistic Artificial Faces](https://www.lyrn.ai/2018/12/26/a-style-based-generator-architecture-for-generative-adversarial-networks/)
+- [stylegan_chs](http://www.gwylab.com/pdf/stylegan_chs.pdf)
 
 
 ********
@@ -536,6 +568,24 @@ A Style-Based Generator Architecture for Generative Adversarial Networks
 
 Analyzing and Improving the Image Quality of StyleGAN
 
+
+
+#### Implementation 
+
+- <img src="./README/images/tf1.png" height="13"> [StyleGAN2 Official](https://github.com/NVlabs/stylegan2)
+
+********
+
+:lemon:  [**Image2StyleGAN**](https://arxiv.org/pdf/1904.03189v1.pdf)   :date:    2019.09.03v1    :blush:  KAUST
+
+Image2StyleGAN: How to Embed Images Into the StyleGAN Latent Space?
+
+
+********
+
+:lemon:  [**Image2StyleGAN++**](https://arxiv.org/pdf/1911.11544v1.pdf)   :date:    2019.11.26    :blush:  KAUST
+
+Image2StyleGAN++: How to Edit the Embedded Images?
 
 
 ********
@@ -562,6 +612,7 @@ Analyzing and Improving the Image Quality of StyleGAN
 
 ## Reference
 
+- [Generative adversarial nets (GAN) , DCGAN, CGAN, InfoGAN](https://jhui.github.io/2017/03/05/Generative-adversarial-models/)
 - [Faster Guaranteed GAN-based Recovery in Linear Inverse Problems](http://www.ima.umn.edu/materials/2019-2020/SW10.14-18.19/28282/IMA2019_Computation_Imaging_Talk_Bresler_Slides.pdf)
 - [Generative model](https://en.wikipedia.org/wiki/Generative_model)
 - [Lecture 13: Generative Models](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)
