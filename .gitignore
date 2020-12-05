@@ -133,3 +133,4 @@ dmypy.json
 .vscode/settings.json
 
 .idea
+GAN_Practicing/Keras/generator-0625.h5
