@@ -435,6 +435,38 @@ First Order Motion Model for Image Animation
 - <img src="../../README/images/first-order-model_net.png">
 
 
+********
+:tomato: [**One-Shot Free-View Neural Talking-Head Synthesis**](https://arxiv.org/pdf/2011.15126.pdf)   :date:   2020.11.30v1    :blush:  NVidia
 
+One-Shot Free-View Neural Talking-Head Synthesis for Video Conferencing
 
+单样本多角度人脸视频合成
+
+- <img src="../../README/images/one-shot-vid2vid.png">
+
+- <img src="../../README/images/one-shot-vid2vid-synthesis.png">
+
+项目地址: https://nvlabs.github.io/face-vid2vid/
+
+主流程: 
+
+      1. 源图像特征提取:用3D特征提取网络(3D特征点检测网络)获取源图像的3D特征(20个3D关键点,宽、高和深度; 也用于后续视频合成的头部旋转和平移)和雅可比矩阵(关键点局部仿射变换到合成帧中,主要是表情的几何处理); 然后, 对于驱动视频, 用头部位姿估计网络获取旋转矩阵和平移向量, 还用表情形变估计网络估计3D形变(从中性表情的), 这两个网络都是从源图像提取运动几何信息。将前面关键点提取和这两个网络提取的几何信息结合, 即3D关键点经过旋转、平移、几何形变得到新的3D关键点, 雅可比矩阵经过旋转得到新的雅可比矩阵。
+
+      2. 驱动视频特征提取: 对于驱动视频使用上述方法计算逐帧新的3D关键点和雅可比矩阵。
+
+      3. 视频生成: 图像帧生成器, 输入处理好的特征, 生成新图像帧。输入特征的处理: 先用一阶估计计算20个关键点的光流, 然后用运动场估计网络估计光流掩码, 生成最终的特征用于生成。
+
+主要部分是3D关键点学习与分解(人脸表情的模型, 人头的几何表示; 两者结合生成特定图像的关键点; 再用关键点学习两个图像之间的映射关系; 这些步骤用一组网络实现, 联合训练)。
+
+#### Network
+
+- <img src="../../README/images/one-shot-vid2vid-net.png">
+
+#### Loss Function
+
+一共用了6个网络: 3D特征提取器F, 3D规范化关键点提取器L, 位姿估计H, 表情形变估计网络△, 运动场估计网络M, 生成器G。
+
+6个损失函数: 感知损失Lp, GAN损失LG, 关键点和雅克比等效损失LE(估计的关键点和变换回图像的L1距离), 关键点先验损失LL(平均深度阈值设置), 位姿估计LH(估计的位姿和预训练估计器生成位姿的L1距离), 形变先验损失L△(L1范数):
+
+- <img src="../../README/images/one-shot-vid-loss.png">
 
