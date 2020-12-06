@@ -2,7 +2,7 @@
 
 ********
 
-## Image-to-Image Translation
+## Audio Generation
 
 ********
 :tangerine:  [**WaveNet**](https://arxiv.org/pdf/1609.03499.pdf)   :date:   2016.09.12v1    :blush:  Google Deepmind
@@ -17,60 +17,59 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
 
 思路来源于: [Pixel RNN](https://arxiv.org/abs/1601.06759) & [Exploring the Limits of Language Modeling](https://arxiv.org/abs/1602.02410)
 
+改进: 
+   生成自然的原始语音信号;
+   因果多孔卷积, 具有非常大的感受野;
+   单模型可以实现生成不同的声音;
+   同样的架构可以用于多个应用, TTS, 语音增强, 声音转换, 声源分离等.
 
-改进: 图像到图像的风格转移： 无需手工处理映射函数，损失函数
-
-思路: cGAN + L1 Loss, U-Net;  PatchGAN Discriminator on NxN image patch
-
+思路: 
+   声波联合概率x={x1, ..., xT} 可以分解为条件概率的积: (xt是t时间内的所有样本)
+   <img src="../README/images/wavenet-formula.png">   
+   条件概率分布可以构建成卷积层的堆叠, 没有池化层, 输入和输出的时间长度相同. 输出层为softmax + categorical distribution. 
    ------
-      Conditional GANs suitable for image-to-image translation tasks, 
-
-      condition on an input image and generate a corresponding output image
-
-      cGAN比较适合图像到图像的风格转移: 给输入图像施加条件, 生成对应的输出图像
-
+   WaveNet的主要成分是: 因果多孔卷积; 像语音信号这样的一维数据, 数据切换几个时间单位就可以了. 并没有使用RNN, 训练会快一些, 尤其是长信号.
+   因果多孔卷积的一个问题是 需要增加层数 或者 更大的滤波器 来增加感受野. 如下感受野为5: (层数+滤波器大小-1). 也可以增加孔的大小来增加感受野.
+   <img src="../README/images/wavenet-causal-conv-stack.png">
+   举例: 因果多孔卷积的孔分别为1, 2, 4, 8. 
+   <img src="../README/images/wavenet-causal-conv-stack-sample.png">
+   WaveNet的多孔配置是: 1,2,4,...,512,1,2,4,...,512,1,2,4,...,512. 幂级数增长的多孔感受野为1024,可以看作是1x1024卷积; 多层堆叠增加了模型容量和感受野大小.
+   训练阶段, 所有的时间信号可以并行输出, 因为ground truth都是已知的. 但推断的时候则是顺序的, 预测的每个样本再送入模型预测下一个样本.
    ------
-      Generator: use a “U-Net”-based architecture; add skip connections
-
-      For image translation, there is a great deal of low-level information shared between the input and output
-
-      and it would be desirable to shuttle this information directly across the net
-
-      Discriminator: use a convolutional “PatchGAN” classifier, which only penalizes structure at the scale of image patches
-
-      Both generator and discriminator use modules of the form convolution-BatchNorm-ReLu
-
-      生成器使用 类U-Net 架构; 添加跳层连接, 而不仅仅是使用自动编解码器
-
-      图像转移, 希望输入和输出共享低阶信息, 直接把这些信息透传到网络中, 例如边缘信息
-
-      判别器使用 Markovian discriminator 马尔科夫判别器/PatchGAN分类器, 只约束图像 NxN区块结构
-
-      N远小于图像尺寸时, 生成的图像质量较高
-
-      生成器和判别器都是用convolution-BatchNorm-ReLu
-
+   SoftMax Distribution: 柔性最大化分布比条件高斯混合更好, 因为categorical分布更具弹性, 更容易输出任意概率. 原始语音信号是16位整型, softmax层可以输出65536个概率值.WaveNet对语音信号进行μ law变换, 256量化; 非线性量化重构效果显然优于线性量化算法.
    ------
-   [It's beneficial to mix the GAN objective with a more traditional loss, such as L2 distance](https://arxiv.org/pdf/1604.07379.pdf)
+   门控激活:与PixelCNN激活单元形同
+   <img src="../README/images/wavenet-gated-activation.png">
+   ∗ 是卷积操作; ⊙是元素相乘; σ(·) sigmoid函数; k层数, f滤波器, g门控,W待学参数
+   ------
+   残差和跳层连接:
+   <img src="../README/images/wavenet-res-skip.png">
+   <img src="../README/images/wavnet-res.jpg">
+   ------
+   Conditional WaveNet: 类似cGAN, 条件控制需要的特征; 
+   全局条件是控制所有时间序列的分布输出,比如说话人嵌入的TTS模型: 
+   <img src="../README/images/wavenet-global-conditional.png">
+   局部条件是比原始语音更低频率的序列, 用转置卷积转换后与原始语音信号相同频率后送入激活单元
+   <img src="../README/images/wavenet-global-local.png">
 
-      discriminator’s job remains unchanged, 
+#### Network
+   
+   <img src="../README/images/wavenet-table.png" height=300>
 
-      generator is tasked to not only fool the discriminator but also to be near the ground truth output in an L2 sense
+   Layer3-10 形成一个block, 这样 block 有 15个。 
+   这些 block 的区别就是dilation 不同。 
+   dialtion 从1, 2, 4, 8, 16 这样改变，重复三次， 就是15个block.
 
-      Using L1 distance rather than L2 as L1 encourages less blurring
-
-      生成器不仅仅是要与判别器博弈, 还需要更可能地接近 训练样本;
-
-      相比L2, 使用L1距离可以使图片更清晰
-
+   <img src="../README/images/wavenetwork.png" height=350>
 
 #### Loss Function
 
-   <img src="../../README/images/pix2pix_loss.png" height=200>
+   用于ASR的Loss Funcation
+   <img src="../README/images/wavenet-net.png" height=300>
 
-   λ = 0  , only cGAN gives much sharper results but introduces visual artifacts
+   激活单元的tanh和sigmoid一起使用: 语音信号在[-1, 1]之间, 希望输出[-1, 1], 如果ReLU, 就没有小于零的部分.
 
-   λ = 100, both terms together reduces these artifacts
+   CTC( Connectionist Temporal Classification) Loss
 
 
 #### Implementation 
@@ -82,42 +81,16 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
 
 #### Reference
 
-- [Pix2Pix Project Homepage](https://phillipi.github.io/pix2pix/)
+- [CTC Loss理解](https://www.cnblogs.com/Allen-rg/p/9720768.html)
 
-- [A Gentle Introduction to Pix2Pix Generative Adversarial Network](https://machinelearningmastery.com/a-gentle-introduction-to-pix2pix-generative-adversarial-network/)
+- [文字识别中CTC损失的直觉解释](https://mp.weixin.qq.com/s?__biz=Mzg5ODAzMTkyMg==&mid=2247486359&idx=1&sn=a6fb6cc2d201abdba19a78da6df91002&chksm=c06983caf71e0adc72de45d785194d48b063c2523a54b6725f2ac5f08ebbc89d9d107a67d1c2&scene=27#wechat_redirect)
 
-- [How to Develop a Pix2Pix GAN for Image-to-Image Translation](https://machinelearningmastery.com/how-to-develop-a-pix2pix-gan-for-image-to-image-translation/)
+- [CTC loss从理论到训练](https://blog.csdn.net/justsolow/article/details/105251789)
 
-- [New York Google Map dataset for Experiment](http://efrosgans.eecs.berkeley.edu/pix2pix/datasets/maps.tar.gz)
+- [Speech-to-Text-WaveNet](https://github.com/buriburisuri/speech-to-text-wavenet)
 
+- [语音合成/识别 WaveNet](https://www.jianshu.com/p/bb13ae73e427)
 
-********
-
-
-:tangerine:  [**Pix2PixHD**](https://arxiv.org/pdf/1711.11585.pdf)   :date:   2017.11v1    :blush:  NVidia / UC Berkeley 
-
-High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs
-
-改进: 生成器分解为2个子2网络: 全局生成器 和 局部增强生成器; 判别器由粗到细, 多尺度架构
-
-#### Reference 
-
--  <img src="../../README/images/pytorch.png" height="13">  [Pix2PixHD - NVidia Official PyTorch](https://github.com/NVIDIA/pix2pixHD)
-
-
-
-********
-:tangerine:  [**CycleGAN**](https://arxiv.org/pdf/1703.10593.pdf)   :date:   2017.03v1    :blush:  UC Berkeley 
-
-Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks
-
-
-
-#### Reference 
-
-- [CycleGAN Offical](https://github.com/junyanz/CycleGAN)
-
-- [How to Develop a CycleGAN for Image-to-Image Translation with Keras](https://machinelearningmastery.com/cyclegan-tutorial-with-keras/)
 
 ********
 
@@ -331,119 +304,4 @@ FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks
 #### Implementation 
 
 - <img src="../../README/images/pytorch.png" height="13">  [flownet2-pytorch](https://github.com/NVIDIA/flownet2-pytorch)
-
-
-********
-
-:tomato: [**RAFT**](https://arxiv.org/pdf/2003.12039.pdf)   :date:   2020.03.26v1    :blush:  Princeton University
-
-RAFT: Recurrent All-Pairs Field Transforms for Optical Flow
-
-#### Implementation 
-
-- <img src="../../README/images/pytorch.png" height="13">  [RAFT-pytorch](https://github.com/princeton-vl/RAFT)
-
-
-********
-
-:tomato: [**Video-to-Video Synthesis**](https://arxiv.org/pdf/1808.06601.pdf)   :date:   2018.08.20v1    :blush:  NVidia
-
-Video-to-Video Synthesis
-
-
-
-#### Implementation 
-
-- <img src="../../README/images/pytorch.png" height="13">  [Vid2Vid Pytorch](https://github.com/NVIDIA/vid2vid)
-
-
-
-********
-
-
-:tomato: [**Few-shot Video-to-Video Synthesis**](https://arxiv.org/pdf/1910.12713.pdf)   :date:   2019.10.28v1    :blush:  NVidia
-
-Few-shot Video-to-Video Synthesis: compose a video based on a small number of reference images and a semantic images based on vid2vid
-
-Video-to-video synthesis (vid2vid): converting an input semantic video to an output photorealistic video.
-
-Conditional GAN framework, user input data not sampling from noise distribution
-
-Vid2vid is based on Image-to-image synthesis, and keeps frames temporally consistent as a whole
-
-Adaptive Network: part of weights are dynamically computed based on input data 
-
-#### Network
-
-flow prediction network W : reuse vid2vid
-soft occlusion map prediction network M : reuse vid2vid
-intermediate image synthesis network H : conditional image generator, adopt SPADE generator for semantic image synthesis
-
-
-
-#### Implementation 
-
-- <img src="../../README/images/pytorch.png" height="13">  [Few-Shot-Vid2Vid Pytorch](https://github.com/NVlabs/few-shot-vid2vid)
-
-
-********
-
-:tomato: [**Face2Face**](https://zollhoefer.com/papers/CACM19_F2F/paper.pdf)   :date:   2016.03.23v1    :blush: Max-Planck-Institute for Informatics / TUM
-
-Face2Face: Real-time Face Capture and Reenactment of RGB Videos
-
-#### Implementation 
-
-- <img src="../../README/images/pytorch.png" height="13">  
-
-- <img src="../../README/images/keras.png" height="13">
-
-- <img src="../../README/images/tf1.png" height="13"> [face2face-demo](https://github.com/datitran/face2face-demo)
-
-- <img src="../../README/images/tf2.png" height="13">   
-
-#### Reference
-
-- [Face2Face](http://niessnerlab.org/papers/2016/1facetoface/thies2016face.pdf)
-
-- [Face2Face Supplemental Material](http://niessnerlab.org/papers/2016/1facetoface/thies2016face_supplemental.pdf)
-
-********
-
-:tomato: [**Neural Talking Head**](https://arxiv.org/pdf/1905.08233.pdf)   :date:   2019.05.20v1    :blush:  Samsung AI Center, Moscow / Skolkovo Institute of Science and Technology
-
-Few-Shot Adversarial Learning of Realistic Neural Talking Head Models
-
-#### Network
-
-   <img src="../../README/images/neural-head_net.png" height=260>
-
-
-#### Implementation
-
-- <img src="../../README/images/pytorch.png" height="13"> [vincent-thevenin / Neural Talking Head](https://github.com/vincent-thevenin/Realistic-Neural-Talking-Head-Models)
-
-********
-
-:tomato: [**MarioNETte**](https://arxiv.org/pdf/1911.08139.pdf)   :date:   2019.11.19v1    :blush:  Hyperconnect Korea
-
-MarioNETte: Few-shot Face Reenactment Preserving Identity of Unseen Targets
-
-#### Network
-
-   <img src="../../README/images/marionette_net.png" height=230>
-
-
-********
-:tomato: [**First Order Motion Model**](https://arxiv.org/pdf/2003.00196.pdf)   :date:   2020.02.29v1    :blush:  University of Trento
-
-First Order Motion Model for Image Animation
-
-#### Network
-
-- <img src="../../README/images/first-order-model_net.png">
-
-
-
-
 
