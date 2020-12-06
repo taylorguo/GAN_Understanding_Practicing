@@ -29,7 +29,9 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
       声波联合概率x={x1, ..., xT} 可以分解为条件概率的积: (xt是t时间内的所有样本)
    <img src="../README/images/wavenet-formula.png">   
       条件概率分布可以构建成卷积层的堆叠, 没有池化层, 输入和输出的时间长度相同. 输出层为softmax + categorical distribution. 
+
       ------
+      
       WaveNet的主要成分是: 因果多孔卷积; 像语音信号这样的一维数据, 数据切换几个时间单位就可以了. 并没有使用RNN, 训练会快一些, 尤其是长信号.
       因果多孔卷积的一个问题是 需要增加层数 或者 更大的滤波器 来增加感受野. 如下感受野为5: (层数+滤波器大小-1). 也可以增加孔的大小来增加感受野.
    <img src="../README/images/wavenet-causal-conv-stack.png">
@@ -37,17 +39,25 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
    <img src="../README/images/wavenet-causal-conv-stack-sample.png">
       WaveNet的多孔配置是: 1,2,4,...,512,1,2,4,...,512,1,2,4,...,512. 幂级数增长的多孔感受野为1024,可以看作是1x1024卷积; 多层堆叠增加了模型容量和感受野大小.
       训练阶段, 所有的时间信号可以并行输出, 因为ground truth都是已知的. 但推断的时候则是顺序的, 预测的每个样本再送入模型预测下一个样本.
+      
       ------
+      
       SoftMax Distribution: 柔性最大化分布比条件高斯混合更好, 因为categorical分布更具弹性, 更容易输出任意概率. 原始语音信号是16位整型, softmax层可以输出65536个概率值.WaveNet对语音信号进行μ law变换, 256量化; 非线性量化重构效果显然优于线性量化算法.
+      
       ------
+      
       门控激活:与PixelCNN激活单元形同
    <img src="../README/images/wavenet-gated-activation.png">
       ∗ 是卷积操作; ⊙是元素相乘; σ(·) sigmoid函数; k层数, f滤波器, g门控,W待学参数
+      
       ------
+      
       残差和跳层连接:
    <img src="../README/images/wavenet-res-skip.png">
    <img src="../README/images/wavnet-res.jpg">
+      
       ------
+      
       Conditional WaveNet: 类似cGAN, 条件控制需要的特征; 
       全局条件是控制所有时间序列的分布输出,比如说话人嵌入的TTS模型: 
    <img src="../README/images/wavenet-global-conditional.png">
