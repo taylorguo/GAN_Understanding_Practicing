@@ -18,12 +18,14 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
 思路来源于: [Pixel RNN](https://arxiv.org/abs/1601.06759) & [Exploring the Limits of Language Modeling](https://arxiv.org/abs/1602.02410)
 
 改进: 
+
    生成自然的原始语音信号;
    因果多孔卷积, 具有非常大的感受野;
    单模型可以实现生成不同的声音;
    同样的架构可以用于多个应用, TTS, 语音增强, 声音转换, 声源分离等.
 
 思路: 
+
    声波联合概率x={x1, ..., xT} 可以分解为条件概率的积: (xt是t时间内的所有样本)
    <img src="../README/images/wavenet-formula.png">   
    条件概率分布可以构建成卷积层的堆叠, 没有池化层, 输入和输出的时间长度相同. 输出层为softmax + categorical distribution. 
