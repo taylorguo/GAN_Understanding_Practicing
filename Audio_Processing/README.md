@@ -106,9 +106,9 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
 
 ********
 
-:tangerine:  [**UNIT**](https://arxiv.org/pdf/1703.00848.pdf)   :date:   2017.03v1    :blush:  Cornell University / NVidia
+:tangerine:  [**WaveRNN**](https://arxiv.org/pdf/1802.08435v1.pdf)   :date:   2018.02.23v1    :blush:  Cornell University / NVidia
 
-Unsupervised Image-to-Image Translation Networks
+Efficient Neural Audio Synthesis
 
 
 
