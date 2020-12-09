@@ -226,12 +226,19 @@ StarGAN v2: Diverse Image Synthesis for Multiple Domains
 - <img src="../../README/images/tf2.png" height="13"> [StarGAN v2 - tensorflow2.1](https://github.com/clovaai/stargan-v2-tensorflow)
 
 
+
+
+
+
+## Speech Separation and Extraction
+
+
 ********
 
 
-:tangerine:  [**GauGAN**](https://arxiv.org/pdf/1903.07291.pdf)   :date:   2019.03.18v1    :blush:  NVidia / UC Berkeley 
+:tangerine:  [**Voice Separation with an Unknown Number of Multiple Speakers**](https://arxiv.org/pdf/2003.01531.pdf)   :date:   2020.02.29v1    :blush:  Facebook
 
-Semantic Image Synthesis with Spatially-Adaptive Normalization
+Voice Separation with an Unknown Number of Multiple Speakers
 
 
 #### Network 
@@ -242,6 +249,8 @@ Semantic Image Synthesis with Spatially-Adaptive Normalization
 #### Reference 
 
 -  <img src="../../README/images/pytorch.png" height="13">  [SPADE Official PyTorch](https://github.com/NVlabs/SPADE)
+
+
 
 ********
 
@@ -267,53 +276,3 @@ Semantic Image Synthesis with Spatially-Adaptive Normalization
 - <img src="../../README/images/tf1.png" height="13">
 
 - <img src="../../README/images/tf2.png" height="13">   
-
-
-********
-
-:tangerine:  [**FUNIT**](https://arxiv.org/pdf/1905.01723.pdf)   :date:   2019.05v1
-
-Few-Shot Unsupervised Image-to-Image Translation
-
-
-#### Network 
-
-   <img src="../../README/images/funit_block.jpg" height=450> 
-
-********
-
-:tangerine:  [**StyleGAN Encoder for Image-to-Image Translation**](https://arxiv.org/pdf/2008.00951.pdf)   :date:   2020.08.03v1  :blush:  Penta-AI / Tel-Aviv University
-
-Encoding in Style: a StyleGAN Encoder for Image-to-Image Translation
-
-
-#### Network 
-
-   <img src="../../README/images/psp_net.png" height=310> 
-
-
-
-
-********
-
-
-## Face Synthesis
-
-
-
-
-********
-
-## Video Synthesis
-
-********
-
-:tomato: [**FlowNet 2.0**](https://arxiv.org/pdf/1612.01925.pdf)   :date:   2016.12.06v1    :blush:  NVidia
-
-FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks
-
-
-#### Implementation 
-
-- <img src="../../README/images/pytorch.png" height="13">  [flownet2-pytorch](https://github.com/NVIDIA/flownet2-pytorch)
-
