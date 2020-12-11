@@ -246,10 +246,16 @@ Voice Separation with an Unknown Number of Multiple Speakers
    <img src="../../README/images/gaugan_net.png"> 
 
 
-#### Reference 
+#### Implementation
 
 -  <img src="../../README/images/pytorch.png" height="13">  [SPADE Official PyTorch](https://github.com/NVlabs/SPADE)
 
+
+#### Reference 
+
+- [Speech Separation and Extraction via Deep Learning](https://github.com/gemengtju/Tutorial_Separation)
+
+- [Project Homepage](https://enk100.github.io/speaker_separation/)
 
 
 ********
