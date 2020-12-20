@@ -303,6 +303,21 @@ Encoding in Style: a StyleGAN Encoder for Image-to-Image Translation
 ********
 
 
+:strawberry:  [**Improved StyleGAN Embedding: Where are the Good Latents?**](https://arxiv.org/pdf/2012.09036v1.pdf)   :date:   2020.12.13v1  :blush:  KAUST / Cardiff University
+
+Improved StyleGAN Embedding: Where are the Good Latents?
+
+
+#### Network 
+
+   <img src="../../README/images/psp_net.png" height=310> 
+
+
+
+
+********
+
+
 ## Face Synthesis
 
 
