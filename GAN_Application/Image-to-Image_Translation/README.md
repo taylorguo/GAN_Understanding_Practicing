@@ -318,6 +318,25 @@ Improved StyleGAN Embedding: Where are the Good Latents?
 ********
 
 
+:strawberry:  [**MPG**](https://arxiv.org/pdf/2012.02821v1.pdf)   :date:   2020.12.04v1  :blush:  Rutgers University / Samsung
+
+MPG: A Multi-ingredient Pizza Image Generator with Conditional StyleGANs
+
+
+#### Network 
+
+   <img src="../../README/images/psp_net.png" height=310> 
+
+
+
+
+********
+
+
+
+
+
+
 ## Face Synthesis
 
 
