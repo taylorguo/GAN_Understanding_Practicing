@@ -303,6 +303,40 @@ Encoding in Style: a StyleGAN Encoder for Image-to-Image Translation
 ********
 
 
+:strawberry:  [**Improved StyleGAN Embedding: Where are the Good Latents?**](https://arxiv.org/pdf/2012.09036v1.pdf)   :date:   2020.12.13v1  :blush:  KAUST / Cardiff University
+
+Improved StyleGAN Embedding: Where are the Good Latents?
+
+
+#### Network 
+
+   <img src="../../README/images/psp_net.png" height=310> 
+
+
+
+
+********
+
+
+:strawberry:  [**MPG**](https://arxiv.org/pdf/2012.02821v1.pdf)   :date:   2020.12.04v1  :blush:  Rutgers University / Samsung
+
+MPG: A Multi-ingredient Pizza Image Generator with Conditional StyleGANs
+
+
+#### Network 
+
+   <img src="../../README/images/psp_net.png" height=310> 
+
+
+
+
+********
+
+
+
+
+
+
 ## Face Synthesis
 
 
@@ -442,17 +476,21 @@ One-Shot Free-View Neural Talking-Head Synthesis for Video Conferencing
 
 单样本多角度人脸视频合成
 
-- <img src="../../README/images/one-shot-vid2vid.png">
+- <img src="../../README/images/one-shot-vid2vid.png" height=600>
 
-- <img src="../../README/images/one-shot-vid2vid-synthesis.png">
+- <img src="../../README/images/one-shot-vid2vid-synthesis.png" height=300>
 
 项目地址: https://nvlabs.github.io/face-vid2vid/
 
 主流程: 
 
-      1. 源图像特征提取:用3D特征提取网络(3D特征点检测网络)获取源图像的3D特征(20个3D关键点,宽、高和深度; 也用于后续视频合成的头部旋转和平移)和雅可比矩阵(关键点局部仿射变换到合成帧中,主要是表情的几何处理); 
+      1. 源图像特征提取:用3D特征提取网络(3D特征点检测网络)获取源图像的3D特征(20个3D关键点,宽、高和深度; 
       
-      然后, 对于驱动视频, 用头部位姿估计网络获取旋转矩阵和平移向量, 还用表情形变估计网络估计3D形变(从中性表情的), 这两个网络都是从源图像提取运动几何信息。
+      也用于后续视频合成的头部旋转和平移)和雅可比矩阵(关键点局部仿射变换到合成帧中,主要是表情的几何处理); 
+      
+      然后, 对于驱动视频, 用头部位姿估计网络获取旋转矩阵和平移向量, 还用表情形变估计网络估计3D形变(从中性表情的), 
+      
+      这两个网络都是从源图像提取运动几何信息。
       
       将前面关键点提取和这两个网络提取的几何信息结合, 即3D关键点经过旋转、平移、几何形变得到新的3D关键点, 雅可比矩阵经过旋转得到新的雅可比矩阵。
 
@@ -478,3 +516,16 @@ One-Shot Free-View Neural Talking-Head Synthesis for Video Conferencing
 
 *******
 :tomato: [**COCO-FUNIT: Few-Shot Unsupervised Image Translation with a Content Conditioned Style Encoder**](https://arxiv.org/pdf/2007.07431.pdf)    :date:   2020.07.15v1    :blush:  NVidia
+
+********
+:tomato: [**NaviGAN**](https://arxiv.org/pdf/2011.13786.pdf)   :date:   2020.11.27v1    :blush:  Yandex
+
+Navigating the GAN Parameter Space for Semantic Image Editing
+
+#### Network
+
+- <img src="../../README/images/first-order-model_net.png">
+
+#### Implementation
+
+- <img src="../../README/images/pytorch.png" height="13"> [NaviGAN](https://github.com/yandex-research/navigan)
