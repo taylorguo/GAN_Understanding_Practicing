@@ -476,3 +476,5 @@ One-Shot Free-View Neural Talking-Head Synthesis for Video Conferencing
 
 - <img src="../../README/images/one-shot-vid-loss.png">
 
+*******
+:tomato: [**COCO-FUNIT: Few-Shot Unsupervised Image Translation with a Content Conditioned Style Encoder**](https://arxiv.org/pdf/2007.07431.pdf)    :date:   2020.07.15v1    :blush:  NVidia
