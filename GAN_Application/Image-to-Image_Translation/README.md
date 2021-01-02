@@ -81,6 +81,7 @@ Image-to-Image Translation with Conditional Adversarial Networks
 
 - [New York Google Map dataset for Experiment](http://efrosgans.eecs.berkeley.edu/pix2pix/datasets/maps.tar.gz)
 
+- [PatchGAN 感知域的理解](https://www.cnblogs.com/ChenKe-cheng/p/11207998.html)
 
 ********
 
@@ -529,3 +530,9 @@ Navigating the GAN Parameter Space for Semantic Image Editing
 #### Implementation
 
 - <img src="../../README/images/pytorch.png" height="13"> [NaviGAN](https://github.com/yandex-research/navigan)
+
+
+
+
+
+
