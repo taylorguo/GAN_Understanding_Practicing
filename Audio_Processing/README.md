@@ -160,6 +160,35 @@ Real-time Voice Cloning
 
 #### Reference 
 
+
+********
+
+:tangerine:  [**Speaker Verification to Multispeaker TTS**](https://arxiv.org/pdf/1806.04558.pdf)   :date:   2019.06.27v1    :blush:  Google）
+
+Transfer Learning from Speaker Verification to Multispeaker Text-To-Speech Synthesis
+
+
+
+
+#### Network 
+
+   <img src="../README/images/unit_net.png"> 
+
+#### Implementation 
+
+- <img src="../README/images/pytorch.png" height="13"> 
+
+- <img src="../README/images/keras.png" height="13">
+
+- <img src="../README/images/tf1.png" height="13"> [Real-Time-Voice-Cloning](https://github.com/CorentinJ/Real-Time-Voice-Cloning)
+
+- <img src="../README/images/tf2.png" height="13">   
+
+
+#### Reference 
+
+- [语音中的风格转换](https://www.cnblogs.com/mengnan/p/10294884.html)
+
 ********
 
 :tangerine:  [**BicycleGAN**](https://arxiv.org/pdf/1711.11586.pdf)   :date:   2017.11v1    :blush:  UC Berkeley / Adobe Research
