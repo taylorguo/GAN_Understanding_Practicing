@@ -88,9 +88,9 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
 
 #### Implementation 
 
-- <img src="../../README/images/pytorch.png" height="13">  [Pix2Pix + BEGAN PyTorch](https://github.com/taey16/pix2pixBEGAN.pytorch)
+- <img src="../README/images/pytorch.png" height="13">  [Pix2Pix + BEGAN PyTorch](https://github.com/taey16/pix2pixBEGAN.pytorch)
 
-- <img src="../../README/images/keras.png" height="13"> [Pix2Pix Keras](https://github.com/tdeboissiere/DeepLearningImplementations/tree/master/pix2pix)
+- <img src="../README/images/keras.png" height="13"> [Pix2Pix Keras](https://github.com/tdeboissiere/DeepLearningImplementations/tree/master/pix2pix)
 
 
 #### Reference
@@ -117,17 +117,17 @@ Efficient Neural Audio Synthesis
 
 #### Network 
 
-   <img src="../../README/images/unit_net.png"> 
+   <img src="../README/images/unit_net.png"> 
 
 #### Implementation 
 
-- <img src="../../README/images/pytorch.png" height="13"> 
+- <img src="../README/images/pytorch.png" height="13"> 
 
-- <img src="../../README/images/keras.png" height="13">
+- <img src="../README/images/keras.png" height="13">
 
-- <img src="../../README/images/tf1.png" height="13">
+- <img src="../README/images/tf1.png" height="13">
 
-- <img src="../../README/images/tf2.png" height="13">   
+- <img src="../README/images/tf2.png" height="13">   
 
 
 #### Reference 
@@ -145,17 +145,17 @@ Real-time Voice Cloning
 
 #### Network 
 
-   <img src="../../README/images/unit_net.png"> 
+   <img src="../README/images/unit_net.png"> 
 
 #### Implementation 
 
-- <img src="../../README/images/pytorch.png" height="13"> 
+- <img src="../README/images/pytorch.png" height="13"> 
 
-- <img src="../../README/images/keras.png" height="13">
+- <img src="../README/images/keras.png" height="13">
 
-- <img src="../../README/images/tf1.png" height="13"> [Real-Time-Voice-Cloning](https://github.com/CorentinJ/Real-Time-Voice-Cloning)
+- <img src="../README/images/tf1.png" height="13"> [Real-Time-Voice-Cloning](https://github.com/CorentinJ/Real-Time-Voice-Cloning)
 
-- <img src="../../README/images/tf2.png" height="13">   
+- <img src="../README/images/tf2.png" height="13">   
 
 
 #### Reference 
@@ -173,13 +173,13 @@ Toward Multimodal Image-to-Image Translation
 
 #### Implementation 
 
-- <img src="../../README/images/pytorch.png" height="13">  [BicycleGAN Official PyTorch](https://github.com/junyanz/BicycleGAN)
+- <img src="../README/images/pytorch.png" height="13">  [BicycleGAN Official PyTorch](https://github.com/junyanz/BicycleGAN)
 
-- <img src="../../README/images/keras.png" height="13">
+- <img src="../README/images/keras.png" height="13">
 
-- <img src="../../README/images/tf1.png" height="13">
+- <img src="../README/images/tf1.png" height="13">
 
-- <img src="../../README/images/tf2.png" height="13">   
+- <img src="../README/images/tf2.png" height="13">   
 
 
 #### Reference 
@@ -195,17 +195,17 @@ MUNIT: Multimodal UNsupervised Image-to-image Translation
 
 #### Network 
 
-   <img src="../../README/images/munit_net.png"> 
+   <img src="../README/images/munit_net.png"> 
 
 #### Reference 
 
--  <img src="../../README/images/pytorch.png" height="13">  [MUNIT - NVidia Official PyTorch](https://github.com/NVlabs/MUNIT)
+-  <img src="../README/images/pytorch.png" height="13">  [MUNIT - NVidia Official PyTorch](https://github.com/NVlabs/MUNIT)
 
-- <img src="../../README/images/keras.png" height="13"> [MUNIT - Keras](https://github.com/shaoanlu/MUNIT-keras)
+- <img src="../README/images/keras.png" height="13"> [MUNIT - Keras](https://github.com/shaoanlu/MUNIT-keras)
 
-- <img src="../../README/images/tf1.png" height="13"> [MUNIT - tensorflow1.4](https://github.com/taki0112/MUNIT-Tensorflow)
+- <img src="../README/images/tf1.png" height="13"> [MUNIT - tensorflow1.4](https://github.com/taki0112/MUNIT-Tensorflow)
 
-- <img src="../../README/images/tf2.png" height="13"> 
+- <img src="../README/images/tf2.png" height="13"> 
 
 ********
 
@@ -216,19 +216,19 @@ StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image
 
 #### Network 
 
-   <img src="../../README/images/starganv1-net.png"> 
+   <img src="../README/images/starganv1-net.png"> 
 
-   <img src="../../README/images/starganv1-train.png"> 
+   <img src="../README/images/starganv1-train.png"> 
 
 #### Reference 
 
--  <img src="../../README/images/pytorch.png" height="13">  [StarGAN v1 Official PyTorch](https://github.com/yunjey/stargan)
+-  <img src="../README/images/pytorch.png" height="13">  [StarGAN v1 Official PyTorch](https://github.com/yunjey/stargan)
 
-- <img src="../../README/images/keras.png" height="13"> [StarGAN v1 - Keras](https://github.com/hoangthang1607/StarGAN-Keras)
+- <img src="../README/images/keras.png" height="13"> [StarGAN v1 - Keras](https://github.com/hoangthang1607/StarGAN-Keras)
 
-- <img src="../../README/images/tf1.png" height="13"> [StarGAN v1 - tensorflow1.8](https://github.com/taki0112/StarGAN-Tensorflow)
+- <img src="../README/images/tf1.png" height="13"> [StarGAN v1 - tensorflow1.8](https://github.com/taki0112/StarGAN-Tensorflow)
 
-- <img src="../../README/images/tf2.png" height="13"> 
+- <img src="../README/images/tf2.png" height="13"> 
 
 
 ********
@@ -241,19 +241,19 @@ StarGAN v2: Diverse Image Synthesis for Multiple Domains
 
 #### Network 
 
-   <img src="../../README/images/starganv1-net.png"> 
+   <img src="../README/images/starganv1-net.png"> 
 
-   <img src="../../README/images/starganv1-train.png"> 
+   <img src="../README/images/starganv1-train.png"> 
 
 #### Reference 
 
--  <img src="../../README/images/pytorch.png" height="13">  [StarGAN v2 Official PyTorch](https://github.com/clovaai/stargan-v2)
+-  <img src="../README/images/pytorch.png" height="13">  [StarGAN v2 Official PyTorch](https://github.com/clovaai/stargan-v2)
 
-- <img src="../../README/images/keras.png" height="13"> 
+- <img src="../README/images/keras.png" height="13"> 
 
-- <img src="../../README/images/tf1.png" height="13"> 
+- <img src="../README/images/tf1.png" height="13"> 
 
-- <img src="../../README/images/tf2.png" height="13"> [StarGAN v2 - tensorflow2.1](https://github.com/clovaai/stargan-v2-tensorflow)
+- <img src="../README/images/tf2.png" height="13"> [StarGAN v2 - tensorflow2.1](https://github.com/clovaai/stargan-v2-tensorflow)
 
 
 
@@ -273,12 +273,12 @@ Voice Separation with an Unknown Number of Multiple Speakers
 
 #### Network 
 
-   <img src="../../README/images/gaugan_net.png"> 
+   <img src="../README/images/gaugan_net.png"> 
 
 
 #### Implementation
 
--  <img src="../../README/images/pytorch.png" height="13">  [SPADE Official PyTorch](https://github.com/NVlabs/SPADE)
+-  <img src="../README/images/pytorch.png" height="13">  [SPADE Official PyTorch](https://github.com/NVlabs/SPADE)
 
 
 #### Reference 
@@ -301,17 +301,17 @@ Voice Separation with an Unknown Number of Multiple Speakers
 
 #### Network 
 
-   <img src="../../README/images/u-gan-it_net.png"> 
+   <img src="../README/images/u-gan-it_net.png"> 
 
 #### Implementation 
 
-- <img src="../../README/images/pytorch.png" height="13">  [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
+- <img src="../README/images/pytorch.png" height="13">  [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
 
-- <img src="../../README/images/keras.png" height="13">
+- <img src="../README/images/keras.png" height="13">
 
-- <img src="../../README/images/tf1.png" height="13">
+- <img src="../README/images/tf1.png" height="13">
 
-- <img src="../../README/images/tf2.png" height="13">   
+- <img src="../README/images/tf2.png" height="13">   
 
 
 
