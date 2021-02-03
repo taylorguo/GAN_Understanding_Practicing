@@ -11,7 +11,8 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
 
 问题: 生成原始音频波形的神经网络;  利用联合概率分布和自回归模型, 根据之前所有音频采样数据来预测当前音频数据.
 
-[自回归模型(Autoregressive Model)](http://geodesy.blog.sohu.com/273714573.html)是用自身做回归变量的过程，即利用前期若干时刻的随机变量的线性组合来描述以后某时刻随机变量的线性回归模型, 它是时间序列中的一种常见形式.
+[自回归模型(Autoregressive Model)](http://geodesy.blog.sohu.com/273714573.html)是用自身做回归变量的过程，
+即利用前期若干时刻的随机变量的线性组合来描述以后某时刻随机变量的线性回归模型, 它是时间序列中的一种常见形式.
 
 <img src="../README/images/autoregressive_model_defination.jpg">
 
@@ -42,7 +43,8 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
       
       ------
       
-      SoftMax Distribution: 柔性最大化分布比条件高斯混合更好, 因为categorical分布更具弹性, 更容易输出任意概率. 原始语音信号是16位整型, softmax层可以输出65536个概率值.WaveNet对语音信号进行μ law变换, 256量化; 非线性量化重构效果显然优于线性量化算法.
+      SoftMax Distribution: 柔性最大化分布比条件高斯混合更好, 因为categorical分布更具弹性, 更容易输出任意概率. 
+      原始语音信号是16位整型, softmax层可以输出65536个概率值.WaveNet对语音信号进行μ law变换, 256量化; 非线性量化重构效果显然优于线性量化算法.
       
       ------
       
@@ -124,6 +126,34 @@ Efficient Neural Audio Synthesis
 - <img src="../../README/images/keras.png" height="13">
 
 - <img src="../../README/images/tf1.png" height="13">
+
+- <img src="../../README/images/tf2.png" height="13">   
+
+
+#### Reference 
+
+
+
+********
+
+:tangerine:  [**Real-Time Voice Cloning**](https://matheo.uliege.be/bitstream/2268.2/6801/5/s123578Jemine2019.pdf)   :date:   2019.06.27v1    :blush:  里昂大学（Université de Lyon）
+
+Real-time Voice Cloning
+
+
+
+
+#### Network 
+
+   <img src="../../README/images/unit_net.png"> 
+
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13"> 
+
+- <img src="../../README/images/keras.png" height="13">
+
+- <img src="../../README/images/tf1.png" height="13"> [Real-Time-Voice-Cloning](https://github.com/CorentinJ/Real-Time-Voice-Cloning)
 
 - <img src="../../README/images/tf2.png" height="13">   
 
@@ -282,3 +312,9 @@ Voice Separation with an Unknown Number of Multiple Speakers
 - <img src="../../README/images/tf1.png" height="13">
 
 - <img src="../../README/images/tf2.png" height="13">   
+
+
+
+
+
+
