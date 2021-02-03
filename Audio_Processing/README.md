@@ -163,7 +163,7 @@ Real-time Voice Cloning
 
 ********
 
-:tangerine:  [**Speaker Verification to Multispeaker TTS**](https://arxiv.org/pdf/1806.04558.pdf)   :date:   2019.06.27v1    :blush:  Google）
+:tangerine:  [**Speaker Verification to Multispeaker TTS**](https://arxiv.org/pdf/1806.04558.pdf)   :date:   2018.06.12v1    :blush:  Google）
 
 Transfer Learning from Speaker Verification to Multispeaker Text-To-Speech Synthesis
 
