@@ -130,12 +130,16 @@ Unsupervised Image-to-Image Translation Networks
 
 - <img src="../../README/images/keras.png" height="13">
 
-- <img src="../../README/images/tf1.png" height="13">
+- <img src="../../README/images/tf1.png" height="13"> [CycleGAN-TensorFlow](https://github.com/vanhuyz/CycleGAN-TensorFlow)
 
 - <img src="../../README/images/tf2.png" height="13">   
 
 
 #### Reference 
+
+- [Understanding and Implementing CycleGAN in TensorFlow](https://hardikbansal.github.io/CycleGANBlog/)
+
+
 
 ********
 
