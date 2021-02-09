@@ -344,7 +344,23 @@ MPG: A Multi-ingredient Pizza Image Generator with Conditional StyleGANs
 
 ## Face Synthesis
 
+********
 
+:tomato: [**FlowNet 2.0**](https://arxiv.org/pdf/1612.01925.pdf)   :date:   2016.12.06v1    :blush:  NVidia
+
+FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks
+
+
+https://arxiv.org/abs/2011.04439
+
+https://arxiv.org/abs/2102.02766
+
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13">  [flownet2-pytorch](https://github.com/NVIDIA/flownet2-pytorch)
+
+
+********
 
 
 ********
