@@ -346,14 +346,24 @@ MPG: A Multi-ingredient Pizza Image Generator with Conditional StyleGANs
 
 ********
 
-:tomato: [**FlowNet 2.0**](https://arxiv.org/pdf/1612.01925.pdf)   :date:   2016.12.06v1    :blush:  NVidia
+:tomato: [**FaceGAN**](https://arxiv.org/pdf/2011.04439.pdf)   :date:   2020.11.09v1    :blush:  Tampere University
 
-FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks
+FACEGAN： Facial Attribute Controllable rEenactment GAN
 
 
-https://arxiv.org/abs/2011.04439
 
-https://arxiv.org/abs/2102.02766
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13">  [flownet2-pytorch](https://github.com/NVIDIA/flownet2-pytorch)
+
+
+********
+
+:tomato: [**Designing an Encoder for StyleGAN Image Manipulation**](https://arxiv.org/pdf/2102.02766.pdf)   :date:   2021.02.04v1    :blush:  Tel-Aviv University
+
+Designing an Encoder for StyleGAN Image Manipulation
+
+
 
 https://www.paperswithcode.com/method/stylegan
 
@@ -363,8 +373,6 @@ https://mp.weixin.qq.com/s/BnxtjC2mUN5S9RlSrvdPZQ
 
 - <img src="../../README/images/pytorch.png" height="13">  [flownet2-pytorch](https://github.com/NVIDIA/flownet2-pytorch)
 
-
-********
 
 
 ********
