@@ -355,7 +355,7 @@ https://arxiv.org/abs/2011.04439
 
 https://arxiv.org/abs/2102.02766
 
-
+https://www.paperswithcode.com/method/stylegan
 
 #### Implementation 
 
