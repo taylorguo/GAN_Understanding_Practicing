@@ -27,7 +27,7 @@ Image-to-Image Translation with Conditional Adversarial Networks
 
       and it would be desirable to shuttle this information directly across the net
 
-      Discriminator: use a convolutional “PatchGAN” classifier, which only penalizes structure at the scale of image patches
+      Discriminator: use CNN “PatchGAN” classifier, which only penalizes structure at the scale of image patches
 
       Both generator and discriminator use modules of the form convolution-BatchNorm-ReLu
 
@@ -222,9 +222,9 @@ StarGAN v2: Diverse Image Synthesis for Multiple Domains
 
 #### Network 
 
-   <img src="../../README/images/starganv1-net.png"> 
+   <img src="../../README/images/starganv1-net.png" width=650> 
 
-   <img src="../../README/images/starganv1-train.png"> 
+   <img src="../../README/images/starganv1-train.png" width=650> 
 
 #### Reference 
 
@@ -247,7 +247,7 @@ Semantic Image Synthesis with Spatially-Adaptive Normalization
 
 #### Network 
 
-   <img src="../../README/images/gaugan_net.png"> 
+   <img src="../../README/images/gaugan_net.png" width=600> 
 
 
 #### Reference 
@@ -350,7 +350,7 @@ MPG: A Multi-ingredient Pizza Image Generator with Conditional StyleGANs
 
 FACEGAN： Facial Attribute Controllable rEenactment GAN
 
-
+#### Network 
 
 #### Implementation 
 
@@ -363,7 +363,7 @@ FACEGAN： Facial Attribute Controllable rEenactment GAN
 
 Designing an Encoder for StyleGAN Image Manipulation
 
-
+#### Network 
 
 https://www.paperswithcode.com/method/stylegan
 
@@ -509,7 +509,7 @@ One-Shot Free-View Neural Talking-Head Synthesis for Video Conferencing
 
 单样本多角度人脸视频合成
 
-- <img src="../../README/images/one-shot-vid2vid.png" height=600>
+- <img src="../../README/images/one-shot-vid2vid.png" height=500>
 
 - <img src="../../README/images/one-shot-vid2vid-synthesis.png" height=300>
 
@@ -525,7 +525,8 @@ One-Shot Free-View Neural Talking-Head Synthesis for Video Conferencing
       
       这两个网络都是从源图像提取运动几何信息。
       
-      将前面关键点提取和这两个网络提取的几何信息结合, 即3D关键点经过旋转、平移、几何形变得到新的3D关键点, 雅可比矩阵经过旋转得到新的雅可比矩阵。
+      将前面关键点提取和这两个网络提取的几何信息结合, 即3D关键点经过旋转、平移、几何形变得到新的3D关键点, 
+      雅可比矩阵经过旋转得到新的雅可比矩阵。
 
       2. 驱动视频特征提取: 对于驱动视频使用上述方法计算逐帧新的3D关键点和雅可比矩阵。
 
@@ -533,7 +534,9 @@ One-Shot Free-View Neural Talking-Head Synthesis for Video Conferencing
       
       输入特征的处理: 先用一阶估计计算20个关键点的光流, 然后用运动场估计网络估计光流掩码, 生成最终的特征用于生成。
 
-主要部分是3D关键点学习与分解(人脸表情的模型, 人头的几何表示; 两者结合生成特定图像的关键点; 再用关键点学习两个图像之间的映射关系; 这些步骤用一组网络实现, 联合训练)。
+      主要部分是3D关键点学习与分解
+      (人脸表情的模型, 人头的几何表示; 两者结合生成特定图像的关键点; 再用关键点学习两个图像之间的映射关系; 
+      这些步骤用一组网络实现, 联合训练)。
 
 #### Network
 
@@ -541,11 +544,17 @@ One-Shot Free-View Neural Talking-Head Synthesis for Video Conferencing
 
 #### Loss Function
 
-一共用了6个网络: 3D特征提取器F, 3D规范化关键点提取器L, 位姿估计H, 表情形变估计网络△, 运动场估计网络M, 生成器G。
+      一共用了6个网络: 3D特征提取器F, 3D规范化关键点提取器L, 位姿估计H, 表情形变估计网络△, 运动场估计网络M, 生成器G。
 
-6个损失函数: 感知损失Lp, GAN损失LG, 关键点和雅克比等效损失LE(估计的关键点和变换回图像的L1距离), 关键点先验损失LL(平均深度阈值设置), 位姿估计LH(估计的位姿和预训练估计器生成位姿的L1距离), 形变先验损失L△(L1范数):
+      6个损失函数: 
+         感知损失Lp, 
+         GAN损失LG, 
+         关键点和雅克比等效损失LE(估计的关键点和变换回图像的L1距离), 
+         关键点先验损失LL(平均深度阈值设置), 
+         位姿估计LH(估计的位姿和预训练估计器生成位姿的L1距离), 
+         形变先验损失L△(L1范数):
 
-- <img src="../../README/images/one-shot-vid-loss.png">
+<img src="../../README/images/one-shot-vid-loss.png" height=50>
 
 *******
 :tomato: [**COCO-FUNIT: Few-Shot Unsupervised Image Translation with a Content Conditioned Style Encoder**](https://arxiv.org/pdf/2007.07431.pdf)    :date:   2020.07.15v1    :blush:  NVidia
