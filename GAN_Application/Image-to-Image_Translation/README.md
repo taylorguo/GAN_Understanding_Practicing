@@ -263,6 +263,7 @@ Semantic Image Synthesis with Spatially-Adaptive Normalization
    - Adaptive Layer-Instance Normalization (AdaLIN)
 
       Combine the advantages of AdaIN and LN by selectively keeping or changing the content information
+      
       选择或改变特定内容信息,融合了AdaIN和LN的优势
 
 #### Network 
