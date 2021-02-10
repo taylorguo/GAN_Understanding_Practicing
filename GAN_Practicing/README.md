@@ -14,7 +14,7 @@ A Survey on Visual Transformer
 
 #### Implementation 
 
-- <img src="../../README/images/pytorch.png" height="13">  [flownet2-pytorch](https://github.com/NVIDIA/flownet2-pytorch)
+- <img src="../README/images/pytorch.png" height="13">  [flownet2-pytorch](https://github.com/NVIDIA/flownet2-pytorch)
 
 
 ********
@@ -25,7 +25,7 @@ RAFT: Recurrent All-Pairs Field Transforms for Optical Flow
 
 #### Implementation 
 
-- <img src="../../README/images/pytorch.png" height="13">  [RAFT-pytorch](https://github.com/princeton-vl/RAFT)
+- <img src="../README/images/pytorch.png" height="13">  [RAFT-pytorch](https://github.com/princeton-vl/RAFT)
 
 
 ********
@@ -38,7 +38,7 @@ Video-to-Video Synthesis
 
 #### Implementation 
 
-- <img src="../../README/images/pytorch.png" height="13">  [Vid2Vid Pytorch](https://github.com/NVIDIA/vid2vid)
+- <img src="../README/images/pytorch.png" height="13">  [Vid2Vid Pytorch](https://github.com/NVIDIA/vid2vid)
 
 
 
@@ -67,7 +67,7 @@ intermediate image synthesis network H : conditional image generator, adopt SPAD
 
 #### Implementation 
 
-- <img src="../../README/images/pytorch.png" height="13">  [Few-Shot-Vid2Vid Pytorch](https://github.com/NVlabs/few-shot-vid2vid)
+- <img src="../README/images/pytorch.png" height="13">  [Few-Shot-Vid2Vid Pytorch](https://github.com/NVlabs/few-shot-vid2vid)
 
 
 
@@ -78,8 +78,8 @@ Navigating the GAN Parameter Space for Semantic Image Editing
 
 #### Network
 
-- <img src="../../README/images/first-order-model_net.png">
+- <img src="../README/images/first-order-model_net.png">
 
 #### Implementation
 
-- <img src="../../README/images/pytorch.png" height="13"> [NaviGAN](https://github.com/yandex-research/navigan)
+- <img src="../README/images/pytorch.png" height="13"> [NaviGAN](https://github.com/yandex-research/navigan)

@@ -575,6 +575,3 @@ Navigating the GAN Parameter Space for Semantic Image Editing
 
 
 
-
-
-
