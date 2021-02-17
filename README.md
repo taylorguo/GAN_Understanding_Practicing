@@ -600,12 +600,12 @@ Image2StyleGAN++: How to Edit the Embedded Images?
 
 :lemon:  [**TransGAN**](https://arxiv.org/abs/2102.07074)   :date:    2021.02.14    :blush:  KAUST
 
-TransGAN: Two Transformers Can Make One Strong GAN
+[TransGAN: Two Transformers Can Make One Strong GAN](https://www.arxiv-vanity.com/papers/2102.07074/)
 
 
 #### Implementation 
 
-- <img src="./README/images/pytorch.png" height="13"> [TransGAN](https://github.com/VITA-Group/TransGAN)
+- <img src="./README/images/pytorch.png" height="12"> [TransGAN](https://github.com/VITA-Group/TransGAN)
 
 ********
 
