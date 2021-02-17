@@ -596,7 +596,16 @@ Image2StyleGAN++: How to Edit the Embedded Images?
 :lemon:  [**Spatially-Adaptive Normalization**](https://arxiv.org/pdf/1903.07291.pdf)   :date:    2019.03
 
 
+********
 
+:lemon:  [**TransGAN**](https://arxiv.org/abs/2102.07074)   :date:    2021.02.14    :blush:  KAUST
+
+TransGAN: Two Transformers Can Make One Strong GAN
+
+
+#### Implementation 
+
+- <img src="./README/images/pytorch.png" height="13"> [TransGAN](https://github.com/VITA-Group/TransGAN)
 
 ********
 
