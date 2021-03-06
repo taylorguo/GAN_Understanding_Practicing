@@ -343,6 +343,24 @@ MPG: A Multi-ingredient Pizza Image Generator with Conditional StyleGANs
 ********
 
 
+:strawberry:  [**HiSD**](https://arxiv.org/pdf/2103.01456v1.pdf)   :date:   2021.03.02v1  :blush:  Xiamen University / Xi’an Jiaotong University / Tencent Youtu Lab
+
+Image-to-image Translation via Hierarchical Style Disentanglement
+
+
+#### Network 
+
+   <img src="../../README/images/psp_net.png" height=310> 
+
+
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13">  [HiSD PyTorch](https://github.com/imlixinyang/HiSD)
+
+
+
+********
+
 
 
 
