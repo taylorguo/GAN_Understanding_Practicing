@@ -350,7 +350,7 @@ Image-to-image Translation via Hierarchical Style Disentanglement
 
 #### Network 
 
-   <img src="../../README/images/psp_net.png" height=310> 
+   <img src="../../README/images/hisd-overview.png" height=310> 
 
 
 #### Implementation 

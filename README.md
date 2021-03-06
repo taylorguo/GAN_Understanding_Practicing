@@ -609,7 +609,16 @@ Image2StyleGAN++: How to Edit the Embedded Images?
 
 ********
 
+:lemon:  [**GANsformer**](https://arxiv.org/pdf/2103.01209v2.pdf)   :date:    2021.03.02    :blush:  Standford / Facebook
 
+GANsformer: Generative Adversarial Transformers
+
+
+#### Implementation 
+
+- <img src="./README/images/pytorch.png" height="12"> [GANsformer](https://github.com/dorarad/gansformer)
+
+********
 ## Dataset
 
 - [Kaggle - CelebA: 200k images with 40 binary attribute](https://www.kaggle.com/jessicali9530/celeba-dataset/data#)
