@@ -362,6 +362,26 @@ Image-to-image Translation via Hierarchical Style Disentanglement
 ********
 
 
+:strawberry:  [**Anycost GAN**](https://arxiv.org/pdf/2103.03243.pdf)   :date:   2021.03.04v1  :blush:  MIT / Adobe Research / CMU
+
+- Anycost GANs for Interactive Image Synthesis and Editing
+
+
+#### Network 
+
+   <img src="../../README/images/anycost-gan-gen.jpg"> 
+
+
+
+   <img src="../../README/images/anycost-gan-gif01.gif"> 
+
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13">  [AnycostGAN PyTorch1.7](https://github.com/mit-han-lab/anycost-gan)
+
+
+
+********
 
 
 
