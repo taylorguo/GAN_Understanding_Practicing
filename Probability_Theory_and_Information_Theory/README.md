@@ -278,7 +278,8 @@
 
 #### Reference 
 
-<!-- -  <img src="../README/images/pytorch.png" height="13"> -->
+- [【概率论】 概率论总览](https://face2ai.com/Math-Probability-Big-Picture/)
+
 -  [《数学之美》( The beauty of Mathematics)](https://github.com/mantchs/Mathematics)
 
 - [UCB Data8 计算与推断思维 with Python Code](https://data8.apachecn.org/#/)

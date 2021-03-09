@@ -638,3 +638,4 @@ GANsformer: Generative Adversarial Transformers
 - [From GAN to WGAN](https://lilianweng.github.io/lil-log/2017/08/20/from-GAN-to-WGAN.html)
 - [Computing the Earth Mover's Distance under Transformations](http://robotics.stanford.edu/~scohen/research/emdg/emdg.html)
 - [Wasserstein GAN and the Kantorovich-Rubinstein Duality](https://vincentherrmann.github.io/blog/wasserstein/)
+- **[StudioGAN](https://github.com/POSTECH-CVLab/PyTorch-StudioGAN)**
