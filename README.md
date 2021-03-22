@@ -610,7 +610,7 @@ Image2StyleGAN++: How to Edit the Embedded Images?
 ********
 
 
-:lemon:  [**ContraGAN **](https://arxiv.org/pdf/2006.12681v3.pdf)   :date:    2021.02.03   :blush:  postech
+:lemon:  [**ContraGAN**](https://arxiv.org/pdf/2006.12681v3.pdf)   :date:    2021.02.03   :blush:  postech
 
 [ContraGAN：Contrastive Learning for Conditional Image Generation](https://www.arxiv-vanity.com/papers/2102.07074/)
 
