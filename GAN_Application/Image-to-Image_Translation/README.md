@@ -384,6 +384,31 @@ Image-to-image Translation via Hierarchical Style Disentanglement
 ********
 
 
+:strawberry:  [**StyleMapGAN**](https://arxiv.org/pdf/2104.14754.pdf)   :date:   2021.04.30v1  :blush:  NAVER AI Lab / Seoul National University / Yonsei University
+
+- StyleMapGAN: Exploiting Spatial Dimensions of Latent in GAN for Real-time Image Editing
+
+
+#### Network 
+   **Encoder**
+   <img src="../../README/images/stylemapgan_encoder.png"> 
+   
+   **Generator**
+
+   <img src="../../README/images/stylemapgan_generator.png" width=500> 
+
+   **Network**
+
+   <img src="../../README/images/stylemapgan_network.png" width=500> 
+
+
+#### Implementation 
+
+- <img src="../../README/images/pytorch.png" height="13">  [StyleMapGAN PyTorch1.4](https://github.com/naver-ai/StyleMapGAN)
+
+
+
+********
 
 ## Face Synthesis
 
