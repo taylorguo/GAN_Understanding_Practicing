@@ -67,7 +67,7 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
    <img src="../README/images/wavenet-global-local.png">
 
 #### Network
-   
+
    <img src="../README/images/wavenet-table.png" height=300>
 
    Layer3-10 形成一个block, 这样 block 有 15个。 
@@ -145,7 +145,7 @@ Real-time Voice Cloning
 
 #### Network 
 
-   <img src="../README/images/unit_net.png"> 
+   <img src="../README/images/unit_net.png"> 3
 
 #### Implementation 
 
@@ -160,10 +160,73 @@ Real-time Voice Cloning
 
 #### Reference 
 
+********
+
+:tangerine:  [**Tacotron**](https://arxiv.org/pdf/1712.05884.pdf)   :date:   2017.03.29v1    :blush:  Google
+
+Tacotron: Towards End-to-End Speech Synthesis
+
+
+
+
+#### Network 
+
+   <img src="../README/images/tacotron_net.png" height=450> 
+
+
+
+CBHG Module
+
+<img src="../README/images/tacotron_net_cbhg.png" height=400>
+
+
+
+#### Implementation 
+
+- <img src="../README/images/pytorch.png" height="13">  [Tacotron2](https://github.com/NVIDIA/tacotron2)
+
+- <img src="../README/images/keras.png" height="13">
+
+- <img src="../README/images/tf1.png" height="13"> 
+
+- <img src="../README/images/tf2.png" height="13">   
+
+
+#### Reference 
+
+
 
 ********
 
-:tangerine:  [**Speaker Verification to Multispeaker TTS**](https://arxiv.org/pdf/1806.04558.pdf)   :date:   2018.06.12v1    :blush:  Google）
+
+:tangerine:  [**Tacotron2**](https://arxiv.org/pdf/1712.05884.pdf)   :date:   2017.12.16v1    :blush:  Google
+
+Natural TTS Synthesis By Conditioning Wavenet On Mel Spectrogram Predictions
+
+
+
+
+#### Network 
+
+   <img src="../README/images/tacotron2_net.png"> 
+
+#### Implementation 
+
+- <img src="../README/images/pytorch.png" height="13">  [Tacotron2](https://github.com/NVIDIA/tacotron2)
+
+- <img src="../README/images/keras.png" height="13">
+
+- <img src="../README/images/tf1.png" height="13"> 
+
+- <img src="../README/images/tf2.png" height="13">   
+
+
+#### Reference 
+
+
+********
+
+:tangerine:  [**Speaker Verification to Multispeaker TTS**](https://arxiv.org/pdf/1806.04558.pdf)   :date:   2018.06.12v1    :blush:  Google
 
 Transfer Learning from Speaker Verification to Multispeaker Text-To-Speech Synthesis
 
