@@ -194,7 +194,9 @@ CBHG Module
 
 #### Reference 
 
-
+- [end-to-end speech synthesis system by Google](https://google.github.io/tacotron/)
+- [注意力机制](https://blog.floydhub.com/attention-mechanism/)
+- [PyTorch 编写 Transformer](https://blog.floydhub.com/the-transformer-in-pytorch/)
 
 ********
 
