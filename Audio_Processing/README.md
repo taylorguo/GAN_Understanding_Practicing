@@ -228,6 +228,68 @@ Natural TTS Synthesis By Conditioning Wavenet On Mel Spectrogram Predictions
 
 ********
 
+:tangerine:  [**WaveGlow**](https://arxiv.org/pdf/1811.00002.pdf)   :date:   2018.10.31v1    :blush:  Nvidia
+
+WaveGlow: A Flow-based Generative Network for Speech Synthesis
+
+基于glow方法从mel-spectrogram生成语音, 将 glow 方法 和 wavenet结合, 速度快效果好。
+
+WaveGlow 是单网络, 单 cost function: 最大化似然估计, 训练过程简单稳定。 V100上训练 25倍audio实时。
+
+TTS text-to-speech synthesis 通常是二步骤: 
+1. 把文字转换成 time-aligned features, 比如 mel-spectrogram, 或 F0 frequencies, 或其他语言特征
+2. 把 time-aligned features 转换成 语音; 这个模型通常是 vocoder . 
+   通常用自回归模型, 可以基于之前的样本对后续样本预测, 可以预测相对较长的样本, 但无法在GPU上并行处理.
+   很难在不损失质量的情况下, 合成采样率高于16KHz的语音.
+
+WaveGlow 生成模型从 zero mean spherical Gaussian 中采样, 通过一系列的网络层变换生成想要的分布; 
+同样方法对梅儿频谱进行采样: z ~N(z; 0, I) ;  x = f0*f1*...fk(z)
+
+**WaveGlow Network**
+
+<img src="../README/images/waveglow_net.png" height=450>
+
+
+
+**Affine Coupling Layer**
+
+<img src="../README/images/waveglow-affine-coupling-layer.png" height=150>
+
+WN(xa, mel-spectrogram) 可以使用dilate convolution layer, gated-tanh 非线性激活,  残差连接和跳层连接。 
+
+
+
+
+#### Network 
+
+   <img src="../README/images/tacotron_net.png" height=450> 
+
+
+
+CBHG Module
+
+<img src="../README/images/tacotron_net_cbhg.png" height=400>
+
+
+
+#### Implementation 
+
+- <img src="../README/images/pytorch.png" height="13">  [Tacotron2](https://github.com/NVIDIA/tacotron2)
+
+- <img src="../README/images/keras.png" height="13">
+
+- <img src="../README/images/tf1.png" height="13"> 
+
+- <img src="../README/images/tf2.png" height="13">   
+
+
+#### Reference 
+
+1. [zero mean spherical Gaussian - UE4中使用球面高斯](https://zhuanlan.zhihu.com/p/139836594)
+
+
+********
+
 :tangerine:  [**Speaker Verification to Multispeaker TTS**](https://arxiv.org/pdf/1806.04558.pdf)   :date:   2018.06.12v1    :blush:  Google
 
 Transfer Learning from Speaker Verification to Multispeaker Text-To-Speech Synthesis
