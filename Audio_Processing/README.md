@@ -112,12 +112,19 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
 
 Efficient Neural Audio Synthesis
 
+Text-to-Speech Synthesis: TTS 应用
+
+WaveRNN: 
+
+- 单层RNN，双 softmax 层，预测16bit audio sample;  GPU 4x 实时
+- 使用了权重剪枝
+
 
 
 
 #### Network 
 
-   <img src="../README/images/unit_net.png"> 
+   <img src="../README/images/wavernn-net.png" height=450> 
 
 #### Implementation 
 
@@ -132,7 +139,7 @@ Efficient Neural Audio Synthesis
 
 #### Reference 
 
-
+[LSTM和GRU图解](http://www.atyun.com/30234.html)
 
 ********
 
@@ -247,7 +254,7 @@ WaveGlow 生成模型从 zero mean spherical Gaussian 中采样, 通过一系列
 
 **WaveGlow Network**
 
-<img src="../README/images/waveglow_net.png" height=450>
+<img src="../README/images/waveglow_net.png" height=400>
 
 
 
@@ -258,17 +265,6 @@ WaveGlow 生成模型从 zero mean spherical Gaussian 中采样, 通过一系列
 WN(xa, mel-spectrogram) 可以使用dilate convolution layer, gated-tanh 非线性激活,  残差连接和跳层连接。 
 
 
-
-
-#### Network 
-
-   <img src="../README/images/tacotron_net.png" height=450> 
-
-
-
-CBHG Module
-
-<img src="../README/images/tacotron_net_cbhg.png" height=400>
 
 
 
@@ -320,96 +316,6 @@ Transfer Learning from Speaker Verification to Multispeaker Text-To-Speech Synth
 
 :tangerine:  [**BicycleGAN**](https://arxiv.org/pdf/1711.11586.pdf)   :date:   2017.11v1    :blush:  UC Berkeley / Adobe Research
 
-Toward Multimodal Image-to-Image Translation
-
-
-#### Network 
-
-   <img src="../../README/images/bicyclegan_net.png"> 
-
-#### Implementation 
-
-- <img src="../README/images/pytorch.png" height="13">  [BicycleGAN Official PyTorch](https://github.com/junyanz/BicycleGAN)
-
-- <img src="../README/images/keras.png" height="13">
-
-- <img src="../README/images/tf1.png" height="13">
-
-- <img src="../README/images/tf2.png" height="13">   
-
-
-#### Reference 
-
-
-
-
-********
-:tangerine:  [**MUNIT**](https://arxiv.org/pdf/1804.04732.pdf)   :date:   2018.04v1    :blush:  Cornell University / NVidia
-
-MUNIT: Multimodal UNsupervised Image-to-image Translation
-
-
-#### Network 
-
-   <img src="../README/images/munit_net.png"> 
-
-#### Reference 
-
--  <img src="../README/images/pytorch.png" height="13">  [MUNIT - NVidia Official PyTorch](https://github.com/NVlabs/MUNIT)
-
-- <img src="../README/images/keras.png" height="13"> [MUNIT - Keras](https://github.com/shaoanlu/MUNIT-keras)
-
-- <img src="../README/images/tf1.png" height="13"> [MUNIT - tensorflow1.4](https://github.com/taki0112/MUNIT-Tensorflow)
-
-- <img src="../README/images/tf2.png" height="13"> 
-
-********
-
-:tangerine:  [**StarGAN v1**](https://arxiv.org/pdf/1711.09020.pdf)   :date:   2017.11.24v1    :blush:  Korea University / Clova AI Research
-
-StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation
-
-
-#### Network 
-
-   <img src="../README/images/starganv1-net.png"> 
-
-   <img src="../README/images/starganv1-train.png"> 
-
-#### Reference 
-
--  <img src="../README/images/pytorch.png" height="13">  [StarGAN v1 Official PyTorch](https://github.com/yunjey/stargan)
-
-- <img src="../README/images/keras.png" height="13"> [StarGAN v1 - Keras](https://github.com/hoangthang1607/StarGAN-Keras)
-
-- <img src="../README/images/tf1.png" height="13"> [StarGAN v1 - tensorflow1.8](https://github.com/taki0112/StarGAN-Tensorflow)
-
-- <img src="../README/images/tf2.png" height="13"> 
-
-
-********
-
-
-:tangerine:  [**StarGAN v2**](https://arxiv.org/pdf/1912.01865.pdf)   :date:   2019.12.04v1    :blush:  Clova AI Research
-
-StarGAN v2: Diverse Image Synthesis for Multiple Domains
-
-
-#### Network 
-
-   <img src="../README/images/starganv1-net.png"> 
-
-   <img src="../README/images/starganv1-train.png"> 
-
-#### Reference 
-
--  <img src="../README/images/pytorch.png" height="13">  [StarGAN v2 Official PyTorch](https://github.com/clovaai/stargan-v2)
-
-- <img src="../README/images/keras.png" height="13"> 
-
-- <img src="../README/images/tf1.png" height="13"> 
-
-- <img src="../README/images/tf2.png" height="13"> [StarGAN v2 - tensorflow2.1](https://github.com/clovaai/stargan-v2-tensorflow)
 
 
 
@@ -446,28 +352,6 @@ Voice Separation with an Unknown Number of Multiple Speakers
 
 ********
 
-:tangerine:  [**U-GAN-IT**](https://arxiv.org/pdf/1907.10830.pdf)   :date:   2019.07v1
-
-#### Loss Function 
-
-   - Adaptive Layer-Instance Normalization (AdaLIN)
-
-      Combine the advantages of AdaIN and LN by selectively keeping or changing the content information
-      选择或改变特定内容信息,融合了AdaIN和LN的优势
-
-#### Network 
-
-   <img src="../README/images/u-gan-it_net.png"> 
-
-#### Implementation 
-
-- <img src="../README/images/pytorch.png" height="13">  [FID PyTorch](https://github.com/mseitzer/pytorch-fid)
-
-- <img src="../README/images/keras.png" height="13">
-
-- <img src="../README/images/tf1.png" height="13">
-
-- <img src="../README/images/tf2.png" height="13">   
 
 
 
