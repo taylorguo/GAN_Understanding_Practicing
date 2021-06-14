@@ -456,11 +456,67 @@ Flow  编码器使用基于分布的损失函数，合成语音的质量稍有�
 
 <img src="../README/images/waveglow_net.png" height=300>
 
+      WaveGlow(
 
+      (upsample): ConvTranspose1d(80, 80, kernel_size=(1024,), stride=(256,))
+      (WN): ModuleList(
+         (0-11): WN(
+
+            (in_layers): ModuleList(
+            (0): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(1,))
+            (1): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(2,), dilation=(2,))
+            (2): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(4,), dilation=(4,))
+            (3): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(8,), dilation=(8,))
+            (4): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(16,), dilation=(16,))
+            (5): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(32,), dilation=(32,))
+            (6): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(64,), dilation=(64,))
+            (7): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(128,), dilation=(128,)) )
+
+            (res_skip_layers): ModuleList(
+            (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+            (1): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+            (2): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+            (3): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+            (4): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+            (5): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+            (6): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+            (7): Conv1d(256, 256, kernel_size=(1,), stride=(1,)) )
+            
+            (start): Conv1d(4, 256, kernel_size=(1,), stride=(1,))
+            (end): Conv1d(256, 8, kernel_size=(1,), stride=(1,))
+            (cond_layer): Conv1d(640, 4096, kernel_size=(1,), stride=(1,))  )
+
+      (convinv): ModuleList(
+            (0): Invertible1x1Conv(
+               (conv): Conv1d(8, 8, kernel_size=(1,), stride=(1,), bias=False) )
+            (1): Invertible1x1Conv(
+               (conv): Conv1d(8, 8, kernel_size=(1,), stride=(1,), bias=False) )
+            (2): Invertible1x1Conv(
+               (conv): Conv1d(8, 8, kernel_size=(1,), stride=(1,), bias=False) )
+            (3): Invertible1x1Conv(
+               (conv): Conv1d(8, 8, kernel_size=(1,), stride=(1,), bias=False) )
+            (4): Invertible1x1Conv(
+               (conv): Conv1d(6, 6, kernel_size=(1,), stride=(1,), bias=False) )
+            (5): Invertible1x1Conv(
+               (conv): Conv1d(6, 6, kernel_size=(1,), stride=(1,), bias=False) )
+            (6): Invertible1x1Conv(
+               (conv): Conv1d(6, 6, kernel_size=(1,), stride=(1,), bias=False) )
+            (7): Invertible1x1Conv(
+               (conv): Conv1d(6, 6, kernel_size=(1,), stride=(1,), bias=False) )
+            (8): Invertible1x1Conv(
+               (conv): Conv1d(4, 4, kernel_size=(1,), stride=(1,), bias=False) )
+            (9): Invertible1x1Conv(
+               (conv): Conv1d(4, 4, kernel_size=(1,), stride=(1,), bias=False) )
+            (10): Invertible1x1Conv(
+               (conv): Conv1d(4, 4, kernel_size=(1,), stride=(1,), bias=False) )
+            (11): Invertible1x1Conv(
+               (conv): Conv1d(4, 4, kernel_size=(1,), stride=(1,), bias=False) )
+         )
+      ))
 
 **Affine Coupling Layer**
 
-<img src="../README/images/waveglow-affine-coupling-layer.png" height=150>
+<img src="../README/images/waveglow-affine-coupling-layer.png" height=120>
 
 WN(xa, mel-spectrogram) 可以使用dilate convolution layer, gated-tanh 非线性激活,  残差连接和跳层连接。 
 
