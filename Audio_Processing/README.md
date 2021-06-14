@@ -211,36 +211,6 @@ WaveRNN:
 
 ********
 
-:tangerine:  [**WaveGlow**](https://arxiv.org/pdf/1811.00002.pdf)   :date:   2018.10.31v1    :blush:  NVidia
-
-WaveGlow: A Flow-based Generative Network for Speech Synthesis
-
-#### Network 
-
-   <img src="../README/images/waveglow_net.png" height=250> 
-
-   <img src="../README/images/waveglow-flow.jpg" height=200> 
-
-   <img src="../README/images/waveglow-process.jpg" height=250> 
-
-#### Implementation 
-
-- <img src="../README/images/pytorch.png" height="13"> 
-
-- <img src="../README/images/keras.png" height="13">
-
-- <img src="../README/images/tf1.png" height="13">
-
-- <img src="../README/images/tf2.png" height="13">   
-
-
-#### Reference 
-
-
-
-
-********
-
 :tangerine:  [**Real-Time Voice Cloning**](https://matheo.uliege.be/bitstream/2268.2/6801/5/s123578Jemine2019.pdf)   :date:   2019.06.27v1    :blush:  里昂大学（Université de Lyon）
 
 Real-time Voice Cloning
@@ -541,6 +511,33 @@ Transfer Learning from Speaker Verification to Multispeaker Text-To-Speech Synth
 #### Reference 
 
 - [语音中的风格转换](https://www.cnblogs.com/mengnan/p/10294884.html)
+
+
+********
+
+:tangerine:  [**EATS**](https://arxiv.org/pdf/2006.03575.pdf)   :date:   2021.03.21v1    :blush:  Google
+
+End-to-End Adversarial Text-to-Speech
+
+#### Network 
+
+<img src="../README/images/east-generator.png" height=500>
+
+#### Implementation 
+
+- <img src="../README/images/pytorch.png" height="13"> 
+
+- <img src="../README/images/keras.png" height="13">
+
+- <img src="../README/images/tf1.png" height="13">
+
+- <img src="../README/images/tf2.png" height="13">   
+
+
+#### Reference 
+
+
+
 
 ********
 
