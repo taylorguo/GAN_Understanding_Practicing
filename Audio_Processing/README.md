@@ -45,7 +45,7 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
    <img src="../README/images/wavenet-formula.png" height=50>  
 
       条件概率分布可以构建成卷积层的堆叠, 没有池化层, 输入和输出的时间长度相同. 输出层为softmax + categorical distribution. 
-
+    
       ------
       
       WaveNet的主要成分是: 因果多孔卷积; 像语音信号这样的一维数据, 数据切换几个时间单位就可以了. 并没有使用RNN, 训练会快一些, 尤其是长信号.
@@ -292,84 +292,84 @@ Natural TTS Synthesis By Conditioning Wavenet On Mel Spectrogram Predictions
 
 
       Tacotron2(
-
+    
       (embedding): Embedding(148, 512)
-
+    
       (encoder): **Encoder**( 
-
+    
       ​    (convolutions): ModuleList(
-
+    
       ​      (0): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,)) )
       ​        	        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True))
-
+    
       ​      (1): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,)))
       ​                      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True))
-
+    
       ​      (2): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,)))
       ​                      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)))
-
+    
       ​    (lstm): LSTM(512, 256, batch_first=True, bidirectional=True))
 
 
 
       (decoder): **Decoder**(
-
+    
       ​    (prenet): Prenet(  (layers): ModuleList(
       ​        (0): LinearNorm( (linear_layer): Linear(in_features=80, out_features=256, bias=False)    )
       ​        (1): LinearNorm( (linear_layer): Linear(in_features=256, out_features=256, bias=False)  )    )      )
-
+    
       ​    (attention_rnn): LSTMCell(768, 1024)
-
+    
       ​    (attention_layer): Attention(
-
+    
       ​      (query_layer):  LinearNorm( (linear_layer): Linear(in_features=1024, out_features=128, bias=False)  )
-
+    
       ​      (memory_layer): LinearNorm( (linear_layer): Linear(in_features=512,  out_features=128, bias=False)   )
-
+    
       ​      (v):            LinearNorm( (linear_layer): Linear(in_features=128,   out_features=1,    bias=False)	)
-
+    
       ​      (location_layer): LocationLayer(
-
+    
       ​        (location_conv): ConvNorm((conv): Conv1d(2, 32, kernel_size=(31,), stride=(1,), padding=(15,), bias=False) )
-
+    
       ​        (location_dense): LinearNorm((linear_layer): Linear(in_features=32, out_features=128, bias=False) )))
-
+    
       ​    (decoder_rnn): LSTMCell(1536, 1024, bias=1)
-
+    
       ​    (linear_projection): LinearNorm(  (linear_layer): Linear(in_features=1536, out_features=80, bias=True)  )
-
+    
       ​    (gate_layer): LinearNorm(  (linear_layer): Linear(in_features=1536, out_features=1, bias=True)  )     )
 
 
 
       (postnet): Postnet(
-
+    
       ​    (convolutions): ModuleList(
-
+    
       ​      (0): Sequential((0): ConvNorm((conv): Conv1d(80, 512, kernel_size=(5,), stride=(1,), padding=(2,))   )
-
+    
       ​       (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)  )
 
 
       ​      (1): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,))  )
-
+    
       ​        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)  )
 
 
       ​      (2): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,))   )
-
+    
       ​        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)   )
 
 
       ​      (3): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,))    )
-
+    
       ​        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)    )
-      
+
 
       ​      (4): Sequential((0): ConvNorm((conv): Conv1d(512, 80, kernel_size=(5,), stride=(1,), padding=(2,))      )
-
+    
       ​       (1): BatchNorm1d(80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)     )   )    )
-
+    
       )
 
 
@@ -450,11 +450,11 @@ Flow  编码器使用基于分布的损失函数，合成语音的质量稍有�
 <img src="../README/images/waveglow_net.png" height=300>
 
       WaveGlow(
-
+    
       (upsample): ConvTranspose1d(80, 80, kernel_size=(1024,), stride=(256,))
       (WN): ModuleList(
          (0-11): WN(
-
+    
             (in_layers): ModuleList(
             (0): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(1,))
             (1): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(2,), dilation=(2,))
@@ -464,7 +464,7 @@ Flow  编码器使用基于分布的损失函数，合成语音的质量稍有�
             (5): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(32,), dilation=(32,))
             (6): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(64,), dilation=(64,))
             (7): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(128,), dilation=(128,)) )
-
+    
             (res_skip_layers): ModuleList(
             (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
             (1): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
@@ -478,7 +478,7 @@ Flow  编码器使用基于分布的损失函数，合成语音的质量稍有�
             (start): Conv1d(4, 256, kernel_size=(1,), stride=(1,))
             (end): Conv1d(256, 8, kernel_size=(1,), stride=(1,))
             (cond_layer): Conv1d(640, 4096, kernel_size=(1,), stride=(1,))  )
-
+    
       (convinv): ModuleList(
             (0): Invertible1x1Conv(
                (conv): Conv1d(8, 8, kernel_size=(1,), stride=(1,), bias=False) )
@@ -590,11 +590,41 @@ End-to-End Adversarial Text-to-Speech
 
 ********
 
-:tangerine:  [**BicycleGAN**](https://arxiv.org/pdf/1711.11586.pdf)   :date:   2017.11v1    :blush:  UC Berkeley / Adobe Research
+:tangerine:  [**Flowtron**](https://arxiv.org/pdf/2005.05957.pdf)   :date:   2020.05.12v1    :blush:  nvidia
+
+Flowtron: an Autoregressive Flow-based Generative Network for Text-to-Speech Synthesis
+
+#### Network
+
+<img src="../README/images/flowtron-network.png" height=260>
 
 
 
 
+
+********
+
+:tangerine:  [**IAF**](https://arxiv.org/pdf/1606.04934.pdf)   :date:   2016.06.15v1    :blush:  openai
+
+Improving Variational Inference with Inverse Autoregressive Flow
+
+
+
+*************
+
+:tangerine:  [**WaveGrad**](https://arxiv.org/pdf/2009.00713v2.pdf)   :date:   2020.09.02v1    :blush:  openai
+
+WaveGrad: Estimating Gradients for Waveform Generation
+
+#### Network
+
+<img src="../README/images/wavegrad-network.png" height=350>
+
+
+
+
+
+**********
 
 
 
