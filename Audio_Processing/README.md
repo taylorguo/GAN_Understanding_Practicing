@@ -16,13 +16,13 @@ Bahdanau Attention Overview
 
 注意力机制的整体流程:
 
-<img src="../README/images/attention-bahdanau-flow.jpg" height=240>
+<img src="../README/images/attention-bahdanau-flow.jpg" height=280>
 
 1. 解码器隐藏状态和编码器输出都有单独线性层，具有可训练权重
 
 <img src="../README/images/attention-bahdanau-flow-01.jpg" height=150>
 
-2. 解码器隐藏状态添加到编码器的每个输出中, 然后通过 *tanh* 激活功能。
+2. 解码器隐藏状态添加到编码器输出中, 然后通过 *tanh* 激活
 
 <img src="../README/images/attention-bahdanau-flow-02.jpg" height=90>
 
