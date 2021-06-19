@@ -129,16 +129,14 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
    <img src="../README/images/wavenet-global-local.png" height=30>
 
 
+      Text-to-Mel 网络生成的输出称为 Mel-Spectrogram，而不是语音。
+      梅尔光谱是分析语音频率特征的数据。Mel频谱非常有效地组织语音数据的关键信息。
+      但无法立即将梅尔频谱转换为语音，需要使用 Vocoder 将梅尔频谱转换为语音数据。
+      神经神经编码器（Neural Vocoder）利用神经网络从语音特征（如梅尔光谱）中产生语音。
 
-
-Text-to-Mel 网络生成的输出称为 Mel-Spectrogram，而不是语音。
-梅尔光谱是分析语音频率特征的数据。Mel频谱非常有效地组织语音数据的关键信息。
-但无法立即将梅尔频谱转换为语音，需要使用 Vocoder 将梅尔频谱转换为语音数据。
-神经神经编码器（Neural Vocoder）利用神经网络从语音特征（如梅尔光谱）中产生语音。
-
-Wavenet 神经编码器模型，是一种自回归模型，使用语音样本之间的顺序特征。
-Wavenet 使用前一个样本成功合成高质量的语音，预测下一个样本。
-但是，从前面的样本中逐个生成下一个样本，生成速度非常缓慢。
+      Wavenet 神经编码器模型，是一种自回归模型，使用语音样本之间的顺序特征。
+      Wavenet 使用前一个样本成功合成高质量的语音，预测下一个样本。
+      但是，从前面的样本中逐个生成下一个样本，生成速度非常缓慢。
 
 #### Network
 
@@ -178,14 +176,14 @@ CTC( Connectionist Temporal Classification) Loss
 
 Parallel WaveNet: Fast High-Fidelity Speech Synthesis
 
-Parallel Wavenet 改善 Wavenet 缓慢的样本生成速度。
-Parallel Wavenet 使用 Inverse Autoregressive Flow （IAF） 模型合成语音。
-IAF 模型在训练时不知道目标语音数据集的分布情况，
-因此使用训练好的 Wavenet 提取目标数据集的分布信息，将其与 IAF 模型中的结果值进行比较。
+      Parallel Wavenet 改善 Wavenet 缓慢的样本生成速度。
+      Parallel Wavenet 使用 Inverse Autoregressive Flow （IAF） 模型合成语音。
+      IAF 模型在训练时不知道目标语音数据集的分布情况，
+      因此使用训练好的 Wavenet 提取目标数据集的分布信息，将其与 IAF 模型中的结果值进行比较。
 
-Parallel Wavenet 使用的 IAF 模型称为 student network，Wavenet 模型称为 teacher network。
-Parallel Wavenet 优势是语音合成速度比 Wavenet 快。
-但缺点是，合成语音的质量不如 Wavenet，并且需要训练 teacher network。
+      Parallel Wavenet 使用的 IAF 模型称为 student network，Wavenet 模型称为 teacher network。
+      Parallel Wavenet 优势是语音合成速度比 Wavenet 快。
+      但缺点是，合成语音的质量不如 Wavenet，并且需要训练 teacher network。
 
 #### Network
 
@@ -257,11 +255,11 @@ Tacotron: Towards End-to-End Speech Synthesis
 
 #### Network
 
-<img src="../README/images/tacotron_net.png" height=450>
+<img src="../README/images/tacotron_net.png" height=350>
 
 CBHG Module
 
-<img src="../README/images/tacotron_net_cbhg.png" height=400>
+<img src="../README/images/tacotron_net_cbhg.png" height=300>
 
 #### Implementation
 
@@ -288,94 +286,85 @@ Natural TTS Synthesis By Conditioning Wavenet On Mel Spectrogram Predictions
 
 
       Tacotron2(
-    
+
       (embedding): Embedding(148, 512)
-    
+
       (encoder): **Encoder**( 
-    
+
       ​    (convolutions): ModuleList(
-    
+
       ​      (0): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,)) )
       ​        	        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True))
-    
+
       ​      (1): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,)))
       ​                      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True))
-    
+
       ​      (2): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,)))
       ​                      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)))
-    
+
       ​    (lstm): LSTM(512, 256, batch_first=True, bidirectional=True))
 
 
 
       (decoder): **Decoder**(
-    
+
       ​    (prenet): Prenet(  (layers): ModuleList(
       ​        (0): LinearNorm( (linear_layer): Linear(in_features=80, out_features=256, bias=False)    )
       ​        (1): LinearNorm( (linear_layer): Linear(in_features=256, out_features=256, bias=False)  )    )      )
-    
+
       ​    (attention_rnn): LSTMCell(768, 1024)
-    
+
       ​    (attention_layer): Attention(
-    
+
       ​      (query_layer):  LinearNorm( (linear_layer): Linear(in_features=1024, out_features=128, bias=False)  )
-    
+
       ​      (memory_layer): LinearNorm( (linear_layer): Linear(in_features=512,  out_features=128, bias=False)   )
-    
+
       ​      (v):            LinearNorm( (linear_layer): Linear(in_features=128,   out_features=1,    bias=False)	)
-    
+
       ​      (location_layer): LocationLayer(
-    
+
       ​        (location_conv): ConvNorm((conv): Conv1d(2, 32, kernel_size=(31,), stride=(1,), padding=(15,), bias=False) )
-    
+
       ​        (location_dense): LinearNorm((linear_layer): Linear(in_features=32, out_features=128, bias=False) )))
-    
+
       ​    (decoder_rnn): LSTMCell(1536, 1024, bias=1)
-    
+
       ​    (linear_projection): LinearNorm(  (linear_layer): Linear(in_features=1536, out_features=80, bias=True)  )
-    
+
       ​    (gate_layer): LinearNorm(  (linear_layer): Linear(in_features=1536, out_features=1, bias=True)  )     )
 
-            (location_conv): ConvNorm((conv): Conv1d(2, 32, kernel_size=(31,), stride=(1,), padding=(15,), bias=False) )
 
-            (location_dense): LinearNorm((linear_layer): Linear(in_features=32, out_features=128, bias=False) )))
-   
 
       (postnet): Postnet(
-    
+
       ​    (convolutions): ModuleList(
-    
+
       ​      (0): Sequential((0): ConvNorm((conv): Conv1d(80, 512, kernel_size=(5,), stride=(1,), padding=(2,))   )
-    
+
       ​       (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)  )
 
-    (0): Sequential((0): ConvNorm((conv): Conv1d(80, 512, kernel_size=(5,), stride=(1,), padding=(2,))   )
 
-     (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)  )
+      ​      (1): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,))  )
 
-
-    (1): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,))  )
-
-      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)  )
+      ​        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)  )
 
 
-    (2): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,))   )
+      ​      (2): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,))   )
+
+      ​        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)   )
+
 
       ​      (3): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,))    )
-    
-      ​        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)    )
 
+      ​        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)    )
+      
 
       ​      (4): Sequential((0): ConvNorm((conv): Conv1d(512, 80, kernel_size=(5,), stride=(1,), padding=(2,))      )
-    
+
       ​       (1): BatchNorm1d(80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)     )   )    )
-    
+
       )
-
-    (4): Sequential((0): ConvNorm((conv): Conv1d(512, 80, kernel_size=(5,), stride=(1,), padding=(2,))      )
-
-     (1): BatchNorm1d(80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)     )   )    )
-)
 
 #### Implementation
 
