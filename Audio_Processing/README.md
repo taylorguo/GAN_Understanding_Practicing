@@ -123,10 +123,10 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
       
       Conditional WaveNet: 类似cGAN, 条件控制需要的特征; 
       全局条件是控制所有时间序列的分布输出,比如说话人嵌入的TTS模型: 
-   <img src="../README/images/wavenet-global-conditional.png">
+   <img src="../README/images/wavenet-global-conditional.png" height=30>
 
       局部条件是比原始语音更低频率的序列, 用转置卷积转换后与原始语音信号相同频率后送入激活单元
-   <img src="../README/images/wavenet-global-local.png">
+   <img src="../README/images/wavenet-global-local.png" height=30>
 
 
 
@@ -281,12 +281,6 @@ CBHG Module
 :tangerine:  [**Tacotron2**](https://arxiv.org/pdf/1712.05884.pdf)   :date:   2017.12.16v1    :blush:  Google
 
 Natural TTS Synthesis By Conditioning Wavenet On Mel Spectrogram Predictions
-
-#### Network
-
-<img src="../README/images/tacotron2_net.png" height=300>
-
-Tacotron2(
 
 #### Network 
 
