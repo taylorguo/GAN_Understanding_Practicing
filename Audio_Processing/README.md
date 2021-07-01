@@ -46,7 +46,7 @@ Neural Machine Translation by Jointly Learning to Align and Translate
 
 <img src="../README/images/attention-bahdanau-flow.jpg" height=280>
 
-1. 解码器隐藏状态和编码器输出都有单独线性层，具有可训练权重
+1. 解码器隐藏状态和编码器输出带线性层，可训练权重
 
 <img src="../README/images/attention-bahdanau-flow-01.jpg" height=150>
 
@@ -108,57 +108,54 @@ WaveNet: A Generative Model for Raw Audio 原始音频波形的生成模型
 
 思路:
 
-  声波联合概率x={x1, ..., xT} 可以分解为条件概率的积: (xt是t时间内的所有样本)
+声波联合概率x={x1, ..., xT} 可以分解为条件概率的积: (xt是t时间内的所有样本)
 <img src="../README/images/wavenet-formula.png" height=50>
 
-      条件概率分布可以构建成卷积层的堆叠, 没有池化层, 输入和输出的时间长度相同. 输出层为softmax + categorical distribution. 
-      
-      WaveNet的主要成分是: 因果多孔卷积; 像语音信号这样的一维数据, 数据切换几个时间单位就可以了. 并没有使用RNN, 训练会快一些, 尤其是长信号.
-      因果多孔卷积的一个问题是 需要增加层数 或者 更大的滤波器 来增加感受野. 如下感受野为5: (层数+滤波器大小-1). 也可以增加孔的大小来增加感受野.
-   <img src="../README/images/wavenet-causal-conv-stack.png" height=200>
-
+  条件概率分布可以构建成卷积层的堆叠, 没有池化层, 输入和输出的时间长度相同. 输出层为softmax + categorical distribution. 
+  
   WaveNet的主要成分是: 因果多孔卷积; 像语音信号这样的一维数据, 数据切换几个时间单位就可以了. 并没有使用RNN, 训练会快一些, 尤其是长信号.
   因果多孔卷积的一个问题是 需要增加层数 或者 更大的滤波器 来增加感受野. 如下感受野为5: (层数+滤波器大小-1). 也可以增加孔的大小来增加感受野.
 <img src="../README/images/wavenet-causal-conv-stack.png" height=200>
 
+WaveNet的主要成分是: 因果多孔卷积; 像语音信号这样的一维数据, 数据切换几个时间单位就可以了. 并没有使用RNN, 训练会快一些, 尤其是长信号.
+因果多孔卷积的一个问题是 需要增加层数 或者 更大的滤波器 来增加感受野. 如下感受野为5: (层数+滤波器大小-1). 也可以增加孔的大小来增加感受野.
+<img src="../README/images/wavenet-causal-conv-stack.png" height=200>
 
-  举例: 因果多孔卷积的孔分别为1, 2, 4, 8. 
+举例: 因果多孔卷积的孔分别为1, 2, 4, 8.
 <img src="../README/images/wavenet-causal-conv-stack-sample.png" height=200>
-      WaveNet的多孔配置是: 1,2,4,...,512,1,2,4,...,512,1,2,4,...,512. 幂级数增长的多孔感受野为1024,可以看作是1x1024卷积; 
-      多层堆叠增加了模型容量和感受野大小.
-      训练阶段, 所有的时间信号可以并行输出, 因为ground truth都是已知的. 
-      但推断的时候则是顺序的, 预测的每个样本再送入模型预测下一个样本.
+WaveNet的多孔配置是: 1,2,4,...,512,1,2,4,...,512,1,2,4,...,512. 幂级数增长的多孔感受野为1024,可以看作是1x1024卷积;
+多层堆叠增加了模型容量和感受野大小.
+训练阶段, 所有的时间信号可以并行输出, 因为ground truth都是已知的.
+但推断的时候则是顺序的, 预测的每个样本再送入模型预测下一个样本.
 
-      SoftMax Distribution: 柔性最大化分布比条件高斯混合更好, 因为categorical分布更具弹性, 更容易输出任意概率. 
-      原始语音信号是16位整型, softmax层可以输出65536个概率值.WaveNet对语音信号进行μ law变换, 256量化; 非线性量化重构效果显然优于线性量化算法.
+  SoftMax Distribution: 柔性最大化分布比条件高斯混合更好, 因为categorical分布更具弹性, 更容易输出任意概率. 
+  原始语音信号是16位整型, softmax层可以输出65536个概率值.WaveNet对语音信号进行μ law变换, 256量化; 非线性量化重构效果显然优于线性量化算法.
 
-      门控激活:与PixelCNN激活单元形同
-   <img src="../README/images/wavenet-gated-activation.png" height=20>
+  门控激活:与PixelCNN激活单元形同
+<img src="../README/images/wavenet-gated-activation.png" height=20>
 
-      ∗ 是卷积操作; ⊙是元素相乘; σ(·) sigmoid函数; k层数, f滤波器, g门控,W待学参数
+  ∗ 是卷积操作; ⊙是元素相乘; σ(·) sigmoid函数; k层数, f滤波器, g门控,W待学参数
 
-      残差和跳层连接:
-   <img src="../README/images/wavenet-res-skip.png" height=300>
+  残差和跳层连接:
+<img src="../README/images/wavenet-res-skip.png" height=300>
    <img src="../README/images/wavnet-res.jpg"  height=300>
-      
 
-
-
-  Conditional WaveNet: 类似cGAN, 条件控制需要的特征; 
-  全局条件是控制所有时间序列的分布输出,比如说话人嵌入的TTS模型: 
+Conditional WaveNet: 类似cGAN, 条件控制需要的特征;
+全局条件是控制所有时间序列的分布输出,比如说话人嵌入的TTS模型:
 <img src="../README/images/wavenet-global-conditional.png" height=30>
 
-  局部条件是比原始语音更低频率的序列, 用转置卷积转换后与原始语音信号相同频率后送入激活单元
+局部条件是比原始语音更低频率的序列, 用转置卷积转换后与原始语音信号相同频率后送入激活单元
 <img src="../README/images/wavenet-global-local.png" height=30>
 
-  Text-to-Mel 网络生成的输出称为 Mel-Spectrogram，而不是语音。
-  梅尔光谱是分析语音频率特征的数据。Mel频谱非常有效地组织语音数据的关键信息。
-  但无法立即将梅尔频谱转换为语音，需要使用 Vocoder 将梅尔频谱转换为语音数据。
-  神经神经编码器（Neural Vocoder）利用神经网络从语音特征（如梅尔光谱）中产生语音。
+Text-to-Mel 网络生成的输出称为 Mel-Spectrogram，而不是语音。
+梅尔光谱是分析语音频率特征的数据。Mel频谱非常有效地组织语音数据的关键信息。
+但无法立即将梅尔频谱转换为语音，需要使用 Vocoder 将梅尔频谱转换为语音数据。
+神经神经编码器（Neural Vocoder）利用神经网络从语音特征（如梅尔光谱）中产生语音。
 
-  Wavenet 神经编码器模型，是一种自回归模型，使用语音样本之间的顺序特征。
-  Wavenet 使用前一个样本成功合成高质量的语音，预测下一个样本。
-  但是，从前面的样本中逐个生成下一个样本，生成速度非常缓慢。
+Wavenet 神经编码器模型，是一种自回归模型，使用语音样本之间的顺序特征。
+Wavenet 使用前一个样本成功合成高质量的语音，预测下一个样本。
+但是，从前面的样本中逐个生成下一个样本，生成速度非常缓慢。
+
 #### Network
 
 <img src="../README/images/wavenet-table.png" height=250>
@@ -197,14 +194,15 @@ CTC( Connectionist Temporal Classification) Loss
 
 Parallel WaveNet: Fast High-Fidelity Speech Synthesis
 
-  Parallel Wavenet 改善 Wavenet 缓慢的样本生成速度。
-  Parallel Wavenet 使用 Inverse Autoregressive Flow （IAF） 模型合成语音。
-  IAF 模型在训练时不知道目标语音数据集的分布情况，
-  因此使用训练好的 Wavenet 提取目标数据集的分布信息，将其与 IAF 模型中的结果值进行比较。
+Parallel Wavenet 改善 Wavenet 缓慢的样本生成速度。
+Parallel Wavenet 使用 Inverse Autoregressive Flow （IAF） 模型合成语音。
+IAF 模型在训练时不知道目标语音数据集的分布情况，
+因此使用训练好的 Wavenet 提取目标数据集的分布信息，将其与 IAF 模型中的结果值进行比较。
 
-  Parallel Wavenet 使用的 IAF 模型称为 student network，Wavenet 模型称为 teacher network。
-  Parallel Wavenet 优势是语音合成速度比 Wavenet 快。
-  但缺点是，合成语音的质量不如 Wavenet，并且需要训练 teacher network。
+Parallel Wavenet 使用的 IAF 模型称为 student network，Wavenet 模型称为 teacher network。
+Parallel Wavenet 优势是语音合成速度比 Wavenet 快。
+但缺点是，合成语音的质量不如 Wavenet，并且需要训练 teacher network。
+
 #### Network
 
 <img src="../README/images/parallel-wavenet-principle.jpg" height=200>
@@ -304,86 +302,80 @@ Natural TTS Synthesis By Conditioning Wavenet On Mel Spectrogram Predictions
 
 <img src="../README/images/tacotron2_net.png" height=300>
 
-  Tacotron2(
+Tacotron2(
 
-  (embedding): Embedding(148, 512)
+(embedding): Embedding(148, 512)
 
-  (encoder): **Encoder**( 
+(encoder): **Encoder**(
 
-      (convolutions): ModuleList(
+  (convolutions): ModuleList(
 
-        (0): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,)) )
-          	        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True))
+    (0): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,)) )
+      	        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True))
 
-        (1): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,)))
-                        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True))
+    (1): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,)))
+                    (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True))
 
-        (2): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,)))
-                        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)))
+    (2): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,)))
+                    (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)))
 
-      (lstm): LSTM(512, 256, batch_first=True, bidirectional=True))
+  (lstm): LSTM(512, 256, batch_first=True, bidirectional=True))
+(decoder): **Decoder**(
 
+  (prenet): Prenet(  (layers): ModuleList(
+      (0): LinearNorm( (linear_layer): Linear(in_features=80, out_features=256, bias=False)    )
+      (1): LinearNorm( (linear_layer): Linear(in_features=256, out_features=256, bias=False)  )    )      )
 
+  (attention_rnn): LSTMCell(768, 1024)
 
-  (decoder): **Decoder**(
+  (attention_layer): Attention(
 
-      (prenet): Prenet(  (layers): ModuleList(
-          (0): LinearNorm( (linear_layer): Linear(in_features=80, out_features=256, bias=False)    )
-          (1): LinearNorm( (linear_layer): Linear(in_features=256, out_features=256, bias=False)  )    )      )
+    (query_layer):  LinearNorm( (linear_layer): Linear(in_features=1024, out_features=128, bias=False)  )
 
-      (attention_rnn): LSTMCell(768, 1024)
+    (memory_layer): LinearNorm( (linear_layer): Linear(in_features=512,  out_features=128, bias=False)   )
 
-      (attention_layer): Attention(
+    (v):            LinearNorm( (linear_layer): Linear(in_features=128,   out_features=1,    bias=False)	)
 
-        (query_layer):  LinearNorm( (linear_layer): Linear(in_features=1024, out_features=128, bias=False)  )
+    (location_layer): LocationLayer(
 
-        (memory_layer): LinearNorm( (linear_layer): Linear(in_features=512,  out_features=128, bias=False)   )
+      (location_conv): ConvNorm((conv): Conv1d(2, 32, kernel_size=(31,), stride=(1,), padding=(15,), bias=False) )
 
-        (v):            LinearNorm( (linear_layer): Linear(in_features=128,   out_features=1,    bias=False)	)
+      (location_dense): LinearNorm((linear_layer): Linear(in_features=32, out_features=128, bias=False) )))
 
-        (location_layer): LocationLayer(
+  (decoder_rnn): LSTMCell(1536, 1024, bias=1)
 
-          (location_conv): ConvNorm((conv): Conv1d(2, 32, kernel_size=(31,), stride=(1,), padding=(15,), bias=False) )
+  (linear_projection): LinearNorm(  (linear_layer): Linear(in_features=1536, out_features=80, bias=True)  )
 
-          (location_dense): LinearNorm((linear_layer): Linear(in_features=32, out_features=128, bias=False) )))
+  (gate_layer): LinearNorm(  (linear_layer): Linear(in_features=1536, out_features=1, bias=True)  )     )
+(postnet): Postnet(
 
-      (decoder_rnn): LSTMCell(1536, 1024, bias=1)
+  (convolutions): ModuleList(
 
-      (linear_projection): LinearNorm(  (linear_layer): Linear(in_features=1536, out_features=80, bias=True)  )
+    (0): Sequential((0): ConvNorm((conv): Conv1d(80, 512, kernel_size=(5,), stride=(1,), padding=(2,))   )
 
-      (gate_layer): LinearNorm(  (linear_layer): Linear(in_features=1536, out_features=1, bias=True)  )     )
-
-
-
-  (postnet): Postnet(
-
-      (convolutions): ModuleList(
-
-        (0): Sequential((0): ConvNorm((conv): Conv1d(80, 512, kernel_size=(5,), stride=(1,), padding=(2,))   )
-
-         (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)  )
+     (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)  )
 
 
-        (1): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,))  )
+    (1): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,))  )
 
-          (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)  )
-
-
-        (2): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,))   )
-
-          (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)   )
+      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)  )
 
 
-        (3): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,))    )
+    (2): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,))   )
 
-          (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)    )
-  
+      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)   )
 
-        (4): Sequential((0): ConvNorm((conv): Conv1d(512, 80, kernel_size=(5,), stride=(1,), padding=(2,))      )
 
-         (1): BatchNorm1d(80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)     )   )    )
+    (3): Sequential((0): ConvNorm((conv): Conv1d(512, 512, kernel_size=(5,), stride=(1,), padding=(2,))    )
 
-  )
+      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)    )
+
+
+    (4): Sequential((0): ConvNorm((conv): Conv1d(512, 80, kernel_size=(5,), stride=(1,), padding=(2,))      )
+
+     (1): BatchNorm1d(80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)     )   )    )
+)
+
 #### Implementation
 
 - <img src="../README/images/pytorch.png" height="13">  [Tacotron2](https://github.com/NVIDIA/tacotron2)
@@ -452,63 +444,62 @@ Flow  编码器使用基于分布的损失函数，合成语音的质量稍有�
 
 <img src="../README/images/waveglow_net.png" height=300>
 
-  WaveGlow(
+WaveGlow(
 
-  (upsample): ConvTranspose1d(80, 80, kernel_size=(1024,), stride=(256,))
-  (WN): ModuleList(
-     (0-11): WN(
+(upsample): ConvTranspose1d(80, 80, kernel_size=(1024,), stride=(256,))
+(WN): ModuleList(
+(0-11): WN(
 
-        (in_layers): ModuleList(
-        (0): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(1,))
-        (1): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(2,), dilation=(2,))
-        (2): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(4,), dilation=(4,))
-        (3): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(8,), dilation=(8,))
-        (4): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(16,), dilation=(16,))
-        (5): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(32,), dilation=(32,))
-        (6): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(64,), dilation=(64,))
-        (7): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(128,), dilation=(128,)) )
+    (in_layers): ModuleList(
+    (0): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(1,))
+    (1): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(2,), dilation=(2,))
+    (2): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(4,), dilation=(4,))
+    (3): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(8,), dilation=(8,))
+    (4): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(16,), dilation=(16,))
+    (5): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(32,), dilation=(32,))
+    (6): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(64,), dilation=(64,))
+    (7): Conv1d(256, 512, kernel_size=(3,), stride=(1,), padding=(128,), dilation=(128,)) )
 
-        (res_skip_layers): ModuleList(
-        (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
-        (1): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
-        (2): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
-        (3): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
-        (4): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
-        (5): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
-        (6): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
-        (7): Conv1d(256, 256, kernel_size=(1,), stride=(1,)) )
-      
-        (start): Conv1d(4, 256, kernel_size=(1,), stride=(1,))
-        (end): Conv1d(256, 8, kernel_size=(1,), stride=(1,))
-        (cond_layer): Conv1d(640, 4096, kernel_size=(1,), stride=(1,))  )
-
-  (convinv): ModuleList(
-        (0): Invertible1x1Conv(
-           (conv): Conv1d(8, 8, kernel_size=(1,), stride=(1,), bias=False) )
-        (1): Invertible1x1Conv(
-           (conv): Conv1d(8, 8, kernel_size=(1,), stride=(1,), bias=False) )
-        (2): Invertible1x1Conv(
-           (conv): Conv1d(8, 8, kernel_size=(1,), stride=(1,), bias=False) )
-        (3): Invertible1x1Conv(
-           (conv): Conv1d(8, 8, kernel_size=(1,), stride=(1,), bias=False) )
-        (4): Invertible1x1Conv(
-           (conv): Conv1d(6, 6, kernel_size=(1,), stride=(1,), bias=False) )
-        (5): Invertible1x1Conv(
-           (conv): Conv1d(6, 6, kernel_size=(1,), stride=(1,), bias=False) )
-        (6): Invertible1x1Conv(
-           (conv): Conv1d(6, 6, kernel_size=(1,), stride=(1,), bias=False) )
-        (7): Invertible1x1Conv(
-           (conv): Conv1d(6, 6, kernel_size=(1,), stride=(1,), bias=False) )
-        (8): Invertible1x1Conv(
-           (conv): Conv1d(4, 4, kernel_size=(1,), stride=(1,), bias=False) )
-        (9): Invertible1x1Conv(
-           (conv): Conv1d(4, 4, kernel_size=(1,), stride=(1,), bias=False) )
-        (10): Invertible1x1Conv(
-           (conv): Conv1d(4, 4, kernel_size=(1,), stride=(1,), bias=False) )
-        (11): Invertible1x1Conv(
-           (conv): Conv1d(4, 4, kernel_size=(1,), stride=(1,), bias=False) )
-     )
-  ))
+    (res_skip_layers): ModuleList(
+    (0): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+    (1): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+    (2): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+    (3): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+    (4): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+    (5): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+    (6): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+    (7): Conv1d(256, 256, kernel_size=(1,), stride=(1,)) )
+  
+    (start): Conv1d(4, 256, kernel_size=(1,), stride=(1,))
+    (end): Conv1d(256, 8, kernel_size=(1,), stride=(1,))
+    (cond_layer): Conv1d(640, 4096, kernel_size=(1,), stride=(1,))  )
+(convinv): ModuleList(
+(0): Invertible1x1Conv(
+(conv): Conv1d(8, 8, kernel_size=(1,), stride=(1,), bias=False) )
+(1): Invertible1x1Conv(
+(conv): Conv1d(8, 8, kernel_size=(1,), stride=(1,), bias=False) )
+(2): Invertible1x1Conv(
+(conv): Conv1d(8, 8, kernel_size=(1,), stride=(1,), bias=False) )
+(3): Invertible1x1Conv(
+(conv): Conv1d(8, 8, kernel_size=(1,), stride=(1,), bias=False) )
+(4): Invertible1x1Conv(
+(conv): Conv1d(6, 6, kernel_size=(1,), stride=(1,), bias=False) )
+(5): Invertible1x1Conv(
+(conv): Conv1d(6, 6, kernel_size=(1,), stride=(1,), bias=False) )
+(6): Invertible1x1Conv(
+(conv): Conv1d(6, 6, kernel_size=(1,), stride=(1,), bias=False) )
+(7): Invertible1x1Conv(
+(conv): Conv1d(6, 6, kernel_size=(1,), stride=(1,), bias=False) )
+(8): Invertible1x1Conv(
+(conv): Conv1d(4, 4, kernel_size=(1,), stride=(1,), bias=False) )
+(9): Invertible1x1Conv(
+(conv): Conv1d(4, 4, kernel_size=(1,), stride=(1,), bias=False) )
+(10): Invertible1x1Conv(
+(conv): Conv1d(4, 4, kernel_size=(1,), stride=(1,), bias=False) )
+(11): Invertible1x1Conv(
+(conv): Conv1d(4, 4, kernel_size=(1,), stride=(1,), bias=False) )
+)
+))
 **Affine Coupling Layer**
 
 <img src="../README/images/waveglow-affine-coupling-layer.png" height=120>
