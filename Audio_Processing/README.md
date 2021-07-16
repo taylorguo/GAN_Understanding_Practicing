@@ -405,6 +405,8 @@ Tacotron2(
 - [Seq2Seq With Attention](https://zhuanlan.zhihu.com/p/36131103)
 - [Tacotron2 & WaveFlow](https://github.com/NVIDIA/DeepLearningExamples/tree/master/PyTorch/SpeechSynthesis/Tacotron2)
 - [Tacotron2 CUDA plugin](https://developer.nvidia.com/blog/getting-real-time-factor-over-60-for-text-to-speech-using-jarvis/)
+- [Tacotron2 TensorRT Code](https://github.com/NVIDIA/DeepLearningExamples/tree/master/PyTorch/SpeechSynthesis/Tacotron2/tensorrt)
+- [Tacotron2 TensorRT Waveglow issue: ](https://github.com/NVIDIA/DeepLearningExamples/issues/943)
 
 ---
 
